@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'django_extensions',
 
     # our apps
-    'apps.authapp.apps.AuthappConfig',
-    'apps.downloadapp.apps.DownloadappConfig',
-    'apps.libraryapp.apps.LibraryappConfig',
-    'apps.pagesapp.apps.PagesappConfig',
+    'authapp.apps.AuthappConfig',
+    'downloadapp.apps.DownloadappConfig',
+    'libraryapp.apps.LibraryappConfig',
+    'pagesapp.apps.PagesappConfig',
 ]
 
 MIDDLEWARE = [
