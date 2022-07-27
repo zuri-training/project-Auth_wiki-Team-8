@@ -1,2 +1,1 @@
-# Auth_wiki_backend
-Team 8 project
+# Auth_wiki_frontend
