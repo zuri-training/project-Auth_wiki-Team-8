@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'authapp.apps.AuthappConfig',
     'downloadapp.apps.DownloadappConfig',
     'libraryapp.apps.LibraryappConfig',
-    'pagesapp.apps.PagesappConfig',
 ]
 
 MIDDLEWARE = [
