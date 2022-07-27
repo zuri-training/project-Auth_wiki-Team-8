@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'django_extensions',
 
     # our apps
-    'authapp.apps.AuthappConfig',
-    'downloadapp.apps.DownloadappConfig',
-    'libraryapp.apps.LibraryappConfig',
+    'Authapp',
+    'Downloadapp',
+    'Libraryapp',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'Auth_wiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/"templates"],
+        'DIRS': [BASE_DIR/"Templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
