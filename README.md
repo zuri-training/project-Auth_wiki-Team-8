@@ -1,4 +1,4 @@
-# Auth_wiki_frontend/backend
+# Auth_wiki_frontend and backend
 
 ## This is Auth_Wiki Project For Group 8
 
@@ -6,7 +6,7 @@
 
 ### Once You Pull/Clone The Repo. Do The Following.
 
-# 1. cd into the main project diectory. thats backend
+# 1. cd into the main project diectory. that is backend
 
 # 2. Run The code below in your terminal to create you virtual server.
 
@@ -14,7 +14,7 @@
 
 # 3. Once it has created the virtual environment Run
 
-##### pip install -r .\requirements.txt
+##### pip install -r requirements.txt
 
 ##### The line of code above will get all the dependencies of the virtual server.
 
