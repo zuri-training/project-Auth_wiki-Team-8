@@ -1,5 +1,5 @@
 """
-ASGI config for Auth_wiki project.
+ASGI config for auth_wiki project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Auth_wiki.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'auth_wiki.settings')
 
 application = get_asgi_application()
