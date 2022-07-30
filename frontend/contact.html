@@ -4,9 +4,44 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
+ <title>Contact Us</title>
+ <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
- 
+ <div class="navbar">
+  <div class="container flex-nav">
+   <div class="nav-header">
+    <h2>Auth_Wiki</h2>
+    <button class="nav-toggle" id="navToggle">
+     <i class="fas fa-bars"></i>
+    </button>
+   </div>
+   <nav class="nav-links" id="nav-links">
+    <ul>
+     <li class="nav-link"><a href="#">About</a></li>
+     <li class="nav-link"><a href="#">Open Source</a></li>
+     <li class="nav-link"><a href="#">Contact</a></li>
+     <li class="nav-link"><a href="#">Login</a></li>
+     <li class="nav-link"><a href="#"><span>Register</span></a></li>
+    </ul>
+   </nav>
+  </div>
+ </div>
+ <section id="contact-section">
+  <h1 id="contact-heading">Contact US</h1>   
+  <h1 id="contact-info">Talk with an advisor</h1>
+  <p>Fill the form and an our team will respond</br>
+  as soon as possible.</p>
+ </section>
+ <section class="form-section"></section>
+
+
+ <form>
+  <input name="name" type="text" class="feedback-input" placeholder="Username" />
+  <input name="email" type="text" class="feedback-input" placeholder="Email address" />
+  <input name="Phone number" type="phone" class="feedback-input" placeholder="Phone number" />
+  <textarea name="text" class="feedback-input" placeholder="How can we help you?"></textarea>
+  <input type="submit" value="SUBMIT" />
+ </form>
 </body>
 </html>
