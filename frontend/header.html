@@ -2,25 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth_Wiki</title>
     <link rel="stylesheet" href="./css/header.css">
 </head>
 <body>
-    <div class="header">
-        <nav>
-            <a href="index.html" class="logo">Auth</a>
-                <ul class="nav-links">
-                    <li><a href=" ">About</a></li>
-                    <li><a href=" ">Open Source</a></li>
-                    <li><a href=" ">Contact</a></li>
-                    <li><a href=" ">Login</a></li>
-                    <li class="btn">Register</li>
-                </ul>
+    <div class="navbar">
+        <div class="container flex-nav">
+            <div class="nav-header">
+                <h2>Auth_Wiki</h2>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </nav>
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li class="nav-link"><a href="#">About</a></li>
+                    <li class="nav-link"><a href="#">Open Source</a></li>
+                    <li class="nav-link"><a href="#">Contact</a></li>
+                    <li class="nav-link"><a href="#">Login</a></li>
+                    <li class="nav-link"><a href="#"><span>Register</span></a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    
+
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
+
