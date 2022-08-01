@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet");
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', serif;
+}
+
+/* Navbar */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link {
+  list-style: none;
+  margin: 20px 0;
+  width: 8rem;
+}
+
+/* Navbar */
+.navbar {
+  background: #333333;
+  position: fixed;
+  width: 100%;
+}
+
+.flex-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-header span {
+  color: rgb(248, 104, 104);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header h2{
+color: white;
+}
+.nav-toggle {
+  border: transparent;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+}
+
+
+.nav-links ul li span{
+background: #D9D9D9;
+border-radius: 5px;
+width: 120px;
+padding: 10px 30px;
+
+}
+
+.nav-links li{
+  font-weight: 400;
+
+}
+
+.nav-open {
+  height: 100vh;
+}
+
+@media only screen and (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-header {
+    display: block;
+  }
+
+  .flex-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+  }
+
+  .nav-links {
+    height: auto;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  .nav-link {
+    display: inline-block;
+    border-bottom: none;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/**************************************** Contact Section *******************************/
+
+#contact-section{
+   background: #333333;
+   height: 770px;
+   color: #D9D9D9;
+  }
+
+/* Contact US */
+#contact-heading{
+position: absolute;
+width: 252px;
+height: 54px;
+left: 130px;
+top: 217px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 45px;
+line-height: 54px;
+color: #FFFFFF;
+}
+
+/* Talk with an advisor */
+#contact-info{
+position: absolute;
+width: 394px;
+height: 48px;
+left: 130px;
+top: 329px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 48px;
+color: #FFFFFF;
+}
+
+/* Fill the form and an our team will respond as soon as possible. */
+
+#contact-section p{
+position: absolute;
+width: 375px;
+height: 46px;
+left: 130px;
+top: 432px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 19.2px;
+line-height: 23px;
+color: #FFFFFF;
+}
+
+/************************ FORM *************************/
+
+
+form { max-width:638px; margin:130px; }
+
+/* We’re are here to help answer any questions you might have. We look forward to hearing from you. */
+.form-section p{
+position: absolute;
+width: 456px;
+height: 56px;
+left: 130px;
+top: 822px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 19.2px;
+line-height: 23px;
+color: #000000;
+}
+
+.feedback-input {
+ 
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #000000;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #333333; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background:#333333;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+[type="submit"]:hover { background: #D9D9D9;
+ } 
+ 
+ /********************* FOOTER *****************/
+footer{
+background: #333333;
+position: relative;
+width: 1440px;
+height: 529px;
+left: 0px;
+top: 0px;
+}
+
+/* Auto_Wiki */
+footer h1{
+position: absolute;
+width: 151px;
+height: 36px;
+left: 135px;
+top: 108.35px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 36px;
+text-align: center;
+color: #FFFFFF;
+}
+
+
