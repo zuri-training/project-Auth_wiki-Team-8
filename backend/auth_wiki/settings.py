@@ -35,6 +35,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 ]
+AUTH_USER_MODEL = 'accounts.User'
+
+REST_FRAMEWORK = {
+    'NON_FIELD_ERRORS_KEY': 'errors',
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,8 +53,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
-
-AUTH_USER_MODEL = 'accounts.User'
 
 ROOT_URLCONF = 'auth_wiki.urls'
 
