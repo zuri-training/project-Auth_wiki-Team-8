@@ -1,5 +1,6 @@
 from .models import User
 from rest_framework import serializers
+from django.contrib.auth.hashers import make_password
 
 
 class UserCreationSerializer(serializers.ModelSerializer):
@@ -27,5 +28,7 @@ class UserCreationSerializer(serializers.ModelSerializer):
 
         if password_length < 8:
             raise serializers.ValidationError(detail="Password must be at least 8 characters long")
+
+        attrs['password'] = make_password(attrs['password'])
 
         return super().validate(attrs)
