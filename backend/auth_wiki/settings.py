@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     # my_apps
     'accounts',
+    'library_app',
 
     # third_party_apps
     'rest_framework',
