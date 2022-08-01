@@ -37,15 +37,16 @@
  <section class="form-section">
   <p>We’re are here to help answer any questions you <br>
   might have. We look forward to hearing from you. </p>
- </section>
+ 
 
- <form>
-  <input name="name" type="text" class="feedback-input" placeholder="Username" />
-  <input name="email" type="text" class="feedback-input" placeholder="Email address" />
-  <input name="Phone number" type="phone" class="feedback-input" placeholder="Phone number" />
+ <form action="#">
+  <input name="name" type="text" class="feedback-input" placeholder="Username" required/>
+  <input name="email" type="email" class="feedback-input" placeholder="Email address" required/>
+  <input name="Phone number" type="tel" class="feedback-input" placeholder="Phone number" />
   <textarea name="text" class="feedback-input" placeholder="How can we help you?"></textarea>
   <input type="submit" value="Send message" />
  </form>
+ </section>
  <!------------------------------TODO: FOOTER ----------------------->
  <footer>
    <h1 id="logo">Auto_Wiki</h1>

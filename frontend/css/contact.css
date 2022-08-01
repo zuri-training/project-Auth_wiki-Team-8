@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: "Poppins", serif;
+  font-family: 'Inter', serif;
 }
 
 /* Navbar */
@@ -193,7 +193,7 @@ color: #000000;
 }
 
 .feedback-input {
-  color:white;
+ 
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
@@ -238,17 +238,18 @@ textarea {
  } 
  
  /********************* FOOTER *****************/
-footer-container{
-position: absolute;
+footer{
+background: #333333;
+position: relative;
 width: 1440px;
 height: 529px;
 left: 0px;
 top: 0px;
-background: #333333;
 }
 
 /* Auto_Wiki */
 footer h1{
+position: absolute;
 width: 151px;
 height: 36px;
 left: 135px;
@@ -261,3 +262,5 @@ line-height: 36px;
 text-align: center;
 color: #FFFFFF;
 }
+
+
