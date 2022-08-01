@@ -30,8 +30,8 @@ document.getElementById("registerForm").addEventListener("submit", (e) => {
             .post("http://127.0.0.1:8000/account/signup/", data)
             .then((response) => {
                 console.log(response);
-                // const addedUser = response.data;
-                // console.log(`POST: user is added`, addedUser);
+                const addedUser = response.data;
+                console.log(`POST: user is added`, addedUser);
             })
             .catch((error) => {
                 let err = JSON.parse(error.request.response);
