@@ -1,9 +1,10 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils import timezone
 
 # Create your models here.
 
-class library(models.Model):
+class LibraryPage(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
     library_file = models.FileField()
@@ -16,3 +17,16 @@ class library(models.Model):
 
     def __str__(self):
          return str(self.name) + '['+str(self.author) + ']'
+
+class CommentReaction(models.Model):
+    comment = models.TextField()
+    like = models.IntegerField()
+    dislike = models.IntegerField()
+    library = models.ForeignKey(
+        get_user_model(), on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return str(self.like) + '[' +str(self.dislike) + ']'
+
+
