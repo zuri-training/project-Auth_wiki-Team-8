@@ -164,16 +164,11 @@ color: #FFFFFF;
 
 form { 
   max-width:638px; 
-  margin:230px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  
+  margin: 25%;
 }
 
 
 .form-section {
-display: block;
 height: 885px;
 text-align: center;
 }
@@ -185,7 +180,6 @@ text-align: center;
   font-size: 14px;
   line-height: 150%;
   border-radius: 5px;
-  line-height: 22px;
   background-color: transparent;
   border:2px solid #000000;
   transition: all 0.3s;
@@ -196,10 +190,14 @@ text-align: center;
   outline:0;
 }
 
+  form input{
+    height: 90px;
+  }
+
 .feedback-input:focus { border:2px solid #00205C; }
 
 textarea {
-  height: 150px;
+  height: 315px;
   line-height: 150%;
   resize:vertical;
 }
