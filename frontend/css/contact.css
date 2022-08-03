@@ -211,7 +211,7 @@ color: #000000;
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid #333333; }
+.feedback-input:focus { border:2px solid #00205C; }
 
 textarea {
   height: 150px;
