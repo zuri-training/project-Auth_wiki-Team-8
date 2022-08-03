@@ -15,7 +15,7 @@ SECRET_KEY = config(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -27,10 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # my installed apps
-    'accounts',
-    'librarys',
+     # my installed apps
+    'accounts.apps.AccountsConfig',
+    'librarys.apps.LibrarysConfig',
 ]
 
 MIDDLEWARE = [
