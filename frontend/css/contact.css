@@ -162,15 +162,23 @@ color: #FFFFFF;
 /************************ FORM *************************/
 
 
-form { max-width:638px; margin:130px; }
+form { 
+  max-width:638px; 
+  margin:230px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
 
-/* We’re are here to help answer any questions you might have. We look forward to hearing from you. */
+
 .form-section {
+display: block;
 height: 885px;
+text-align: center;
 }
 
 .feedback-input {
- 
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
