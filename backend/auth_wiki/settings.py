@@ -27,6 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # my installed apps
+    'accounts',
+    'librarys',
 ]
 
 MIDDLEWARE = [
@@ -44,7 +48,7 @@ ROOT_URLCONF = 'auth_wiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
