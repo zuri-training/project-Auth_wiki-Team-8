@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: white;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -34,9 +34,9 @@ a {
 
 /* Navbar */
 .navbar {
-  background: #333333;
-  position: fixed;
-  width: 100%;
+background: #F4F4F4;
+position: fixed;
+width: 100%;
 }
 
 .flex-nav {
@@ -54,7 +54,7 @@ a {
   align-items: center;
 }
 .nav-header h2{
-color: white;
+color: #000000;
 }
 .nav-toggle {
   border: transparent;
@@ -70,7 +70,7 @@ color: white;
 
 
 .nav-links ul li span{
-background: #D9D9D9;
+background: #00205C;
 border-radius: 5px;
 width: 120px;
 padding: 10px 30px;
@@ -121,86 +121,65 @@ padding: 10px 30px;
 /**************************************** Contact Section *******************************/
 
 #contact-section{
-   background: #333333;
-   height: 770px;
+   background: #00205C;
+   height: 413px;
    color: #D9D9D9;
   }
 
 /* Contact US */
 #contact-heading{
 position: absolute;
-width: 252px;
-height: 54px;
-left: 130px;
-top: 217px;
+width: 307px;
+height: 69px;
+left: 567px;
+top: 252px;
 font-family: 'Inter';
 font-style: normal;
-font-weight: 800;
-font-size: 45px;
-line-height: 54px;
+font-weight: 700;
+font-size: 57.33px;
+line-height: 69px;
+text-align: center;
 color: #FFFFFF;
 }
 
-/* Talk with an advisor */
-#contact-info{
-position: absolute;
-width: 394px;
-height: 48px;
-left: 130px;
-top: 329px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 48px;
-color: #FFFFFF;
-}
 
-/* Fill the form and an our team will respond as soon as possible. */
-
+/* Want to talk to us? Fill the form and an our team will respond as soon as possible. */
 #contact-section p{
 position: absolute;
-width: 375px;
-height: 46px;
-left: 130px;
-top: 432px;
-font-family: 'Inter';
+width: 858px;
+height: 60px;
+left: 291px;
+top: 331px;
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 19.2px;
-line-height: 23px;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
 color: #FFFFFF;
 }
 
 /************************ FORM *************************/
 
 
-form { max-width:638px; margin:130px; }
+form { 
+  max-width:638px; 
+  margin: 25%;
+}
 
-/* We’re are here to help answer any questions you might have. We look forward to hearing from you. */
-.form-section p{
-position: absolute;
-width: 456px;
-height: 56px;
-left: 130px;
-top: 822px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 19.2px;
-line-height: 23px;
-color: #000000;
+
+.form-section {
+height: 885px;
+text-align: center;
 }
 
 .feedback-input {
- 
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   border-radius: 5px;
-  line-height: 22px;
   background-color: transparent;
   border:2px solid #000000;
   transition: all 0.3s;
@@ -211,17 +190,21 @@ color: #000000;
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid #333333; }
+  form input{
+    height: 90px;
+  }
+
+.feedback-input:focus { border:2px solid #00205C; }
 
 textarea {
-  height: 150px;
+  height: 315px;
   line-height: 150%;
   resize:vertical;
 }
 
 [type="submit"] {
   width: 100%;
-  background:#333333;
+  background: #00205C;
   border-radius:5px;
   border:0;
   cursor:pointer;
@@ -239,7 +222,7 @@ textarea {
  
  /********************* FOOTER *****************/
 footer{
-background: #333333;
+background: #00205C;
 position: relative;
 width: 1440px;
 height: 529px;
