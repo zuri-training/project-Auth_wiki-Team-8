@@ -2,16 +2,16 @@ from django.http import HttpResponse
 # from django.shortcuts import render
 
 
-def signup_view(request):
+def about(request):
     # return render(request, 'aboutpage.html')
-    return HttpResponse("Registration page")
+    return HttpResponse("About page")
 
 
-def signin_view(request):
+def home(request):
     # return render(request, 'homepage.html')
-    return HttpResponse("Login page")
+    return HttpResponse("Home page")
 
 
-def logout_view(request):
+def contact_us(request):
     # return render(request, 'contactpage.html')
-    return HttpResponse("Logout page")
+    return HttpResponse("Contact page")
