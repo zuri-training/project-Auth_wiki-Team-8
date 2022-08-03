@@ -142,34 +142,20 @@ text-align: center;
 color: #FFFFFF;
 }
 
-/* Talk with an advisor */
-#contact-info{
-position: absolute;
-width: 394px;
-height: 48px;
-left: 130px;
-top: 329px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 48px;
-color: #FFFFFF;
-}
 
-/* Fill the form and an our team will respond as soon as possible. */
-
+/* Want to talk to us? Fill the form and an our team will respond as soon as possible. */
 #contact-section p{
 position: absolute;
-width: 375px;
-height: 46px;
-left: 130px;
-top: 432px;
-font-family: 'Inter';
+width: 858px;
+height: 60px;
+left: 291px;
+top: 331px;
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 19.2px;
-line-height: 23px;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
 color: #FFFFFF;
 }
 
