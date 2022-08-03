@@ -122,22 +122,23 @@ padding: 10px 30px;
 
 #contact-section{
    background: #00205C;
-   height: 770px;
+   height: 413px;
    color: #D9D9D9;
   }
 
 /* Contact US */
 #contact-heading{
 position: absolute;
-width: 252px;
-height: 54px;
-left: 130px;
-top: 217px;
+width: 307px;
+height: 69px;
+left: 567px;
+top: 252px;
 font-family: 'Inter';
 font-style: normal;
-font-weight: 800;
-font-size: 45px;
-line-height: 54px;
+font-weight: 700;
+font-size: 57.33px;
+line-height: 69px;
+text-align: center;
 color: #FFFFFF;
 }
 
