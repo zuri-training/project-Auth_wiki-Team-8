@@ -165,18 +165,8 @@ color: #FFFFFF;
 form { max-width:638px; margin:130px; }
 
 /* We’re are here to help answer any questions you might have. We look forward to hearing from you. */
-.form-section p{
-position: absolute;
-width: 456px;
-height: 56px;
-left: 130px;
-top: 822px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 19.2px;
-line-height: 23px;
-color: #000000;
+.form-section {
+height: 885px;
 }
 
 .feedback-input {
@@ -226,7 +216,7 @@ textarea {
  
  /********************* FOOTER *****************/
 footer{
-background: #333333;
+background: #00205C;
 position: relative;
 width: 1440px;
 height: 529px;
