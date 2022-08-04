@@ -191,7 +191,7 @@ text-align: center;
 }
 
   form input{
-    height: 90px;
+    height: 80px;
   }
 
 .feedback-input:focus { border:2px solid #00205C; }
