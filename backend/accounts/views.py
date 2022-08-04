@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.urls import reverse_lazy
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import login, logout
@@ -57,3 +60,9 @@ def profile_view(request):
     else:
         form = CustomUserChangeForm(instance=request.user)
         return render(request, "accounts/edit_profile.html", {'form': form})
+
+
+class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
+    template_name = 'accounts/change_pass.html'
+    success_message = "Successfully Changed Your Password"
+    success_url = reverse_lazy('dashboard:home')
