@@ -7,10 +7,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>My Registration Page</h1>
-    <form class="site-form" action="/accounts/signup/" method="post">
+    <h1>My Edit Profile Page</h1>
+    <form class="site-form" action="/accounts/profile/" method="post">
       {% csrf_token %} {{form}}
-      <input type="submit" value="Signup" />
+      <input type="submit" value="Update Profile" />
     </form>
   </body>
 </html>
