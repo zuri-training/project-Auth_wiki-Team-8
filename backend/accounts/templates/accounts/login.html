@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>My Login Page</h1>
-    <form class="site-form" action="/account/signin/" method="post"> 
+    <form class="site-form" action="/accounts/signin/" method="post">
       {% csrf_token %} {{form}} {% if request.GET.next %}
       <!-- if the user was redirected to the login page we want to get
       the page the want to go to. so that if they login we redirect back to the page they wanted to go to. -->
