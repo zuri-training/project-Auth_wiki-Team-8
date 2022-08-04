@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import login, logout
-from .forms import CustomUserCreationForm, CustomUserAuthenticationForm
+from .forms import CustomUserCreationForm, CustomUserAuthenticationForm, CustomUserChangeForm
 
 
 def signup_view(request):
@@ -41,3 +42,18 @@ def logout_view(request):
         return redirect('accounts/login.html')
     else:
         return redirect('accounts/login.html')
+
+
+def profile_view(request):
+    if request.method == 'POST':
+        form = CustomUserChangeForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile is updated successfully')
+            return redirect('dashboard:home')
+        else:
+            print(form.errors.as_data())
+            return render(request, 'accounts/edit_profile.html', {'form': form})
+    else:
+        form = CustomUserChangeForm(instance=request.user)
+        return render(request, "accounts/edit_profile.html", {'form': form})
