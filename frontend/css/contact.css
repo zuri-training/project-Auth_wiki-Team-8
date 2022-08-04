@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 @import url("https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet");
-@import url("https://fonts.googleapis.com/css?family=Inter");
-
+@import url('https://fonts.googleapis.com/css?family=Inter');
 
 * {
   box-sizing: border-box;
@@ -34,9 +33,9 @@ a {
 
 /* Navbar */
 .navbar {
-background: #F4F4F4;
-position: fixed;
-width: 100%;
+  background: #f4f4f4;
+  position: fixed;
+  width: 100%;
 }
 
 .flex-nav {
@@ -53,8 +52,8 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
 }
-.nav-header h2{
-color: #000000;
+.nav-header h2 {
+  color: #000000;
 }
 .nav-toggle {
   border: transparent;
@@ -68,18 +67,15 @@ color: #000000;
   overflow: hidden;
 }
 
-
-.nav-links ul li span{
-background: #00205C;
-border-radius: 5px;
-width: 120px;
-padding: 10px 30px;
-
+.nav-links ul li span {
+  background: #00205c;
+  border-radius: 5px;
+  width: 120px;
+  padding: 10px 30px;
 }
 
-.nav-links li{
+.nav-links li {
   font-weight: 400;
-
 }
 
 .nav-open {
@@ -120,57 +116,55 @@ padding: 10px 30px;
 
 /**************************************** Contact Section *******************************/
 
-#contact-section{
-   background: #00205C;
-   height: 413px;
-   color: #D9D9D9;
-  }
-
-/* Contact US */
-#contact-heading{
-position: absolute;
-width: 307px;
-height: 69px;
-left: 567px;
-top: 252px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 57.33px;
-line-height: 69px;
-text-align: center;
-color: #FFFFFF;
+#contact-section {
+  background-image: url('../images/header_bg.svg');
+  height: 413px;
+  color: #d9d9d9;
+  box-shadow: inset 2000px 0 0 0 rgba(0, 32, 92, 0.5);
 }
 
+/* Contact US */
+#contact-heading {
+  position: absolute;
+  width: 307px;
+  height: 69px;
+  left: 567px;
+  top: 252px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57.33px;
+  line-height: 69px;
+  text-align: center;
+  color: #ffffff;
+}
 
 /* Want to talk to us? Fill the form and an our team will respond as soon as possible. */
-#contact-section p{
-position: absolute;
-width: 858px;
-height: 60px;
-left: 291px;
-top: 331px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 32px;
-text-align: center;
-color: #FFFFFF;
+#contact-section p {
+  position: absolute;
+  width: 858px;
+  height: 60px;
+  left: 291px;
+  top: 331px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
 }
 
 /************************ FORM *************************/
 
-
-form { 
-  max-width:638px; 
+form {
+  max-width: 638px;
   margin: 25%;
 }
 
-
 .form-section {
-height: 885px;
-text-align: center;
+  height: 885px;
+  text-align: center;
 }
 
 .feedback-input {
@@ -181,69 +175,70 @@ text-align: center;
   line-height: 150%;
   border-radius: 5px;
   background-color: transparent;
-  border:2px solid #000000;
+  border: 2px solid #000000;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
-  outline:0;
+  outline: 0;
 }
 
-  form input{
-    height: 90px;
-  }
+form input {
+  height: 80px;
+}
 
-.feedback-input:focus { border:2px solid #00205C; }
+.feedback-input:focus {
+  border: 2px solid #00205c;
+}
 
 textarea {
   height: 315px;
   line-height: 150%;
-  resize:vertical;
+  resize: vertical;
 }
 
-[type="submit"] {
+[type='submit'] {
   width: 100%;
-  background: #00205C;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:white;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
+  background: #00205c;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+  margin-top: -4px;
+  font-weight: 700;
 }
 
-[type="submit"]:hover { background: #D9D9D9;
- } 
- 
- /********************* FOOTER *****************/
-footer{
-background: #00205C;
-position: relative;
-width: 1440px;
-height: 529px;
-left: 0px;
-top: 0px;
+[type='submit']:hover {
+  background: #d9d9d9;
+}
+
+/********************* FOOTER *****************/
+footer {
+  background: #00205c;
+  position: relative;
+  width: 1440px;
+  height: 529px;
+  left: 0px;
+  top: 0px;
 }
 
 /* Auto_Wiki */
-footer h1{
-position: absolute;
-width: 151px;
-height: 36px;
-left: 135px;
-top: 108.35px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 36px;
-text-align: center;
-color: #FFFFFF;
+footer h1 {
+  position: absolute;
+  width: 151px;
+  height: 36px;
+  left: 135px;
+  top: 108.35px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
 }
-
-
