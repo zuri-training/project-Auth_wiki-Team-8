@@ -121,7 +121,7 @@ padding: 10px 30px;
 /**************************************** Contact Section *******************************/
 
 #contact-section{
-   background: #00205C;
+  background-image: url("../images/header_bg.svg");
    height: 413px;
    color: #D9D9D9;
   }
