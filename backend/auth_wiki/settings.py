@@ -9,13 +9,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY",
-                    default='django-insecure-u#c@i-^(i-iwp%+m91cf#f=ys8+r0*fpncfz-(ed=tcsnd*zj^')
+SECRET_KEY = config(
+    'SECRET_KEY', default='django-insecure-#&e5ze(2!jj*ro4rl95++wp=#c%j+j8&1o4)bxd7$4!@j2whe2')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG',cast=bool, default=True)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -27,13 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # my_apps
-    'accounts',
-
-    # third_party_apps
-    'rest_framework',
-    'corsheaders',
+     # my installed apps
+    'accounts.apps.AccountsConfig',
+    'librarys.apps.LibrarysConfig',
 ]
 
 MIDDLEWARE = [
@@ -44,16 +40,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
-CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'auth_wiki.urls'
+AUTH_USER_MODEL = 'accounts.User'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
