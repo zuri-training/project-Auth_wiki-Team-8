@@ -5,6 +5,6 @@ from . import views as library_views
 app_name = 'librarys'
 
 urlpatterns = [
-    path('', library_views.library_view, name="home"),
+    path('', library_views.LibraryHomeView.as_view, name="home"),
     # path('search_result', )
 ]
