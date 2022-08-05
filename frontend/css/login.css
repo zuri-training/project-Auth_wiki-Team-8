@@ -192,6 +192,7 @@ a {
   position: absolute;
   top: 528px;
   width: 100%;
+  height:auto;
 }
 .form-section form {
   margin: auto;
@@ -217,6 +218,7 @@ span {
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"],
 input[type="submit"] {
   height: 71px;
@@ -228,12 +230,11 @@ input[type="submit"] {
   margin-top: 6px;
   transition: 0.3s;
 }
-input[type="email"]:focus-within,
-input[type="password"]:focus-within {
+input[type="email"]:focus-within,input[type="text"]:focus-within,input[type="password"]:focus-within {
   border: 3px solid #00205c;
   background-color: rgba(128, 128, 128, 0.21);
 }
-input[type="email"] {
+input[type="email"], input[type="text"], input[type="password"] {
   margin-bottom: 33px;
 }
 
