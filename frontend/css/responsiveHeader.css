@@ -101,6 +101,9 @@
       font-size: 20px;
       color:#ffffff
     }
+    .navi{
+        color:#00205C
+    }
     a:hover,a.active{
       background: #ffff;
       color: #00205C;
