@@ -16,7 +16,7 @@ class LibrarySearchPage(View):
 
 class LibraryInfo(View):
     def get(self, request, *args, **kwargs):
-        pk = request.GET['pk']
+        pk = request.GET.get('pk')
         library = LibraryPage.objects.filter(id=pk)
-        return render(request, 'search_result.html', {'library': library})
+        return render(request, 'librarys/search_result.html', {'library': library})
 
