@@ -11,6 +11,7 @@ urlpatterns = [
     path('library/', include('librarys.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('about/', views.about),
+    path('faq/', views.faq),
     path('contact-us/', views.contact_us),
     path('', views.home),
     # path('', article_views.article_list, name="home"),
@@ -21,4 +22,5 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += [re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }), ]
+urlpatterns += [re_path(r'^media/(?P<path>.*)$', serve,
+                        {'document_root': settings.MEDIA_ROOT, }), ]

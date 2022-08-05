@@ -1,17 +1,18 @@
 from django.http import HttpResponse
-# from django.shortcuts import render
+from django.shortcuts import render
 
 
 def about(request):
-    # return render(request, 'aboutpage.html')
-    return HttpResponse("About page")
+    return render(request, 'aboutpage.html')
 
 
 def home(request):
-    # return render(request, 'homepage.html')
-    return HttpResponse("Home page")
+    return render(request, 'homepage.html')
 
 
 def contact_us(request):
-    # return render(request, 'contactpage.html')
-    return HttpResponse("Contact page")
+    return render(request, 'contactpage.html')
+
+
+def faq(request):
+    return render(request, 'faqPage.html')
