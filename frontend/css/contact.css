@@ -116,16 +116,66 @@ a {
 
 /**************************************** Contact Section *******************************/
 
-#contact-section {
+/* #contact-section {
+  background-image: url('../images/header_bg.svg');
+  height: 413px;
+  margin-bottom: 100px;
+  width: 100%;
+  color: #d9d9d9;
+  box-shadow: inset 2000px 0 0 0 rgba(0, 32, 92, 0.5);
+  margin-bottom: 100px;
+} */
+
+.hero {
+  position: relative;
+  top: 115px;
   background-image: url('../images/header_bg.svg');
   height: 413px;
   width: 100%;
   color: #d9d9d9;
   box-shadow: inset 2000px 0 0 0 rgba(0, 32, 92, 0.5);
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
-/* Contact US */
+.hero-text {
+   width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.hero-text h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57.33px;
+  line-height: 69px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-text p {
+  font-family: Poppins;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .hero-text h3 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Contact US
 #contact-heading {
   position: absolute;
   width: 25%;
@@ -139,7 +189,7 @@ a {
   line-height: 69px;
   text-align: center;
   color: #ffffff;
-}
+} */
 
 /* Want to talk to us? Fill the form and an our team will respond as soon as possible. */
 #contact-section p {
@@ -158,7 +208,6 @@ a {
 }
 
 /************************ FORM *************************/
-
 form {
   margin: auto;
   width: min(638px, 90%);
@@ -167,10 +216,11 @@ form {
 }
 
 .form-section {
+  position: relative;
+  width: 100%;
   display: block;
   text-align: center;
-  position: absolute;
-  top: 50%;
+  top: 12px;
   width: 100%;
 }
 
