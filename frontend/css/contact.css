@@ -202,6 +202,11 @@ form input {
   border: 2px solid #00205c;
 }
 
+.feedback-input:focus-within {
+  border: 3px solid #00205c;
+  background-color: rgba(128, 128, 128, 0.21);
+}
+
 textarea {
   height: 315px;
   line-height: 150%;
