@@ -1,39 +1,31 @@
-# Auth_wiki_frontend and backend
+### Auth_wiki is a project designed to make authentication codes readily available to developers in order to fast-track their work and avoid re-inventing the wheel.
 
-## This is Auth_Wiki Project For Group 8
+## Registered users on our platform have access to various open source authentication codes from top industry developers. They can view examples, like, comment and download the codes for their use.
 
-## How To SetUp The Server And Run The Project.
+## This repository contains all the codes for this project.
 
-### Once You Pull/Clone The Repo. Do The Following.
+### Here is how you can contribute to the project
 
-# 1. cd into the main project diectory. that is backend
+1. #### Clone the repository to your local machine
 
-# 2. Run The code below in your terminal to create you virtual server.
+2. #### cd into the backend, and create a virtual environment, by typing this code into your terminal:
 
-##### python -m venv env
+##### python -m venv 'name of virtual environment'
 
-# 3. Once it has created the virtual environment Run
+3. #### Activate the virtual environment. For windows, type this in your terminal:
+
+##### 'name of virtual environmenty\Scripts\activate
+
+4. ##### Install the required dependencies, by typing this code into your terminal:
 
 ##### pip install -r requirements.txt
 
-##### The line of code above will get all the dependencies of the virtual server.
+5. #### Update the database by running this code in your terminal:
 
-# 4. Once you are Done, you have to Activate the Virtual Server or Instantiate it
+##### python manage.py migrate
 
-##### cd into the env folder
+6. #### You can now go ahead to make changes, or add features as necessary
 
-##### cd into the scripts folder
+7. #### Stage and commit your changes. Ensure to write a descriptive commit message, highlighting the part you worked on and what you changed.
 
-##### Run .\Activate.ps1 or just activate
-
-# 5. Now the virtual server is activated. you can go ahead with your code.
-
-# 6. Now lets Run our Django Application.
-
-##### Run py manage.py runserver
-
-##### Your Django Application will be Running on localhost
-
-##### Starting development server at http://127.0.0.1:8000/
-
-##### You can click on your Link above to see your server Running.
+8. #### Push your changes to Github and make a pull request
