@@ -169,7 +169,7 @@ form {
 }
 
 .feedback-input {
-  font-family: 'Raleway';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -183,6 +183,9 @@ form {
   width: 100%;
   box-sizing: border-box;
   outline: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 form input {
@@ -217,6 +220,7 @@ textarea {
 [type='submit']:hover {
   background: #d9d9d9;
 }
+
 
 label{
   text-align: left;
