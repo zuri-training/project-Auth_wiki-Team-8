@@ -218,6 +218,15 @@ textarea {
   background: #d9d9d9;
 }
 
+label{
+  text-align: left;
+  float: left;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.2px;
+  line-height: 23px;
+}
 /********************* FOOTER *****************/
 footer {
   background: #00205c;
