@@ -635,7 +635,7 @@ border-radius: 8px;
         padding: 5px;
         border-radius: 8px;
         display:flex;
-        width: 60%;
+        width: 70%;
         margin-top: 40px;
     }
 
@@ -643,8 +643,16 @@ border-radius: 8px;
         flex: 1;
         border: none;
         outline: none;
-        padding: 0 20px;
+        padding: 0 25px;
         font-size: 15px;
+    }
+
+    #home form button{
+      padding: 10px 10px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: transparent;
     }
 
     #blog .blog-heading h6{
@@ -741,11 +749,105 @@ border-radius: 8px;
     }
 
     .faq-sec h3{
-      font-size: 20px;
+      font-size: 15px;
     }
+    .accordion-content header .title{
+      font-size: 15px;
+      font-weight: 500;
+      color: #40405E;
+      font-family: 'Roboto';
+    }
+    .accordion-content .description{
+      height: 0;
+      font-size: 12px;
+      color: #333;
+      font-weight: 400;
+      padding: 0 15px;
+      transition: all 0.2s linear;
+      text-align: start;
+  }
+  
+  #faq .faq-sec{
+    background-color: #ececec;
+    width: 100%;
+    background-size: cover;
+    padding: 5px 5px;
+  }
+  
+  #faq{
+    background: #fff;
+    width: 100%;
+    margin-top: 10px;
+    height: 50vh;
+  }
+
+    
 
     
 
 
+
+  }
+
+  @media(max-width: 375px){
+
+    body{
+      width: 100%;
+    }
+    #home h2{
+
+      font-size: 24px;
+      text-align: center;
+    }
+    #home form {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      display:flex;
+      width: 80%;
+      margin-top: 40px;
+  }
+
+  #blog .blog-heading h6{
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .faq-sec h3{
+    font-size: 16px;
+  }
+
+
+
+  .accordion-content header .title{
+    font-size: 15px;
+    font-weight: 500;
+    color: #40405E;
+    font-family: 'Roboto';
+  }
+
+  .accordion-content .description{
+    height: 0;
+    font-size: 12px;
+    color: #333;
+    font-weight: 400;
+    padding: 0 15px;
+    transition: all 0.2s linear;
+    text-align: start;
+}
+
+#faq .faq-sec{
+  background-color: #ececec;
+  width: 100%;
+  background-size: cover;
+  padding: 5px 5px;
+}
+
+#faq{
+  background: #fff;
+  width: 100%;
+  margin-top: 10px;
+  height: 50vh;
+}
 
   }
