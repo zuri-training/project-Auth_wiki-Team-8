@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reset Password</title>
-    <link rel="stylesheet" href="css/forgot_password.css" />
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/edit_profile.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
@@ -29,15 +29,13 @@
             </li>
             <li class="nav-link"><a href="#">Open Source</a></li>
             <li class="nav-link">
-              <a href="/project-Auth_wiki-Team-8/frontend/contact.html"
-                >Contact</a
-              >
+              <a href="./contact.html">Contact</a>
             </li>
             <li class="nav-link">
-              <a href="#">Login</a>
+              <a href="./login.html">Login</a>
             </li>
             <li class="nav-link">
-              <a href="./registration.html">Register</a>
+              <a href="#"><button>Register</button></a>
             </li>
           </ul>
         </nav>
@@ -47,28 +45,53 @@
     <main>
       <div class="hero">
         <div class="hero-text">
-          <h3>Password reset</h3>
-          <p>Enter your email to request password reset</p>
+          <h3>Edit Profile</h3>
+          <p>Edit Your Profile</p>
         </div>
       </div>
 
       <section class="form-section">
         <form action="#">
-          <label for="email">Email</label>
+          <label for="fname">First Name</label>
           <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Jacob"
             required
           />
-
-          <input type="submit" value="Request password reset" />
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Zuri"
+            required
+          />
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Zuri004"
+            required
+          />
+          <label for="phone">Phone Number</label>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="+234"
+            required
+          />
+          <input type="submit" value="Save Changes" />
+            <a href="dashboard.html"><p class="home-link">Back to Home</p></a>
+          
         </form>
       </section>
     </main>
 
-    <footer>
+    <footer style="top: 1400px">
       <div class="footer-flex">
         <div class="footer-flex-left">
           <h2>Auth_Wiki</h2>

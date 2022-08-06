@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reset Password</title>
-    <link rel="stylesheet" href="css/forgot_password.css" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'librarys/style.css' %}" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
@@ -27,14 +28,16 @@
             <li class="nav-link">
               <a href="./about.html">About</a>
             </li>
-            <li class="nav-link"><a href="#">Open Source</a></li>
+            <li class="nav-link">
+              <a href="#"><button>Open Source</button></a>
+            </li>
             <li class="nav-link">
               <a href="/project-Auth_wiki-Team-8/frontend/contact.html"
                 >Contact</a
               >
             </li>
             <li class="nav-link">
-              <a href="#">Login</a>
+              <a href="./login.html">Login</a>
             </li>
             <li class="nav-link">
               <a href="./registration.html">Register</a>
@@ -47,27 +50,15 @@
     <main>
       <div class="hero">
         <div class="hero-text">
-          <h3>Password reset</h3>
-          <p>Enter your email to request password reset</p>
+          <h3>Code Title Goes in Here</h3>
+          <p>Small description about the code can be placed here</p>
         </div>
       </div>
-
-      <section class="form-section">
-        <form action="#">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-
-          <input type="submit" value="Request password reset" />
-        </form>
-      </section>
+      {% for message in messages %}
+        <p>message</p>
+      {% endfor %}
     </main>
-
+    {% block content %}{% endblock %}
     <footer>
       <div class="footer-flex">
         <div class="footer-flex-left">

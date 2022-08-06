@@ -1,5 +1,3 @@
-import mimetypes
-import os
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import Q
@@ -12,7 +10,7 @@ from django.urls import reverse
 # Create your views here.
 class LibraryHomeView(ListView):
     model = LibraryPage
-    template_name = "librarys/library_page.html"
+    template_name = "library_page.html"
 
 class LibraryDetailView(DetailView):
     model = LibraryPage
