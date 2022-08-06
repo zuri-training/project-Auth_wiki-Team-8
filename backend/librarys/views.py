@@ -35,4 +35,3 @@ def LikeView(request, pk):
     like_library = get_object_or_404(CommentReaction, id=request.POST.get('post_id'))
     like_library.like.add(request.user)
     return HttpResponseRedirect(reverse('post_detail', args=[str(pk)]))
-
