@@ -133,8 +133,6 @@ header nav{
 } */
 
 .hero {
-  position: relative;
-  top: 115px;
   background-image: url('../images/header_bg.svg');
   height: 413px;
   width: 100%;
