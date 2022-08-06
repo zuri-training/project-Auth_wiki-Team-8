@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <title>Auth_Wiki</title>
+    {% block styles %}{% endblock %}
+    {% if title %}
+      <title>Auth_Wiki - {{ title }}</title>
+    {% else %}
+      <title>Auth_Wiki</title>
+    {% endif %}
   </head>
   <body>
     <header>

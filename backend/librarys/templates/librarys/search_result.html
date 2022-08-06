@@ -1,5 +1,16 @@
-{% extends 'librarys/base.html' %}
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'librarys/search_style.css' %}">
+{% endblock styles %}
 {% block content %}
-    <h1>Search Page</h1>
-    <p>{{ found }}</p>
+    <div id="sub-header">
+
+    </div>
+    <h3>filter: found {{ found }} search results</h3>
+    {% for library in libraries %}
+        <div id="library-div">
+            <h1 id="library-name">{{ library.name }}</h1>
+        </div>
+    {% endfor %}
 {% endblock content %}
