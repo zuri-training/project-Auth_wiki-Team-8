@@ -28,3 +28,5 @@ function removeOpen(index1){
         }
     })
 }
+
+//script//
