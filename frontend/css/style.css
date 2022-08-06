@@ -638,6 +638,7 @@ border-radius: 8px;
         width: 70%;
         margin-top: 40px;
     }
+    /*home*/
 
     #home form input{
         flex: 1;
@@ -847,7 +848,7 @@ border-radius: 8px;
   background: #fff;
   width: 100%;
   margin-top: 10px;
-  height: 50vh;
+  height: 55vh;
 }
 
   }
