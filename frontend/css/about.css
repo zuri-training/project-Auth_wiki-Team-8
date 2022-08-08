@@ -12,7 +12,7 @@ main{
     width: 100vw;
 }
 
-/* header nav{
+header nav{
     background: #F4F4F4;;
     height: 80px;
     width: 100%;
@@ -119,7 +119,7 @@ header nav #check{
     header nav #check:checked ~ ul{
       left: 0;
     }
-} */
+}
 
 
 #heading-ctn{
@@ -322,11 +322,11 @@ header nav #check{
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        /* margin: 0 150px */
+        margin: 0 auto;
     }
 
     #headline-cont{
-        margin: 0;
+        margin: auto 80px;
     }
 
     #headline{
@@ -340,22 +340,142 @@ header nav #check{
         margin-bottom: 15px;
     }
 
-    #img-second-ctn-img{
-        width: 200px
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     #form-ctn input{
         padding: 24px 80px 24px 25px;
     }
+
+    #form-ctn button{
+        padding: auto;
+        margin: auto;
+    }
+
+    #form-ctn p{
+        text-align: center;
+    }
     
     .stats{
-        padding: 40px 60px;
+        padding: 40px 40px;
+    }
+
+    #stats-ctn{
+        padding: 40px;
+        margin: 60px auto;
+    }
+    #stats-ctn h5{
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    .small{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px){
+    #heading-ctn{
+        padding: 100px;
+
+    }
+
+    #heading-elem{
+        font-size: 32px;
+    }
+
+    #second-ctn{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px auto;
+    }
+
+    #headline-cont{
+        margin: auto 80px;
+    }
+
+    #headline{
+        margin-right: 40px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+
+    #subheadline{
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 60px 30px 20px 30px;
+    }
+
+    #form-ctn h3{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #form-ctn input{
+        padding: 24px 60px 24px 25px;
+    }
+
+    #form-ctn button{
+        padding: auto;
+        margin: auto;
+    }
+
+    #form-ctn p{
+        visibility: hidden;
+    }
+    
+    .stats{
+        padding: 60px 100px;
+    }
+
+    #stats-ctn{
+        padding: 40px 80px;
+        margin: 40px 10px;
+        flex-direction: column;
+        
     }
 
     #stats-ctn h5{
         line-height: 30px;
+        font-size: 57.33px;
+    }
+
+    .small{
+        font-size: 23.33px;
     }
 }
+
+
+/* FOOTER */
 
 .footer{
     background-color: #00205C;
@@ -473,4 +593,15 @@ header nav #check{
   }
   
 
-  
+/*Footer responsive*/
+@media(max-width: 767px){
+    footer .container .row .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    footer .container .row .footer-col{
+      width: 100%;
+  }
+  }
