@@ -20,14 +20,16 @@ class LibraryPage(models.Model):
     def __str__(self):
         return str(self.name) + '['+str(self.author) + ']'
 
+
 class CommentReaction(models.Model):
     comment = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     like = models.IntegerField()
     dislike = models.IntegerField()
     library = models.ForeignKey(
-        get_user_model(), on_delete=models.CASCADE
+        LibraryPage, on_delete=models.CASCADE
     )
 
     def __str__(self):
-        return str(self.like) + '[' +str(self.dislike) + ']'
-        
+        return str(self.like) + '[' + str(self.dislike) + ']'
