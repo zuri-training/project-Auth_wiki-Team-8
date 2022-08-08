@@ -8,8 +8,9 @@ from django.contrib.auth import get_user_model
 class LibraryPage(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
-    library_file = models.FileField()
-    example_file = models.FileField()
+    library_file = models.FileField(upload_to='libraries')
+    example_file = models.FileField(upload_to='examples')
+    library_version = models.CharField(max_length=50)
     library_language = models.CharField(max_length=100)
     example_instruction = models.TextField()
     github_link = models.CharField(max_length=200)

@@ -1,16 +1,27 @@
 {% extends 'base_layout.html' %}
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'librarys/search_style.css' %}">
+<link rel="stylesheet" href="{% static 'librarys/styles/search_style.css' %}">
 {% endblock styles %}
 {% block content %}
-    <div id="sub-header">
-
-    </div>
-    <h3>filter: found {{ found }} search results</h3>
-    {% for library in libraries %}
-        <div id="library-div">
-            <h1 id="library-name">{{ library.name }}</h1>
+        <div id="sub-header">
+            
         </div>
-    {% endfor %}
+        {% if found > 1 %}
+            <h3>filter: found {{ found }} search results</h3>
+        {% else %}
+            <h3>filter: found {{ found }} search result</h3>
+        {% endif %}
+        {% for library in libraries %}
+            <a href="search_result/{{library.id}}">
+                <div id="library-div">
+                    <h2 id="library-name">{{ library.name }}</h2>
+                    <p id="version">{{ library.library_version }}</p>
+                </div>
+            </a>
+        {% endfor %}
+        <div id="pagination">
+            <a href="" id="previous">Previous</a>
+            <a href="" id="next">Next</a>
+        </div>
 {% endblock content %}

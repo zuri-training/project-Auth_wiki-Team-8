@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libraries</title>
-</head>
-<body>
-    <h1>Library page</h1>
-</body>
-</html>
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'librarys/styles/library_style.css' %}">
+{% endblock styles %}
+{% block content %}
+        <div id="description-div">
+            <h3 id="description">Description:</h3>
+            <p id="described">{{ library.description }}</p>
+        </div>
+{% endblock content %}
