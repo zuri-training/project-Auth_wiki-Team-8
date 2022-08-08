@@ -1,12 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libraries</title>
-</head>
-<body>
-    <h1>Library page</h1>
-</body>
-</html>
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'librarys/styles/library_style.css' %}">
+    <!--
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.6.0/styles/xcode.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.6.0/styles/xt256.css">
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.6.0/styles/rainbow.css">
+{% endblock styles %}
+{% block content %}
+    <div id="sub-header">
+        <h1 id="library-name">{{ library.name }}</h1>
+        <p id="library-version">{{ library.library_version }}</p>
+    </div>
+    <div id="main">
+        <div id="sub-main">
+            <div id="description-div">
+                <h3 id="description">Description</h3>
+                <p id="described">{{ library.description }}</p>
+            </div>
+            <table id="detail">
+                <tbody>
+                    <tr class="detail-tr">
+                        <th class="detail-th">Author</th>
+                        <td class="detail-td">{{ library.author }}</td>
+                    </tr>
+                    <tr class="detail-tr">
+                        <th class="detail-th">GitHub Link</th>
+                        <td class="detail-td"><a href="{{ library.github_link }}">{{ library.github_link }}</a></td>
+                    </tr>
+                    <tr class="detail-tr">
+                        <th class="detail-th">Version</th>
+                        <td class="detail-td">{{ library.library_version }}</td>
+                    </tr>
+                    <tr class="detail-tr">
+                        <th class="detail-th">Language</th>
+                        <td class="detail-td">{{ library.library_language }}</td>
+                    </tr>
+                    <tr class="detail-tr">
+                        <th class="detail-th">Date Uploaded</th>
+                        <td class="detail-td">{{ library.created_date.date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="example-div">
+                <h3 id="example">Example</h3>
+                <pre id="intructions">{{ library.example_instruction }}</pre>
+            </div>
+            <div id="code-div">
+                <h3 id="example">Code Example</h3>
+                <pre id="intructions"><code>{{ library.example_file }}</code></pre>
+            </div>
+            <div id="reaction">
+                <div id="react">
+                    <button class="react-btn" id="like">
+                        <div id="react-div" class="react-div">
+                            <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
+                            <p id="like-dislike">Like</p>
+                        </div>
+                    </button>
+                    <button class="react-btn">
+                        <div id="react-div" class="react-div">
+                            <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
+                            <p id="like-dislike">Dislike</p>
+                        </div>
+                    </button>
+                </div>
+                <button class="react-btn">
+                    <div id="comment-div" class="react-div">
+                        <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
+                        <p id="comment">Comment</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div id="download-comment">
+            <button id="download-btn">
+                <div id="download-div">
+                    <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
+                    <p id="download">Download</p>
+                </div>
+            </button>
+            <div id="comments-reactions">
+                
+
+            </div>
+        </div>
+    </div>
+    {% block scripts %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/src/highlightjs-line-numbers.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+            // hljs.initLineNumbersOnLoad();
+        </script>
+    {% endblock scripts %}
+{% endblock content %}
