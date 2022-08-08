@@ -61,6 +61,8 @@ class LibrarySearchPage(View):
 class LibraryInfo(View):
     def get(self, request, pk):
         library = LibraryPage.objects.get(id=pk)
+        library.example_file = open(library.example_file.path, 'r')
+        library.example_file = library.example_file.read()
         return render(request, 'librarys/library_page.html', {'library': library})
 
 
