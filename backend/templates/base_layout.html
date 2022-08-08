@@ -10,7 +10,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <title>Auth_Wiki</title>
+    {% block styles %}{% endblock %}
+    {% if title %}
+      <title>Auth_Wiki - {{ title }}</title>
+    {% else %}
+      <title>Auth_Wiki</title>
+    {% endif %}
   </head>
   <body>
     <header>
@@ -93,5 +98,6 @@
         </div>
       </footer>
     <script src="{% static 'js/script.js' %}"></script>
+    {% block scripts %}{% endblock %}
   </body>
 </html>
