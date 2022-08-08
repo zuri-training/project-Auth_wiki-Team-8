@@ -76,12 +76,14 @@
             </div>
         </div>
         <div id="download-comment">
-            <button id="download-btn">
-                <div id="download-div">
-                    <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
-                    <p id="download">Download</p>
-                </div>
-            </button>
+            <a download href="{{ library.library_file.url }}" id="file-download" target="_blank">
+                <button id="download-btn">
+                    <div id="download-div">
+                        <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
+                        <p id="download">Download</p>
+                    </div>
+                </button>
+            </a>
             <div id="comments-reactions">
                 
 
