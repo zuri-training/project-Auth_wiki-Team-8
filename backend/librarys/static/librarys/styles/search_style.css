@@ -1,0 +1,38 @@
+#sub-header {
+    background: url(../images/image.png) no-repeat;
+    background-color: hsla(219, 100%, 18%, 0.75);
+    height: 200px;
+}
+
+h3 {
+    margin: 80px 72px 50px 80px;
+}
+
+#library-div {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    width: 78%;
+    height: 100px;
+    padding-left: 5%;
+
+    /* material-theme/sys/light/on-error */
+
+    background: #FFFFFF;
+    /* material-theme/sys/light/inverse-primary */
+
+    border: 1px solid #B3C5FF;
+    border-radius: 16px;
+}
+
+#pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    width: 77.6%;
+    color: black;
+}
