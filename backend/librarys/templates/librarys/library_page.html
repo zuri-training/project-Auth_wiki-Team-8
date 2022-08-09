@@ -14,14 +14,18 @@
         <h1 id="library-name">{{ library.name }}</h1>
         <p id="library-version">{{ library.library_version }}</p>
         {% if not request.user.is_authenticated %}
-            <h3 id="login"><a href="{% url 'accounts:login' %}" style="color: white; font-style: italic;">Login</a> to have full access!..</h3>
+            <h3 id="login"><a href="{% url 'accounts:login' %}" style="color: white; font-style: italic; text-decoration-line: underline;">Login</a> to have full access!..</h3>
         {% endif %}
     </div>
     <div id="main">
         <div id="sub-main">
             <div id="description-div">
                 <h3 id="description">Description</h3>
-                <p id="described">{{ library.description }}</p>
+                {% if request.user.is_authenticated %}
+                    <p id="described">{{ library.description }}</p>
+                {% else %}
+                    <p id="described">{{ library1.description }}...</p>
+                {% endif %}
             </div>
             <table id="detail">
                 <tbody>
@@ -145,15 +149,27 @@
             {% endif %}
             <div id="comments-reactions">
                 <p id="p-com">Comments:</p>
-                {% for comment in comments %}
-                    <div class="comment-div">
-                        <div class="info">
-                            <h3 class="author">{{ comment.author }}</h3>
-                            <small class="date">{{ comment.date_posted }}</small>
+                {% if request.user.is_authenticated %}
+                    {% for comment in comments %}
+                        <div class="comment-div">
+                            <div class="info">
+                                <h3 class="author">{{ comment.author }}</h3>
+                                <small class="date">{{ comment.date_posted }}</small>
+                            </div>
+                            <p class="comment">{{ comment.comment }}</p>
                         </div>
-                        <p class="comment">{{ comment.comment }}</p>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    {% for comment in comments1 %}
+                        <div class="comment-div">
+                            <div class="info">
+                                <h3 class="author">{{ comment.author }}</h3>
+                                <small class="date">{{ comment.date_posted }}</small>
+                            </div>
+                            <p class="comment">{{ comment.comment }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
                 {% if request.user.is_authenticated %}
                     <section name="comment-section" id="comment-section">
                         <form action="" method="post">{% csrf_token %}
