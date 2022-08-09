@@ -51,14 +51,14 @@ class LibrarySearchPage(View):
             libraries_per_page = Paginator(libraries, page_num)
             try:
                 libraries = libraries_per_page.page(page)
-            except PageNotAnInteger:
-                libraries = libraries_per_page.page(page_num)
             except EmptyPage:
+                libraries = libraries_per_page.page(page_num)
+            except PageNotAnInteger:
                 libraries = libraries_per_page.page(
                     libraries_per_page.num_pages)
-            return render(request, 'librarys/search_result.html', {'libraries': libraries, 'found': found, 'title': 'Search results'})
+            return render(request, 'librarys/search_result.html', {'libraries': libraries, 'found': found, 'title': 'Search results', 'page': libraries_per_page})
         else:
-            return render(request, 'librarys/index.html')
+            return redirect('/')
 
 
 class LibraryInfo(View):

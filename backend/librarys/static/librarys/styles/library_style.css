@@ -3,8 +3,7 @@
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    background: url(../images/image.png) no-repeat;
-    background-color: hsla(219, 100%, 18%, 0.75);
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
     height: 200px;
     color: #FFFFFF;
     text-align: center;

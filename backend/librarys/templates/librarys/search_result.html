@@ -5,7 +5,12 @@
 {% endblock styles %}
 {% block content %}
         <div id="sub-header">
-            
+            <section id="home">
+                    <form method="get" action="/library" enctype="multipart/form-data">
+                        <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
+                        <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
+                    </form>
+            </section>
         </div>
         {% if found > 1 %}
             <h3>filter: found {{ found }} search results</h3>
@@ -21,7 +26,18 @@
             </a>
         {% endfor %}
         <div id="pagination">
-            <a href="" id="previous">Previous</a>
-            <a href="" id="next">Next</a>
+            {% if page.has_previous and page.has_next %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next">Next</a>
+            {% elif  page.has_previous %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
+            {% elif  page.has_next %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next">Next</a>
+            {% else %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
+            {% endif %}
         </div>
 {% endblock content %}

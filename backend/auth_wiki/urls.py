@@ -13,7 +13,7 @@ urlpatterns = [
     path('about/', views.about),
     path('faq/', views.faq),
     path('contact-us/', views.contact_us),
-    path('', views.home),
+    path('', views.home, name='home'),
     # path('', article_views.article_list, name="home"),
 ]
 
