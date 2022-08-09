@@ -13,6 +13,9 @@
     <div id="sub-header">
         <h1 id="library-name">{{ library.name }}</h1>
         <p id="library-version">{{ library.library_version }}</p>
+        {% if not request.user.is_authenticated %}
+            <h3 id="login"><a href="{% url 'accounts:login' %}" style="color: white; font-style: italic;">Login</a> to have full access!..</h3>
+        {% endif %}
     </div>
     <div id="main">
         <div id="sub-main">
@@ -57,7 +60,7 @@
             {% if request.user.is_authenticated %}
                 <div id="reaction">
                     <div id="react">
-                        <form action="{% url 'like' library.pk %}" method="post">{% csrf_token %}
+                        <form action="{% url 'librarys:like' library.pk %}" method="post">{% csrf_token %}
                             <button class="react-btn" id="like">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
@@ -66,7 +69,7 @@
                                 </div>
                             </button>
                         </form>
-                        <form action="{% url 'dislike' library.pk %}" method="post">{% csrf_token %}
+                        <form action="{% url 'librarys:dislike' library.pk %}" method="post">{% csrf_token %}
                             <button class="react-btn" name="dislike">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
@@ -89,7 +92,7 @@
             {% else %}
                 <div id="reaction" style="pointer-events: none; opacity: 0.4;">
                     <div id="react">
-                        <form action="{% url 'like' library.pk %}" method="post">{% csrf_token %}
+                        <form action="{% url 'librarys:like' library.pk %}" method="post">{% csrf_token %}
                             <button class="react-btn" id="like">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
@@ -98,7 +101,7 @@
                                 </div>
                             </button>
                         </form>
-                        <form action="{% url 'dislike' library.pk %}" method="post">{% csrf_token %}
+                        <form action="{% url 'librarys:dislike' library.pk %}" method="post">{% csrf_token %}
                             <button class="react-btn" name="dislike">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
