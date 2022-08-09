@@ -58,24 +58,26 @@
                         <div id="react-div" class="react-div">
                             <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
                             <p id="like-dislike">Like</p>
-                            <h3 class="like-dislike">{{ likes }}</h3>
+                            <h3 class="like-dislike">{{ library.like }}</h3>
                         </div>
                     </button>
                     <button class="react-btn">
                         <div id="react-div" class="react-div">
                             <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
                             <p id="like-dislike">Dislike</p>
-                            <h3 class="like-dislike">{{ dislikes }}</h3>
+                            <h3 class="like-dislike">{{ library.dislike }}</h3>
                         </div>
                     </button>
                 </div>
-                <button class="react-btn">
-                    <div id="comment-div" class="react-div">
-                        <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
-                        <p id="comment">Comment</p>
-                        <h3 class="like-dislike">{{ comments.count }}</h3>
-                    </div>
-                </button>
+                <label for="write-comment">
+                    <button class="react-btn">
+                        <div id="comment-div" class="react-div">
+                            <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
+                            <p id="comment">Comment</p>
+                            <h3 class="like-dislike">{{ comments.count }}</h3>
+                        </div>
+                    </button>
+                </label>
             </div>
         </div>
         <div id="download-comment">
@@ -98,6 +100,12 @@
                         <p class="comment">{{ comment.comment }}</p>
                     </div>
                 {% endfor %}
+                <section name="comment-section" id="comment-section">
+                    <form action="" method="post">{% csrf_token %}
+                        <textarea name="comment" id="write-comment" cols="30" rows="10" maxlength="150" placeholder="write your comment"></textarea>
+                        <button id="comment-submit">Comment</button>
+                    </form>
+                </section>
             </div>
         </div>
     </div>

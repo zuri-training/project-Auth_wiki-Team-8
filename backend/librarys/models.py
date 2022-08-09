@@ -15,6 +15,8 @@ class LibraryPage(models.Model):
     example_instruction = models.TextField()
     github_link = models.CharField(max_length=200)
     author = models.CharField(max_length=250)
+    like = models.IntegerField(default=0)
+    dislike = models.IntegerField(default=0)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -25,11 +27,9 @@ class CommentReaction(models.Model):
     comment = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    like = models.IntegerField(default=0)
-    dislike = models.IntegerField(default=0)
     library = models.ForeignKey(
         LibraryPage, on_delete=models.CASCADE
     )
 
     def __str__(self):
-        return str(self.like) + '[' + str(self.dislike) + ']'
+        return str(self.author)
