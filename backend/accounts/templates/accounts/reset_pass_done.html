@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %} {% block content %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/email_sent.css' %}">
+{% endblock styles %}
+<main>
+    <div id="heading-ctn">
+        <h1>Email Confirmation</h1>
+    </div>
+
+    <!-- <p>Login to your mail to check your confimation link</p> -->
+    <p>A link has been to your email inbox, click on the link and it will redirect
+        you to the reset password page</p>
+</main>
+{% endblock %}

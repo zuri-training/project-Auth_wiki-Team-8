@@ -1,16 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>My Edit Profile Page</h1>
-    <form class="site-form" action="/accounts/profile/" method="post">
-      {% csrf_token %} {{form}}
-      <input type="submit" value="Update Profile" />
+{% extends 'base_layout.html' %} 
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/edit_profile.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<main>
+  <div class="hero">
+    <div class="hero-text">
+      <h3>Edit Profile</h3>
+      <p>Edit Your Profile</p>
+    </div>
+  </div>
+  <section class="form-section">
+    <form action="/accounts/profile/" method="post">
+      {% csrf_token %}
+      <label for="fname">First Name</label>
+      <input
+        type="text"
+        name="fname"
+        id="fname"
+        placeholder="Jacob"
+        required
+      />
+      <label for="lname">Last Name</label>
+      <input
+        type="text"
+        name="lname"
+        id="lname"
+        placeholder="Zuri"
+        required
+      />
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Zuri004"
+        required
+      />
+      <label for="phone">Phone Number</label>
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        placeholder="+234"
+        required
+      />
+      <input type="submit" value="Save Changes" />
+        <a href="./dashboard.html"><p class="home-link">Back to profile</p></a>
+      
     </form>
-  </body>
-</html>
+  </section>
+</main>
+{% endblock %}

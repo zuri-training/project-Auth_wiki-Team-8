@@ -1,0 +1,352 @@
+
+#heading-ctn{
+    color: hsla(0, 0%, 100%, 1);
+    text-align: center;
+    padding: 150px;
+    background-image: url(../images/hero\ pic.png);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+#heading-elem{
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 57.33px;
+}
+
+#sub-head-elem{
+    font-family: 'Inter', sans-serif;
+}
+
+#second-ctn{
+    display: flex;
+    margin-left: 80px;
+    align-items: center;
+}
+
+#headline-cont{
+    margin-right: 250px;
+}
+
+#headline{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 57.33px;
+    color: #333;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+#subheadline{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 19.2px;
+    line-height: 28.8px;
+}
+
+#img-second-ctn{
+    margin: 50px 100px 50px 170px;
+}
+
+#form-ctn{
+    background-image: url(../images/Group\ 161.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 50px;
+}
+
+#form-ctn h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 57.33px;
+    color: hsla(0, 0%, 100%, 1);
+    margin-bottom: 15px;
+}
+
+#form-ctn input{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    border: 1px solid #ffff;
+    background-color: transparent;
+    padding: 24px 300px 24px 25px;
+    border-radius: 8px;
+    margin-right: 10px;
+    color: white;
+}
+
+#form-ctn button{
+    padding: 24px 62px;
+    color: hsla(0, 0%, 20%, 1);
+    border-radius: 8px;
+    background-color: hsla(0, 0%, 100%, 1);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 19.2px;
+    border: 1px solid #fff;
+}
+
+#form-ctn button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 12px;
+}
+
+#form-ctn p{
+    color:hsla(0, 0%, 100%, 1);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 19.2px;
+    margin-top: 10px;
+}
+
+#stats-ctn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    margin: 80px auto;
+}
+
+.stats{
+    border-radius: 16px;
+    background-color: #DAE1FF;
+    padding: 40px 60px;
+}
+
+#stats-ctn h5{
+    font-family: 'Inter', sans-serif;
+    font-family: 700;
+    font-size: 57.33px;
+    text-align: center;
+    color: #00205c;
+}
+
+.small{
+    font-size: 23.33px;
+}
+
+/* Responsiveness for main */
+
+@media (max-width: 1280px){
+    #headline-cont{
+        margin-right: 20px;
+    }
+
+    #form-ctn input{
+        padding: 24px 200px 24px 25px;
+    }
+
+    #stats-ctn h5{
+        font-size: 40px;
+    }
+
+    #img-second-ctn{
+        margin: 50px 50px 50px 80px;
+    }
+}
+
+@media (max-width: 960px){  
+    #second-ctn{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #headline-cont{
+        margin: auto 150px;
+    }
+
+    #headline{
+        margin-right: 40px;
+        text-align: center;
+        line-height: 70px;
+    }
+
+    #subheadline{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px
+    }
+
+    #form-ctn input{
+        padding: 24px 80px 24px 25px;
+    }
+    
+    .stats{
+        padding: 40px 60px;
+    }
+
+    #stats-ctn h5{
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 720px){  
+    #second-ctn{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #headline-cont{
+        margin: auto 80px;
+    }
+
+    #headline{
+        margin-right: 40px;
+        text-align: center;
+        line-height: 70px;
+    }
+
+    #subheadline{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #form-ctn input{
+        padding: 24px 80px 24px 25px;
+    }
+
+    #form-ctn button{
+        padding: auto;
+        margin: auto;
+    }
+
+    #form-ctn p{
+        text-align: center;
+    }
+    
+    .stats{
+        padding: 40px 40px;
+    }
+
+    #stats-ctn{
+        padding: 40px;
+        margin: 60px auto;
+    }
+    #stats-ctn h5{
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    .small{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px){
+    #heading-ctn{
+        padding: 100px;
+
+    }
+
+    #heading-elem{
+        font-size: 32px;
+    }
+
+    #second-ctn{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px auto;
+    }
+
+    #headline-cont{
+        margin: auto 80px;
+    }
+
+    #headline{
+        margin-right: 40px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+
+    #subheadline{
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 60px 30px 20px 30px;
+    }
+
+    #form-ctn h3{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #form-ctn input{
+        padding: 24px 60px 24px 25px;
+    }
+
+    #form-ctn button{
+        padding: auto;
+        margin: auto;
+    }
+
+    #form-ctn p{
+        visibility: hidden;
+    }
+    
+    .stats{
+        padding: 60px 100px;
+    }
+
+    #stats-ctn{
+        padding: 40px 80px;
+        margin: 40px 10px;
+        flex-direction: column;
+        
+    }
+
+    #stats-ctn h5{
+        line-height: 30px;
+        font-size: 57.33px;
+    }
+
+    .small{
+        font-size: 23.33px;
+    }
+}
