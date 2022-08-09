@@ -5,22 +5,55 @@
 #home {
     height: 100%;
     padding: 70px 0;
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.82)60%,rgba(0, 32, 92, 0.82)60%), url("../images/image\ 1.png");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 #home .faq-form {
     width: 40%;
     position: relative;
     max-width: 400px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    display:flex;
+    margin-top: 40px;
 }
 
 #home .faq-form input {
     padding: 10px 20px;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
 }
 
 #home .faq-form button {
     padding: 15px 10px;
     position: absolute;
     right: 5%;
+    color: black;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
 }
 
 #faq_page {
