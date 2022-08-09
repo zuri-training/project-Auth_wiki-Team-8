@@ -3,8 +3,6 @@ from django.utils import timezone
 from django.contrib.auth import get_user_model
 
 
-# Create your models here.
-
 class LibraryPage(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()

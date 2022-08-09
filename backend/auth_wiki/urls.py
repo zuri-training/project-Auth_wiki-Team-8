@@ -15,10 +15,6 @@ urlpatterns = [
     path('faq/', views.faq),
     path('contact-us/', views.contact_us),
     path('', views.home, name='home'),
-    path('dislike/<pk>', library_views.dislikes, name='dislike'),
-    path('like/<pk>', library_views.likes, name='like'),
-    path('search_result/<pk>', library_views.LibraryInfo.as_view(),
-         name='search_result'),
     # path('', article_views.article_list, name="home"),
 ]
 
