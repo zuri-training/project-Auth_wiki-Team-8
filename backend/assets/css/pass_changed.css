@@ -1,0 +1,137 @@
+
+.password {
+    background-image: url('../images/header_bg.svg');
+    height: 413px;
+    width: 100%;
+    color: #d9d9d9;
+    box-shadow: inset 2000px 0 0 0 rgba(0, 32, 92, 0.5);
+    margin-bottom: 90px;
+  }
+  
+  .password-text {
+     width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+  }
+  
+  .password-text h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 57.33px;
+    line-height: 69px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .password-text p {
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .password-text h3 {
+      font-size: 40px;
+      line-height: 45px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+  /************************ FORM *************************/
+  form {
+    margin: auto;
+    width: min(638px, 90%);
+    padding-bottom: 103px;
+    margin-top: 100px;
+  }
+  .form-section {
+    position: relative;
+    width: 100%;
+    display: block;
+    text-align: center;
+    top: 12px;
+    width: 100%;
+  }
+  
+  .feedback-input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #000000;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  form input {
+    height: 80px;
+  }
+  
+  .feedback-input:focus {
+    border: 2px solid #00205c;
+  }
+  
+  .feedback-input:focus-within {
+    border: 3px solid #00205c;
+    background-color: rgba(128, 128, 128, 0.21);
+  }
+  
+  textarea {
+    height: 315px;
+    line-height: 150%;
+    resize: vertical;
+  }
+  
+  [type='submit'] {
+    width: 100%;
+    background: #00205c;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+  }
+  
+  [type='submit']:hover {
+    background: #d9d9d9;
+  }
+  
+  
+  label{
+    text-align: left;
+    float: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.2px;
+    line-height: 23px;
+  }
