@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %} {% block content %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/forgot_pass.css' %}">
+{% endblock styles %}
+<main>
+    <div class="hero">
+      <div class="hero-text">
+        <h3>Password reset</h3>
+        <p>Enter your email to request password reset</p>
+      </div>
+    </div>
+
+    <section class="form-section">
+      <form action="#">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <input type="submit" value="Request password reset" />
+      </form>
+    </section>
+  </main>
+  {% endblock %}
