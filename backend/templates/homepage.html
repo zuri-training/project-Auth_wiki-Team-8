@@ -23,38 +23,20 @@
         </div>
 
         <div class="blog-container">
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="{% static 'images/image 3.png' %}" alt="">
-                </div>
+            {% for library in libraries1 %}
+                <a href="{% url 'librarys:search_result' library.id %}">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="{% static 'images/image 3.png' %}" alt="">
+                        </div>
 
-                <div class="blog-text">
-                    <a href="#" class="blog-title">Facebook</a>
-                    <p>Metus aliquet sapien quam amet risus egestas netus ut vest ibul um.Metus aliquet sapien quam amet risus egestas netus ut </p>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="{% static 'images/image 4 (1).png' %}" alt="">
-                </div>
-
-                <div class="blog-text">
-                    <a href="#" class="blog-title">Google</a>
-                    <p>Metus aliquet sapien quam amet risus egestas netus ut vest ibul um.Metus aliquet sapien quam amet risus egestas netus ut </p>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="{% static 'images/image 7.png' %}" alt="">
-                </div>
-
-                <div class="blog-text">
-                    <a href="#" class="blog-title">Zuri</a>
-                    <p>Metus aliquet sapien quam amet risus egestas netus ut vest ibul um.Metus aliquet sapien quam amet risus egestas netus ut </p>
-                </div>
-            </div>
+                        <div class="blog-text">
+                            <p>{{ library.name }}</p>
+                            <p>{{ library.description }}</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
         </div>
     </section>
 
@@ -73,19 +55,18 @@
 
 
     <section id="container">
-        <h6>Trending codes</h6>
-    <div class="row">
-        <div class="card-01"></div>
-        <div class="card-01"></div>
-    </div>
-    <div class="row">
-        <div class="card-02"></div>
-        <div class="card-02"></div>
-    </div>
-    <div class="row">
-        <div class="card-03"></div>
-        <div class="card-03"></div>
-    </div>
+        <h6>Trending libraries</h6>
+        {% for library in libraries %}
+            <a href="{% url 'librarys:search_result' library.id %}">
+                <div class="row">
+                    <div class="card-01">
+                        <h3 id="library-name">{{ library.name }}</h3>
+                        <p id="version">{{ library.library_version }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+        <a href="library/?q=a" id="see-more">See More..</a>
     </section>
     
 
