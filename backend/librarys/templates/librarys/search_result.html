@@ -18,7 +18,7 @@
             <h3>filter: found {{ found }} search result</h3>
         {% endif %}
         {% for library in libraries %}
-            <a href="search_result/{{library.id}}">
+            <a href="{% url 'like' library.id %}">
                 <div id="library-div">
                     <h2 id="library-name">{{ library.name }}</h2>
                     <p id="version">{{ library.library_version }}</p>

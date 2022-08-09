@@ -1,4 +1,3 @@
-from ast import Import
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import Q
@@ -43,7 +42,6 @@ class LibrarySearchPage(View):
     def get(self, request, *args, **kwargs):
         if 'q' in request.GET:
             keyword = request.GET.get('q', '')
-            # libraries = LibraryPage.objects.filter(name__contains=keyword)
             libraries = LibraryPage.objects.filter(
                 Q(name__icontains=keyword) |
                 Q(description__icontains=keyword) |
@@ -95,6 +93,22 @@ class LibraryInfo(View):
             comment=request.POST['comment'], library=library, author=request.user)
         comment.save()
         return HttpResponseRedirect(request.path_info)
+
+
+def dislikes(request, pk):
+    if request.method == 'POST':
+        library = LibraryPage.objects.get(id=pk)
+        library.dislike += 1
+        library.save()
+    return HttpResponseRedirect(reverse('search_result', args=[str(pk)]))
+
+
+def likes(request, pk):
+    if request.method == 'POST':
+        library = LibraryPage.objects.get(id=pk)
+        library.like += 1
+        library.save()
+    return HttpResponseRedirect(reverse('search_result', args=[str(pk)]))
 
 
 # class LibraryDetailView(DetailView):
