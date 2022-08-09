@@ -58,12 +58,14 @@
                         <div id="react-div" class="react-div">
                             <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
                             <p id="like-dislike">Like</p>
+                            <h3 class="like-dislike">{{ likes }}</h3>
                         </div>
                     </button>
                     <button class="react-btn">
                         <div id="react-div" class="react-div">
                             <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
                             <p id="like-dislike">Dislike</p>
+                            <h3 class="like-dislike">{{ dislikes }}</h3>
                         </div>
                     </button>
                 </div>
@@ -71,6 +73,7 @@
                     <div id="comment-div" class="react-div">
                         <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
                         <p id="comment">Comment</p>
+                        <h3 class="like-dislike">{{ comments.count }}</h3>
                     </div>
                 </button>
             </div>
@@ -85,8 +88,16 @@
                 </button>
             </a>
             <div id="comments-reactions">
-                
-
+                <p id="p-com">Comments:</p>
+                {% for comment in comments %}
+                    <div class="comment-div">
+                        <div class="info">
+                            <h3 class="author">{{ comment.author }}</h3>
+                            <small class="date">{{ comment.date_posted }}</small>
+                        </div>
+                        <p class="comment">{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
