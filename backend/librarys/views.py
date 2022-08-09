@@ -7,6 +7,24 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 
 
+def solution(message, K):
+    print(len(message))
+    if len(message) < K:
+        return message
+    elif len(message) == K and message[-1] != ' ':
+        return message[0: K]
+    elif len(message) > K and message[K - 1] == ' ':
+        return message[0: K - 1]
+    elif message[K] == ' ':
+        return message[0: K]
+    else:
+        i = K - 1
+        while i < K:
+            if message[i] == ' ':
+                return message[0: i]
+            i -= 1
+
+
 class LibrarySearchPage(View):
     def get(self, request, *args, **kwargs):
         if 'q' in request.GET:
@@ -49,13 +67,21 @@ class LibraryInfo(View):
         library = LibraryPage.objects.get(id=pk)
         library.example_file = open(library.example_file.path, 'r')
         library.example_file = library.example_file.read()
-        comments = CommentReaction.objects.filter(library=library)
+        comments = CommentReaction.objects.filter(library=library)[::-1]
+        library1 = library
+        library1.description = solution(library1.description, 150)
+        if len(comments) > 5:
+            comments1 = comments[0:5]
+        else:
+            comments1 = comments
         return render(
             request,
             'librarys/library_page.html',
             {
                 'library': library,
                 'comments': comments,
+                'library1': library1,
+                'comments1': comments1
             }
         )
 
