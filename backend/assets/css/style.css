@@ -14,6 +14,12 @@
     overflow-y: hidden;
   }
 
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
   header nav{
     background: #F4F4F4;;
     height: 80px;
@@ -40,6 +46,8 @@
     display: inline-block;
     line-height: 32px;
     padding: 16px 12px;
+    transition: .2s;
+    border-radius: 20px;
   }
   header nav ul li a{
     color: #000000;
@@ -48,7 +56,6 @@
     border-radius: 3px;
     font-style: normal;
     font-family: Roboto;
-    transition: .2s;
     font-weight: 700;
   }
   header nav ul li a.active {
@@ -60,7 +67,6 @@
   header nav ul li:hover {
     background: #00205C;
     color: #FFFFFF;
-    border-radius: 20px
   }
 
   header nav ul li:hover a {
@@ -133,6 +139,7 @@
       z-index: -1;
       opacity: 0;
       margin-right: 0;
+      visibility: hidden;
     }
     header nav ul li{
       margin: 0;
@@ -171,14 +178,16 @@
       opacity: 1;
       display: block;
       transition: opacity 0.5s ease;
-      z-index: 10;
+      z-index: 10000;
+      visibility: visible;
     }
   }
 
   /* footer styles */
   .footer{
     background-color: #00205C;
-      padding: 70px 0;
+    padding: 70px 0;
+    bottom: 0;
   }
   footer .container{
     max-width: 1170px;
