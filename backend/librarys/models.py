@@ -25,8 +25,8 @@ class CommentReaction(models.Model):
     comment = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    like = models.IntegerField()
-    dislike = models.IntegerField()
+    like = models.IntegerField(default=0)
+    dislike = models.IntegerField(default=0)
     library = models.ForeignKey(
         LibraryPage, on_delete=models.CASCADE
     )

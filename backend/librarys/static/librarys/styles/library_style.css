@@ -1,9 +1,9 @@
 #sub-header {
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
     height: 200px;
     color: #FFFFFF;
     text-align: center;
@@ -92,13 +92,41 @@
 }
 
 #comments-reactions {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     height: 100%;
     width: 100%;
     border: 1px solid black;
     margin-top: 5%;
-    padding: 2%;
+    padding: 5%;
 }
 
 #download-div {
     display: flex;
+}
+
+.comment-div {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.info {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.author {
+    margin-right: 2%;
+}
+
+.date {
+    padding-top: 1.5%;
+    font-style: italic;
+}
+
+#p-com {
+    margin-bottom: 5%;
 }

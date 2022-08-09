@@ -85,8 +85,16 @@
                 </button>
             </a>
             <div id="comments-reactions">
-                
-
+                <p id="p-com">Comments:</p>
+                {% for comment in comments %}
+                    <div class="comment-div">
+                        <div class="info">
+                            <h3 class="author">{{ comment.author }}</h3>
+                            <small class="date">{{ comment.date_posted }}</small>
+                        </div>
+                        <p class="comment">{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

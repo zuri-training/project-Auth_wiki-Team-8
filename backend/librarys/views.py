@@ -56,7 +56,16 @@ class LibrarySearchPage(View):
             except PageNotAnInteger:
                 libraries = libraries_per_page.page(
                     libraries_per_page.num_pages)
-            return render(request, 'librarys/search_result.html', {'libraries': libraries, 'found': found, 'title': 'Search results', 'page': libraries_per_page})
+            return render(
+                request,
+                'librarys/search_result.html',
+                {
+                    'libraries': libraries,
+                    'found': found,
+                    'title': 'Search results',
+                    'page': libraries_per_page
+                }
+            )
         else:
             return redirect('/')
 
@@ -66,7 +75,22 @@ class LibraryInfo(View):
         library = LibraryPage.objects.get(id=pk)
         library.example_file = open(library.example_file.path, 'r')
         library.example_file = library.example_file.read()
-        return render(request, 'librarys/library_page.html', {'library': library})
+        comment_reactions = CommentReaction.objects.filter(library=library)
+        likes = 0
+        dislikes = 0
+        for comment_reaction in comment_reactions:
+            likes += comment_reaction.like
+            dislikes += comment_reaction.dislike
+        return render(
+            request,
+            'librarys/library_page.html',
+            {
+                'library': library,
+                'comments': comment_reactions,
+                'likes': likes,
+                'dislikes': dislikes
+            }
+        )
 
 # class LibraryDetailView(DetailView):
 #     model = LibraryPage
