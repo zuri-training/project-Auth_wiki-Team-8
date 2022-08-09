@@ -434,7 +434,6 @@ border-radius: 8px;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    text-align: center;
     margin-left: 50px;
 
 }
@@ -752,6 +751,13 @@ border-radius: 8px;
     .faq-sec h3{
       font-size: 15px;
     }
+
+    .accordion{
+      margin-left: 0;
+      text-align: none;
+    }
+
+    
     .accordion-content header .title{
       font-size: 15px;
       font-weight: 500;
@@ -814,9 +820,49 @@ border-radius: 8px;
     text-align: left;
   }
 
+  #faq{
+    height: 40vh;
+    margin-bottom: 0;
+  }
+
+
   .faq-sec h3{
     font-size: 16px;
   }
+
+  #Newsletter h3{
+    font-size: 30px;
+  }
+
+  #Newsletter form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+  #Newsletter form p{
+    display: none;
+  }
+
+  #Newsletter form input {
+    width: 80%;
+    padding: 15px 20px;
+    margin-bottom: 20px;}
+
+    #Newsletter form button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      width: 150px;
+      align-items: center;
+      margin-left: 50px;
+  }
+
+
+  .accordion{
+    width: 100%;
+   margin-left: 0;
+
+
+}
 
 
 

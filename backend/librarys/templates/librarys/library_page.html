@@ -13,6 +13,9 @@
     <div id="sub-header">
         <h1 id="library-name">{{ library.name }}</h1>
         <p id="library-version">{{ library.library_version }}</p>
+        {% if not request.user.is_authenticated %}
+            <h3 id="login"><a href="{% url 'accounts:login' %}" style="color: white; font-style: italic;">Login</a> to have full access!..</h3>
+        {% endif %}
     </div>
     <div id="main">
         <div id="sub-main">
@@ -26,10 +29,12 @@
                         <th class="detail-th">Author</th>
                         <td class="detail-td">{{ library.author }}</td>
                     </tr>
-                    <tr class="detail-tr">
-                        <th class="detail-th">GitHub Link</th>
-                        <td class="detail-td"><a href="{{ library.github_link }}">{{ library.github_link }}</a></td>
-                    </tr>
+                    {% if request.user.is_authenticated %}
+                        <tr class="detail-tr">
+                            <th class="detail-th">GitHub Link</th>
+                            <td class="detail-td"><a href="{{ library.github_link }}">{{ library.github_link }}</a></td>
+                        </tr>
+                    {% endif %}
                     <tr class="detail-tr">
                         <th class="detail-th">Version</th>
                         <td class="detail-td">{{ library.library_version }}</td>
@@ -52,41 +57,118 @@
                 <h3 id="example">Code Example</h3>
                 <pre id="intructions"><code>{{ library.example_file }}</code></pre>
             </div>
-            <div id="reaction">
-                <div id="react">
-                    <button class="react-btn" id="like">
-                        <div id="react-div" class="react-div">
-                            <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
-                            <p id="like-dislike">Like</p>
-                        </div>
-                    </button>
-                    <button class="react-btn">
-                        <div id="react-div" class="react-div">
-                            <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
-                            <p id="like-dislike">Dislike</p>
-                        </div>
-                    </button>
-                </div>
-                <button class="react-btn">
-                    <div id="comment-div" class="react-div">
-                        <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
-                        <p id="comment">Comment</p>
+            {% if request.user.is_authenticated %}
+                <div id="reaction">
+                    <div id="react">
+                        <form action="{% url 'librarys:like' library.pk %}" method="post">{% csrf_token %}
+                            <button class="react-btn" id="like">
+                                <div id="react-div" class="react-div">
+                                    <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
+                                    <p id="like-dislike">Like</p>
+                                    <h3 class="like-dislike">{{ library.like }}</h3>
+                                </div>
+                            </button>
+                        </form>
+                        <form action="{% url 'librarys:dislike' library.pk %}" method="post">{% csrf_token %}
+                            <button class="react-btn" name="dislike">
+                                <div id="react-div" class="react-div">
+                                    <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
+                                    <p id="like-dislike">Dislike</p>
+                                    <h3 class="like-dislike">{{ library.dislike }}</h3>
+                                </div>
+                            </button>
+                        </form>
                     </div>
-                </button>
-            </div>
+                    <a href="#comment-section">
+                        <button class="react-btn">
+                            <div id="comment-div" class="react-div">
+                                <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
+                                <p id="comment">Comment</p>
+                                <h3 class="like-dislike">{{ comments.count }}</h3>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            {% else %}
+                <div id="reaction" style="pointer-events: none; opacity: 0.4;">
+                    <div id="react">
+                        <form action="{% url 'librarys:like' library.pk %}" method="post">{% csrf_token %}
+                            <button class="react-btn" id="like">
+                                <div id="react-div" class="react-div">
+                                    <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
+                                    <p id="like-dislike">Like</p>
+                                    <h3 class="like-dislike">{{ library.like }}</h3>
+                                </div>
+                            </button>
+                        </form>
+                        <form action="{% url 'librarys:dislike' library.pk %}" method="post">{% csrf_token %}
+                            <button class="react-btn" name="dislike">
+                                <div id="react-div" class="react-div">
+                                    <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
+                                    <p id="like-dislike">Dislike</p>
+                                    <h3 class="like-dislike">{{ library.dislike }}</h3>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                    <label for="write-comment">
+                        <button class="react-btn">
+                            <div id="comment-div" class="react-div">
+                                <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
+                                <p id="comment">Comment</p>
+                                <h3 class="like-dislike">{{ comments.count }}</h3>
+                            </div>
+                        </button>
+                    </label>
+                </div>
+            {% endif %}
         </div>
         <div id="download-comment">
-            <a download href="{{ library.library_file.url }}" id="file-download" target="_blank">
-                <button id="download-btn">
-                    <div id="download-div">
-                        <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
-                        <p id="download">Download</p>
-                    </div>
-                </button>
-            </a>
+            {% if request.user.is_authenticated %}
+                <a download href="{{ library.library_file.url }}" id="file-download" target="_blank">
+                    <button id="download-btn">
+                        <div id="download-div">
+                            <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
+                            <p id="download">Download</p>
+                        </div>
+                    </button>
+                </a>
+            {% else %}
+                <a download href="{{ library.library_file.url }}" id="file-download" target="_blank" style="pointer-events: none; opacity: 0.4;">
+                    <button id="download-btn">
+                        <div id="download-div">
+                            <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
+                            <p id="download">Download</p>
+                        </div>
+                    </button>
+                </a>
+            {% endif %}
             <div id="comments-reactions">
-                
-
+                <p id="p-com">Comments:</p>
+                {% for comment in comments %}
+                    <div class="comment-div">
+                        <div class="info">
+                            <h3 class="author">{{ comment.author }}</h3>
+                            <small class="date">{{ comment.date_posted }}</small>
+                        </div>
+                        <p class="comment">{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
+                {% if request.user.is_authenticated %}
+                    <section name="comment-section" id="comment-section">
+                        <form action="" method="post">{% csrf_token %}
+                            <textarea name="comment" id="write-comment" cols="30" rows="10" maxlength="150" placeholder="write your comment"></textarea>
+                            <button id="comment-submit">Comment</button>
+                        </form>
+                    </section>
+                {% else %}
+                    <section name="comment-section" id="comment-section" style="pointer-events: none; opacity: 0.4;">
+                        <form action="" method="post" id="comment-form">{% csrf_token %}
+                            <textarea name="comment" id="write-comment" cols="30" rows="10" maxlength="150" placeholder="write your comment..."></textarea>
+                            <button id="comment-submit">Comment</button>
+                        </form>
+                    </section>
+                {% endif %}
             </div>
         </div>
     </div>

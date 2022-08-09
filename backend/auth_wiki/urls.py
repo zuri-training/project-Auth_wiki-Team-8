@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 from .import views
+from librarys import views as library_views
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.static import serve
@@ -13,7 +14,7 @@ urlpatterns = [
     path('about/', views.about),
     path('faq/', views.faq),
     path('contact-us/', views.contact_us),
-    path('', views.home),
+    path('', views.home, name='home'),
     # path('', article_views.article_list, name="home"),
 ]
 

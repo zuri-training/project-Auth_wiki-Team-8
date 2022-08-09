@@ -79,6 +79,31 @@
     display: none;
   }
 
+  .card-01 {
+    display: flex;
+    flex-flow: column;
+    padding: 3%;
+    justify-content: center;
+  }
+
+  .row, .card-01 {
+    width: 100%;
+  }
+
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #see-more {
+    margin-top: 5%;
+  }
+
+  @media (max-width: 1216px){
+    header nav ul{
+        margin-right: 100px;
+      }
+}
   @media (max-width: 1100px){
     header nav label.logo{
       font-size: 30px;
