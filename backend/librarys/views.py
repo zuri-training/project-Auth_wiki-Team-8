@@ -1,3 +1,4 @@
+from ast import Import
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import Q
@@ -8,6 +9,9 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import LibraryPage, CommentReaction
 from .forms import CommentForm
 from django.urls import reverse
+from django.http import HttpResponseRedirect
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
 # Create your views here.
 # class LibraryHomeView(ListView):
@@ -75,22 +79,23 @@ class LibraryInfo(View):
         library = LibraryPage.objects.get(id=pk)
         library.example_file = open(library.example_file.path, 'r')
         library.example_file = library.example_file.read()
-        comment_reactions = CommentReaction.objects.filter(library=library)
-        likes = 0
-        dislikes = 0
-        for comment_reaction in comment_reactions:
-            likes += comment_reaction.like
-            dislikes += comment_reaction.dislike
+        comments = CommentReaction.objects.filter(library=library)
         return render(
             request,
             'librarys/library_page.html',
             {
                 'library': library,
-                'comments': comment_reactions,
-                'likes': likes,
-                'dislikes': dislikes
+                'comments': comments,
             }
         )
+
+    def post(self, request, pk):
+        library = LibraryPage.objects.get(id=pk)
+        comment = CommentReaction(
+            comment=request.POST['comment'], library=library, author=request.user)
+        comment.save()
+        return HttpResponseRedirect(request.path_info)
+
 
 # class LibraryDetailView(DetailView):
 #     model = LibraryPage
