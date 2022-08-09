@@ -99,11 +99,6 @@
     margin-top: 5%;
   }
 
-  @media (max-width: 1216px){
-    header nav ul{
-        margin-right: 100px;
-      }
-}
   @media (max-width: 1100px){
     header nav label.logo{
       font-size: 30px;
@@ -144,16 +139,14 @@
       align-items: center;
       justify-content: center;
     }
-    header nav ul li:hover {
+    header nav ul li:active {
       background: #FFFFFF;
       border-radius: 0;
     }
     header nav ul li:hover a {
       color: #00205C;
     }
-    header nav ul li:active {
-      background: rgb(157, 167, 230);
-    }
+    
     header nav ul li a{
       font-size: 20px;
       color:#ffffff
@@ -165,10 +158,7 @@
     header nav label .navi{
         color:#00205C
     }
-    header nav ul li a:hover,a.active{
-      background: #ffff;
-      color: #00205C;
-    }
+  
     header nav #check:checked ~ ul{
       opacity: 1;
       display: block;
