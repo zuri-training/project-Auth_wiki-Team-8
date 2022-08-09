@@ -11,11 +11,14 @@ class LibrarySearchPage(View):
     def get(self, request, *args, **kwargs):
         if 'q' in request.GET:
             keyword = request.GET.get('q', '')
-            libraries = LibraryPage.objects.filter(
-                Q(name__icontains=keyword) |
-                Q(description__icontains=keyword) |
-                Q(library_language__icontains=keyword)
-            )
+            if keyword == 'a':
+                libraries = LibraryPage.objects.all()
+            else:
+                libraries = LibraryPage.objects.filter(
+                    Q(name__icontains=keyword) |
+                    Q(description__icontains=keyword) |
+                    Q(library_language__icontains=keyword)
+                )
             found = len(libraries)
             page_num = 7
             page = request.GET.get('page', 1)

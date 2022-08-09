@@ -79,7 +79,7 @@
                             </button>
                         </form>
                     </div>
-                    <label for="write-comment">
+                    <a href="#comment-section">
                         <button class="react-btn">
                             <div id="comment-div" class="react-div">
                                 <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
@@ -87,7 +87,7 @@
                                 <h3 class="like-dislike">{{ comments.count }}</h3>
                             </div>
                         </button>
-                    </label>
+                    </a>
                 </div>
             {% else %}
                 <div id="reaction" style="pointer-events: none; opacity: 0.4;">
