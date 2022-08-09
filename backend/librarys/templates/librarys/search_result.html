@@ -6,16 +6,17 @@
 {% block content %}
         <div id="sub-header">
             <section id="home">
-                    <form method="get" action="/library" enctype="multipart/form-data">
+                    <form method="get" action="/library" enctype="multipart/form-data" class="faq-form">
                         <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
                         <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
                     </form>
             </section>
         </div>
         {% if found > 1 %}
-            <h3>filter: found {{ found }} search results</h3>
+            <h3>Filter: Found {{ found }} search results</h3>
         {% else %}
-            <h3>filter: found {{ found }} search result</h3>
+            <h3>Filter: No matches found</h3>
+            <h4>Try another keyword</h4>
         {% endif %}
         {% for library in libraries %}
             <a href="{% url 'librarys:search_result' library.id %}">
@@ -25,6 +26,9 @@
                 </div>
             </a>
         {% endfor %}
+        {% if found == 0 %}
+        <div id="pagination" style="display: none;"></div>
+        {% else %}
         <div id="pagination">
             {% if page.has_previous and page.has_next %}
                 <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous">Previous</a>
@@ -40,4 +44,5 @@
                 <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
             {% endif %}
         </div>
+        {% endif %}
 {% endblock content %}

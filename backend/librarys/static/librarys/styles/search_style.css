@@ -18,35 +18,47 @@
     display: flex;
 }
 
-#home form {
+#home .faq-form {
+    width: 40%;
+    position: relative;
+    max-width: 400px;
     background: #fff;
     padding: 5px;
     border-radius: 8px;
     display:flex;
-    width: 40%;
     margin-top: 40px;
 }
 
-#home form input{
+#home .faq-form input {
+    padding: 10px 20px;
     flex: 1;
     border: none;
     outline: none;
-    padding: 0 20px;
     font-size: 18px;
 }
 
-  #home form button{
+#home .faq-form button {
+    padding: 15px 10px;
+    position: absolute;
+    right: 5%;
     color: black;
-    padding: 15px 40px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     background: transparent;
-  }
+}
 
+.wrapper h3 {
+    margin: 40px auto 50px auto;
+    text-align: center;
+    font-size: 32px;
+    font-family: Roboto;
+}
 
-h3 {
-    margin: 80px 72px 50px 80px;
+.wrapper h4 {
+    font-family: Roboto;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #library-div {
@@ -76,4 +88,30 @@ h3 {
     margin-bottom: 20px;
     width: 77.6%;
     color: black;
+    font-family: Roboto;
+}
+
+@media (max-width: 800px) {
+    #home .faq-form {
+        width: 60%;
+    }
+}
+
+@media (max-width: 460px) {
+    #home .faq-form {
+        width: 80%;
+    }
+
+    #home .faq-form input {
+        padding: 10px 5px;
+    }
+
+    #home .faq-form button {
+        padding: 12px 10px;
+        right: 0%;
+    }
+
+    .wrapper h3 {
+        font-size: 26px;
+    }
 }
