@@ -99,11 +99,6 @@
     margin-top: 5%;
   }
 
-  @media (max-width: 1216px){
-    header nav ul{
-        margin-right: 100px;
-      }
-}
   @media (max-width: 1100px){
     header nav label.logo{
       font-size: 30px;
