@@ -134,3 +134,19 @@
 #p-com {
     margin-bottom: 5%;
 }
+
+#comment-section, #comment-form, #write-comment {
+    width: 100%;
+}
+
+#write-comment {
+    resize: none;
+    margin-bottom: 3%;
+    padding: 5%;
+}
+
+#comment-submit {
+    height: 30%;
+    width: 40%;
+    cursor: pointer;
+}
