@@ -1,0 +1,156 @@
+#sub-header {
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    height: 200px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    margin: 80px;
+    justify-content: space-between;
+}
+
+#sub-main {
+    width: 60%;
+}
+
+#described {
+    text-align: justify;
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+#detail, .detail-tr, .detail-td, .detail-th {
+    border: 1px solid black;
+}
+
+#detail {
+    width: 100%;
+    margin: 5% 0;
+    border-radius: .3em;
+}
+
+.detail-td, .detail-th {
+    padding: 2%;
+}
+
+.detail-th {
+    text-align: left;
+}
+
+#intructions {
+    margin-top: 2%;
+}
+
+#code-div {
+    margin: 5% 0;
+}
+
+#reaction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.react-img, #download-img {
+    width: 20px;
+    margin-right: 15px;
+}
+
+.react-div {
+    display: flex;
+}
+
+.react-btn, #download-btn {
+    border: 0;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+#like {
+    margin-right: 5%;
+}
+
+#react {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.like-dislike {
+    margin-left: 10%;
+}
+
+#download-comment {
+    display: flex;
+    flex-flow: column;
+    height: inherit;
+    width: 30%;
+    align-items: flex-end;
+}
+
+#comments-reactions {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+#download-div {
+    display: flex;
+}
+
+.comment-div {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.info {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.author {
+    margin-right: 2%;
+}
+
+.date {
+    padding-top: 1.5%;
+    font-style: italic;
+}
+
+#p-com {
+    margin-bottom: 5%;
+}
+
+#comment-section, #comment-form, #write-comment {
+    width: 100%;
+}
+
+#write-comment {
+    resize: none;
+    margin-bottom: 3%;
+    padding: 5%;
+}
+
+#comment-submit {
+    height: 30%;
+    width: 40%;
+    cursor: pointer;
+}
+
+#login {
+    margin-top: 2%;
+}

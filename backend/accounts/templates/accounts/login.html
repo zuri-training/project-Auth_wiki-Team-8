@@ -1,11 +1,82 @@
-{% extends 'base_layout.html' %} {% block content %}
-<h1>My Login Page</h1>
-<form class="site-form" action="/accounts/login/" method="post">
-  {% csrf_token %} {{form}} {% if request.GET.next %}
-  <!-- if the user was redirected to the login page we want to get
+{% extends 'base_layout.html' %} {% block content %} {% load static %} {% block
+styles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock styles %}
+
+<main>
+  <div class="hero">
+    <div class="hero-text">
+      <h3>For full access, Log in to your account</h3>
+      <p>
+        Log in your details to gain full access to the website, copy codes and
+        download tons of
+        <br />authentication codes
+      </p>
+    </div>
+  </div>
+  <section class="form-section">
+    <form action="/accounts/login/" method="post">
+      {% csrf_token %}
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        required
+      />
+
+      <div class="flex-layout row1">
+        <p>
+          <a href="#" target="_blank" class="hover">Forgot password? </a>
+        </p>
+
+        <p>
+          Don't have an account?<span>
+            <a href="registration.html"> Register</a>
+          </span>
+        </p>
+      </div>
+
+      <input type="submit" value="Sign in" />
+
+      <div class="flex-layout row2">
+        <span class="line"></span>
+        <p>Or</p>
+        <span class="line"></span>
+      </div>
+      <div class="flex-layout row3">
+        <div class="google-box">
+          <img
+          src=https://th.bing.com/th/id/OIP.8s3LAW5gto4UdNXpmKEyQgHaGt?w=160&h=180&c=7&r=0&o=5&pid=1.7
+          alt="" class="logos" />
+          <label for="google">Google</label>
+        </div>
+
+        <div class="github-box">
+          <img
+            src="https://th.bing.com/th/id/OIP.ckeUFk-yid0vfWnd56w7wAHaHa?w=167&h=180&c=7&r=0&o=5&pid=1.7"
+            alt=""
+            class="logos"
+          />
+          <label for="github">Github</label>
+        </div>
+      </div>
+      {% if request.GET.next %}
+      <!-- if the user was redirected to the login page we want to get
       the page the want to go to. so that if they login we redirect back to the page they wanted to go to. -->
-  <input type="hidden" name="next" value="{{request.GET.next}}" />
-  {% endif %}
-  <input type="submit" value="Login" />
-</form>
+      <input type="hidden" name="next" value="{{request.GET.next}}" />
+      {% endif %}
+    </form>
+  </section>
+</main>
 {% endblock %}

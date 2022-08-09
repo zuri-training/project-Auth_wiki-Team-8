@@ -11,25 +11,23 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <div class="container flex-nav">
-      <div class="nav-header">
-        <h2>Auth_Wiki</h2>
-        <button class="nav-toggle" id="navToggle">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-      <nav class="nav-links" id="nav-links">
-        <ul>
-          <li class="nav-link"><a href="about.html">About</a></li>
-          <li class="nav-link"><a href="#">Open Source</a></li>
-          <li class="nav-link"><a href="contact.html">Contact</a></li>
-          <li class="nav-link"><a href="login.html">Login</a></li>
-          <li class="nav-link"><a href="registration"><span>Register</span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <header>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars navi"></i>
+      </label>
+      <label class="logo">Auth_Wiki</label>
+      <ul>
+        <li><a class="nav-links" href="index.html">Home</a></li>
+        <li><a class="nav-links" href="about.html">About</a></li>
+        <li><a class="nav-links" href="contact.html">Contact us</a></li>
+        <li><a class="nav-links" href="faq.html">FAQ</a></li>
+        <li><a class="nav-links" href="login.html">Login</a></li>
+        <li><a class="nav-links active" href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <div class="hero">
       <div class="hero-text">
@@ -55,55 +53,59 @@
       </form>
     </section>
   </main>
-  <!------------------------------TODO: FOOTER ----------------------->
-  <footer>
-    <div class="footer-flex">
-      <div class="footer-flex-left">
-        <h2>Auth_Wiki</h2>
-        <p>
-          Auth_wiki is a website for authentication codes where developers can
-          register to download ready made authentication codes.
-        </p>
-      </div>
-      <div class="footer-flex-right">
-        <div class="Company">
-          <h4>Company</h4>
-          <a href="/project-Auth_wiki-Team-8/frontend/index.html">Home</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/about.html">About</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/login.html">Login</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/register.html">Register</a>
+  <!------------------------------ FOOTER ----------------------->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col colmain">
+          <h4 class="head">AuthWiki</h4>
+          <p>
+            Authwiki is a website for authentication codes where developers
+            can register to download ready made authentication code
+          </p>
         </div>
-        <div class="Services">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a class="footer-links" href="#">Home</a></li>
+            <li><a class="footer-links" href="#">About</a></li>
+            <li><a class="footer-links" href="#">Login</a></li>
+            <li><a class="footer-links" href="#">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
           <h4>Services</h4>
-          <a href="/project-Auth_wiki-Team-8/frontend/index.html">Auth Codes</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/index.html">Trending Codes</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/index.html">Recent Codes</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/login.html .flex-layout">Update Codes</a>
+          <ul>
+            <li><a class="footer-links" href="#">Auth Codes</a></li>
+            <li><a class="footer-links" href="#">Trending codes</a></li>
+            <li><a class="footer-links" href="#">Recent codes</a></li>
+            <li><a class="footer-links" href="#">Update codes</a></li>
+          </ul>
         </div>
-        <div class="help">
+        <div class="footer-col">
           <h4>Help</h4>
-          <a href="/project-Auth_wiki-Team-8/frontend/contact.html">Contact Us</a>
-          <!-- incomplete -->
-          <a href="/project-Auth_wiki-Team-8/frontend/">FAQs</a>
-          <!-- -- -->
-          <a href="/project-Auth_wiki-Team-8/frontend/">User guides</a>
-          <a href="/project-Auth_wiki-Team-8/frontend/">Documentation</a>
-          <!-- --------- -->
+          <ul>
+            <li><a class="footer-links" href="#">Contact us</a></li>
+            <li><a class="footer-links" href="#">FAQ</a></li>
+            <li><a class="footer-links" href="#">User guides</a></li>
+            <li><a class="footer-links" href="#">Documentation</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-
-    <!--social media  icons here-->
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-google"></i>
-    <i class="fa-brands fa-facebook-f"></i>
-
-    <hr />
-    <span class="oval"></span>
-    <p>Auth_wiki Platform 2022. All right reserved</p>
-
+      <div class="row">
+        <div class="social">
+          <a class="footer-socials" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="footer-socials" href="#"><i class="fab fa-google"></i></a>
+          <a class="footer-socials" href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="last">
+          <div class="col-md-12">
+            <p class="copyright">
+              Authwiki Platform 2022. All right reserved
+            </p>
+          </div>
+        </div>
+      </div>
   </footer>
-  <script src="./js/script.js"></script>
 </body>
-
 </html>

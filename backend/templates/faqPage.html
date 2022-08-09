@@ -1,3 +1,141 @@
 {% extends 'base_layout.html' %} {% block content %}
-<h1>This is the FAQ Page</h1>
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+{% endblock styles %}
+<!----FAQ---->
+<section id="home">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+        <form class="faq-form">
+            <input type="text" placeholder="e.g python authentication">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+</section>
+<!--section-->
+<main>
+    <section id="faq_page">
+        <div class="faq-sec">
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">Do I need to sign up?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        Sign up to access full library features such as Authentication codes download or ability to like and comment.
+                    </p>
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">How do I change my password?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        Under the Password section, click or tap Change. Enter your current password in the first text box and then click Next. For Windows 10 users, enter your new password twice to verify that you've typed it correctly.
+                    </p>
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">How can i download authentication code?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        Register to access the authentication codes.
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">Can i connect with my github account?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        Yes, you can absolutely connect with your Github account.
+                    <p>
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">Is there a team i can work with?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        You can send a mail to us, we'd get back to you if a team is available.
+                </p>
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">Is the code free to download?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        Download is only available to registered users.
+                    </p>
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="question-container">
+                    <div>
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <span class="title">How can i reset my password?</span>
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="description">
+                        On the Login page, there's a password reset link. Follow the steps to successfully reset your password.
+                    </p>
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    <section id="help">
+        <div class="help-sec">
+            <div class="more-help">
+                <p>Need more help?</p>
+            </div>
+            <div class="contact-help">
+                <p>Want to talk to us or you have anything to share with us, click on the contact us button and fill the form on the page, our team member will respond to you as quickly as possible</p>
+                <button>Contact Us</button>
+            </div>
+        </div>
+    </section>
+</main>
+{% block page_scripts %}
+  <script src="{% static 'js/faq.js' %}"></script>
+{% endblock page_scripts %}
 {% endblock %}
+

@@ -1,0 +1,79 @@
+#sub-header {
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#home {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+#home form {
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    display:flex;
+    width: 40%;
+    margin-top: 40px;
+}
+
+#home form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+  #home form button{
+    color: black;
+    padding: 15px 40px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+
+
+h3 {
+    margin: 80px 72px 50px 80px;
+}
+
+#library-div {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    width: 78%;
+    height: 100px;
+    padding-left: 5%;
+
+    /* material-theme/sys/light/on-error */
+
+    background: #FFFFFF;
+    /* material-theme/sys/light/inverse-primary */
+
+    border: 1px solid #B3C5FF;
+    border-radius: 16px;
+}
+
+#pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    width: 77.6%;
+    color: black;
+}
