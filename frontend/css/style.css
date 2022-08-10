@@ -711,7 +711,7 @@ border-radius: 8px;
 
     #container{
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     padding-top: 50px;
     padding-bottom: 50px;
     justify-items: center;
@@ -785,7 +785,7 @@ border-radius: 8px;
     background: #fff;
     width: 100%;
     margin-top: 10px;
-    height: 50vh;
+    height: 40vh;
   }
 
     
@@ -894,7 +894,7 @@ border-radius: 8px;
   background: #fff;
   width: 100%;
   margin-top: 10px;
-  height: 54vh;
+  height: 30%;
 }
 
   }
