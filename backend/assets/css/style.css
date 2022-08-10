@@ -167,6 +167,9 @@
       font-size: 20px;
       color:#ffffff
     }
+    header nav ul li:last-child a.active {
+      background: transparent
+    }
     header nav label .navi{
         color:#00205C
     }
