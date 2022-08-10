@@ -167,13 +167,13 @@
       font-size: 20px;
       color:#ffffff
     }
+    header nav ul li:last-child a.active {
+      background: transparent
+    }
     header nav label .navi{
         color:#00205C
     }
-    header nav ul li a:hover,a.active{
-      background: #ffff;
-      color: #00205C;
-    }
+
     header nav #check:checked ~ ul{
       opacity: 1;
       display: block;

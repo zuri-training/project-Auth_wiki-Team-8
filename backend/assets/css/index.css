@@ -305,6 +305,7 @@ border-radius: 8px;
 
 .accordion .accordion-content{
     overflow: hidden;
+    z-index: 1;
 }
 
 .accordion-content.open{
