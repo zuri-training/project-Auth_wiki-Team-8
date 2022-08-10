@@ -24,7 +24,7 @@
                 {% if request.user.is_authenticated %}
                     <p id="described">{{ library.description }}</p>
                 {% else %}
-                    <p id="described">{{ library1.description }}...</p>
+                    <p id="described">{{ description }}...</p>
                 {% endif %}
             </div>
             <table id="detail">
@@ -88,7 +88,7 @@
                             <div id="comment-div" class="react-div">
                                 <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
                                 <p id="comment">Comment</p>
-                                <h3 class="like-dislike">{{ comments.count }}</h3>
+                                <h3 class="like-dislike">{{ num }}</h3>
                             </div>
                         </button>
                     </a>
@@ -120,7 +120,7 @@
                             <div id="comment-div" class="react-div">
                                 <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
                                 <p id="comment">Comment</p>
-                                <h3 class="like-dislike">{{ comments.count }}</h3>
+                                <h3 class="like-dislike">{{ num }}</h3>
                             </div>
                         </button>
                     </label>

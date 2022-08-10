@@ -30,13 +30,13 @@ class LibrarySearchPage(View):
         if 'q' in request.GET:
             keyword = request.GET.get('q', '')
             if keyword == 'a':
-                libraries = LibraryPage.objects.all()
+                libraries = LibraryPage.objects.all()[::-1]
             else:
                 libraries = LibraryPage.objects.filter(
                     Q(name__icontains=keyword) |
                     Q(description__icontains=keyword) |
                     Q(library_language__icontains=keyword)
-                )
+                )[::-1]
             found = len(libraries)
             page_num = 7
             page = request.GET.get('page', 1)
@@ -68,12 +68,13 @@ class LibraryInfo(View):
         library.example_file = open(library.example_file.path, 'r')
         library.example_file = library.example_file.read()
         comments = CommentReaction.objects.filter(library=library)[::-1]
-        library1 = library
-        library1.description = solution(library1.description, 150)
+        library1 = LibraryPage.objects.get(id=pk)
+        description_no_auth = solution(library1.description, 150)
         if len(comments) > 5:
             comments1 = comments[0:5]
         else:
-            comments1 = comments
+            comments1 = CommentReaction.objects.filter(library=library)[::-1]
+        num = len(comments)
         return render(
             request,
             'librarys/library_page.html',
@@ -81,7 +82,9 @@ class LibraryInfo(View):
                 'library': library,
                 'comments': comments,
                 'library1': library1,
-                'comments1': comments1
+                'comments1': comments1,
+                'num': num,
+                'description': description_no_auth
             }
         )
 
