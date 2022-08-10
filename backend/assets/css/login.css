@@ -197,3 +197,6 @@ form a {
     padding-inline: 60px;
   }
 }
+form.profile span.helptext, form.profile div#id_password, form.profile label:last-of-type {
+  display: none !important;
+}

@@ -1,7 +1,5 @@
-{% extends 'base_layout.html' %} {% block content %} {% load static %} {% block
-styles %}
+{% extends 'base_layout.html' %} {% block content %} {% load static %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}" />
-{% endblock styles %}
 
 <main>
   <div class="hero">
@@ -15,24 +13,29 @@ styles %}
     </div>
   </div>
   <section class="form-section">
-    <form action="/accounts/login/" method="post">
-      {% csrf_token %}
-      <label for="email">Email</label>
+    <form class="site-form" action="/accounts/login/" method="post">
+      {% csrf_token %} {% if message %} {% for msg in message %}
+      <li style="color: red">{{ msg }}</li>
+      {% endfor %} {% endif %}
+      <label for="id_username">Email</label>
       <input
         type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
+        name="username"
+        autofocus
+        autocapitalize="none"
+        autocomplete="username"
+        maxlength="100"
         required
+        id="id_username"
       />
 
-      <label for="password">Password</label>
+      <label for="id_password">Password</label>
       <input
         type="password"
         name="password"
-        id="password"
-        placeholder="Password"
+        autocomplete="current-password"
         required
+        id="id_password"
       />
 
       <div class="flex-layout row1">
@@ -42,7 +45,7 @@ styles %}
 
         <p>
           Don't have an account?<span>
-            <a href="registration.html"> Register</a>
+            <a href="{% url 'accounts:signup' %}"> Register</a>
           </span>
         </p>
       </div>

@@ -30,10 +30,13 @@
           <li><a class="nav-links" href="/about/">About</a></li>
           <li><a class="nav-links" href="/contact-us/">Contact us</a></li>
           <li><a class="nav-links" href="/faq/">FAQ</a></li>
+          {% if not request.user.is_authenticated %}
           <li><a class="nav-links" href="{% url 'accounts:login' %}">Login</a></li>
-          <li>
-            <a class="active" href="{% url 'accounts:signup' %}">Register</a>
-          </li>
+          <li><a class="active" href="{% url 'accounts:signup' %}">Register</a></li>
+          {% else %}
+          <li><a class="nav-links" href="{% url 'accounts:profile' %}">Profile</a></li>
+          <li><a class="active" href="{% url 'accounts:logout' %}">Logout</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
