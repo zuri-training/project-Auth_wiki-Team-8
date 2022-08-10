@@ -2,6 +2,7 @@
 {% load static %}
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -10,8 +11,8 @@
 {% block content %}
 <!----Home---->
 <section id="home">
-    <h2>We have the best Authentication <br>codes that is ready to be used</h2>
-        <form method="get" action="/library" enctype="multipart/form-data">
+    <h2>We have the best Authentication <br>codes that are ready to be used</h2>
+        <form method="get" action="/library" enctype="multipart/form-data" class="faq-form">
             <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
             <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
         </form>
