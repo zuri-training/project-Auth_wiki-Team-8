@@ -77,10 +77,11 @@
       />
       <div class="flex-layout row1">
         <p>
-          Already have an account?<span>
-            <a href="./login.html"> Login</a>
-          </span>
+          Already have an account?
         </p>
+        <span>
+            <a href="{% url 'accounts:signup' %}"> Login</a>
+          </span>
       </div>
 
       <input type="submit" value="Sign in" />
