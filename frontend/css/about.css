@@ -460,7 +460,7 @@ header nav #check{
     }
 
     #headline{
-        margin: auto 100px;
+        margin: auto 50px;
         text-align: center;
         line-height: 32px;
         font-size: 24px;
@@ -471,7 +471,7 @@ header nav #check{
         text-align: center;
         margin-bottom: 15px;
         font-size: 16px;
-        margin: auto 30px;
+        margin: auto 25px;
     }
 
     #img-second-ctn{
@@ -490,7 +490,7 @@ header nav #check{
     }
 
     #form-ctn h3{
-        font-size: 32px;
+        font-size: 30px;
         text-align: center;
     }
 
