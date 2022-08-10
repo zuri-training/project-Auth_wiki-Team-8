@@ -1,39 +1,41 @@
-{% extends 'base_layout.html' %} {% block content %}
-{% load static %}
-{% block styles %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-{% endblock styles %}
+{% extends 'base_layout.html' %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
 
 <main>
   <div class="hero">
     <div class="hero-text">
       <h3>For full access, Log in to your account</h3>
       <p>
-        Log in your details to gain full access to the website, copy codes
-        and download tons of
+        Log in your details to gain full access to the website, copy codes and
+        download tons of
         <br />authentication codes
       </p>
     </div>
   </div>
   <section class="form-section">
-    <form action="/accounts/login/" method="post">
-      {% csrf_token %}
-      <label for="email">Email</label>
+    <form class="site-form" action="/accounts/login/" method="post">
+      {% csrf_token %} {% if message %} {% for msg in message %}
+      <li style="color: red">{{ msg }}</li>
+      {% endfor %} {% endif %}
+      <label for="id_username">Email</label>
       <input
         type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
+        name="username"
+        autofocus
+        autocapitalize="none"
+        autocomplete="username"
+        maxlength="100"
         required
+        id="id_username"
       />
 
-      <label for="password">Password</label>
+      <label for="id_password">Password</label>
       <input
         type="password"
         name="password"
-        id="password"
-        placeholder="Password"
+        autocomplete="current-password"
         required
+        id="id_password"
       />
 
       <div class="flex-layout row1">
@@ -73,10 +75,10 @@
         </div>
       </div>
       {% if request.GET.next %}
-  <!-- if the user was redirected to the login page we want to get
+      <!-- if the user was redirected to the login page we want to get
       the page the want to go to. so that if they login we redirect back to the page they wanted to go to. -->
-  <input type="hidden" name="next" value="{{request.GET.next}}" />
-  {% endif %}
+      <input type="hidden" name="next" value="{{request.GET.next}}" />
+      {% endif %}
     </form>
   </section>
 </main>

@@ -14,10 +14,16 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('dashboard:home')
+            return redirect('accounts:profile')
         else:
-            # print(form.errors.as_data())
-            return render(request, 'accounts/registration.html', {'form': form})
+            err = form.errors.as_data()
+            print(err)
+            bag = []
+            for key in err:
+                str1 = " "
+                val = err[key]
+                bag.append(str1.join(val[0]))
+            return render(request, 'accounts/registration.html', {'errors': bag})
     else:
         form = CustomUserCreationForm()
         return render(request, "accounts/registration.html", {'form': form})
@@ -31,20 +37,18 @@ def signin_view(request):
             login(request, user)
             if'next' in request.POST:
                 return redirect(request.POST.get('next'))
-            return redirect('dashboard:home')
+            return redirect('accounts:profile')
         else:
-            return render(request, 'accounts/login.html', {'form': form})
+            message = form.errors.as_data().get('__all__')[0]
+            return render(request, 'accounts/login.html', {'message': message})
     else:
         form = CustomUserAuthenticationForm()
     return render(request, "accounts/login.html", {'form': form})
 
 
 def logout_view(request):
-    if request.method == 'POST':
-        logout(request)
-        return redirect('accounts/login.html')
-    else:
-        return redirect('accounts/login.html')
+    logout(request)
+    return redirect('accounts:login')
 
 
 def profile_view(request):
@@ -53,7 +57,7 @@ def profile_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your profile is updated successfully')
-            return redirect('dashboard:home')
+            return redirect('accounts:profile')
         else:
             print(form.errors.as_data())
             return render(request, 'accounts/edit_profile.html', {'form': form})
@@ -65,4 +69,4 @@ def profile_view(request):
 class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
     template_name = 'accounts/change_pass.html'
     success_message = "Successfully Changed Your Password"
-    success_url = reverse_lazy('dashboard:home')
+    success_url = reverse_lazy('accounts:profile')

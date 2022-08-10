@@ -1,90 +1,95 @@
-{% extends 'base_layout.html' %} 
-{% load static %}
-{% block styles %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-{% endblock styles %}
-{% block content %}
+{% extends 'base_layout.html' %} {% load static %} {% block styles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock styles %} {% block content %}
 <main>
   <div class="hero">
     <div class="hero-text">
       <h3>For full access, please register or create an account</h3>
       <p>
-        Create an account with your details to gain full access to the
-        website, copy codes and download tons of
+        Create an account with your details to gain full access to the website,
+        copy codes and download tons of
         <br />authentication codes
       </p>
     </div>
   </div>
-
   <section class="form-section">
     <form action="/accounts/signup/" method="post">
-      {% csrf_token %}
-      <label for="fname">First Name</label>
-      <input
-        type="text"
-        name="fname"
-        id="fname"
-        placeholder="First Name"
-        required
-      />
-      <label for="lname">Last Name</label>
-      <input
-        type="text"
-        name="lname"
-        id="lname"
-        placeholder="Last Name"
-        required
-      />
-      <label for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
-        required
-      />
-      <label for="username">Username</label>
+      {% csrf_token %} {% if errors %} {% for err in errors %}
+      <li style="color: red">{{ err }}</li>
+      {% endfor %} {% endif %}
+      <label for="id_username">Username:</label>
       <input
         type="text"
         name="username"
-        id="username"
-        placeholder="username"
+        autofocus
+        maxlength="50"
         required
+        placeholder="Enter your username"
+        id="id_username"
       />
-      <label for="phone">Phone Number</label>
+      <label for="id_email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        maxlength="100"
+        required
+        id="id_email"
+        placeholder="Enter your Email"
+      />
+      <label for="id_first_name">First name:</label>
       <input
         type="text"
-        name="phone"
-        id="phone"
-        placeholder="Phone Number"
+        name="first_name"
+        maxlength="50"
         required
+        placeholder="Enter your first name"
+        id="id_first_name"
       />
-      <label for="password">Password</label>
+      <label for="id_last_name">Last name:</label>
+      <input
+        type="text"
+        name="last_name"
+        maxlength="50"
+        required
+        placeholder="Enter your last name"
+        id="id_last_name"
+      />
+      <label for="id_phone_number">Phone number:</label>
+      <input
+        type="text"
+        name="phone_number"
+        maxlength="15"
+        required
+        placeholder="Enter your phone number"
+        id="id_phone_number"
+      />
+      <label for="id_password1">Password:</label>
       <input
         type="password"
-        name="password"
-        id="password"
-        placeholder="Password"
+        name="password1"
+        autocomplete="new-password"
         required
+        placeholder="Enter your password"
+        id="id_password1"
       />
-      <label for="password2">Confirm Password</label>
+      <label for="id_password2">Password confirmation:</label>
       <input
         type="password"
         name="password2"
-        id="password2"
-        placeholder="Confirm Password"
+        autocomplete="new-password"
         required
+        placeholder="Confirm your password"
+        id="id_password2"
       />
       <div class="flex-layout row1">
         <p>
-          Already have an account?
-        </p>
-        <span>
-            <a href="{% url 'accounts:signup' %}"> Login</a>
+          Already have an account?<span>
+            <a href="{% url 'accounts:login' %}"> Login</a>
           </span>
+        </p>
       </div>
 
-      <input type="submit" value="Sign in" />
+      <input type="submit" value="Sign Up" />
 
       <div class="flex-layout row2">
         <span class="line"></span>
