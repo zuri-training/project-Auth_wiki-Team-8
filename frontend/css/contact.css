@@ -134,21 +134,20 @@ header nav{
 
 .hero {
   background-image: url('../images/header_bg.svg');
-  height: 413px;
   width: 100%;
-  color: #d9d9d9;
-  box-shadow: inset 2000px 0 0 0 rgba(0, 32, 92, 0.5);
-  margin-bottom: 90px;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
 }
 
 .hero-text {
-   width: 100%;
+  width: 100%;
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
 }
 
 .hero-text h3 {
@@ -168,6 +167,7 @@ header nav{
   line-height: 29px;
   letter-spacing: 0em;
   text-align: center;
+  color: #fff;
 }
 
 @media screen and (max-width: 500px) {
@@ -211,7 +211,7 @@ header nav{
   color: #ffffff;
 }
 
-/************************ FORM *************************/
+/************************ FORM ***************************/
 form {
   margin: auto;
   width: min(638px, 90%);

@@ -472,8 +472,8 @@ border-radius: 8px;
     transition: all 0.2s linear;
 }
 
- /* footer styles */
- .footer{
+ /********************* FOOTER *****************/
+.footer{
   background-color: #00205C;
     padding: 70px 0;
 }
@@ -600,6 +600,7 @@ footer .container .row .footer-col .social-links a:hover{
     width: 100%;
 }
 }
+
 
   @media(max-width: 574px){
     #home{
