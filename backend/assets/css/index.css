@@ -140,16 +140,12 @@ margin-left: 70px;
 #Newsletter{
     background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url("../images/image\ 5.png");
     width: 100%;
-    height: 50vh;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding: 60px 10px 40px 40px;
     justify-items: center;
-    padding-left: 40px;
-
 }
 #Newsletter h3{
     color: #fff;
@@ -342,6 +338,39 @@ margin-left: 70px;
   #home form {
     width: 60%;
   }
+
+  #Newsletter{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    justify-items: center;
+    padding: 40px 5px;
+   }
+
+   #Newsletter h3{
+    font-size: 26px;
+    text-align: center;
+   }
+   #Newsletter form {
+    border-radius: 8px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+ }
+   #Newsletter form input{
+    width: 70%;
+    padding: 15px 20px;
+    margin: auto;
+   }
+   #Newsletter form button{
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 150px;
+    margin: auto;
+    }
+
+    #Newsletter form p {
+        text-align: center;
+    }
 }
   @media(max-width: 574px){
     #home{
@@ -412,15 +441,14 @@ margin-left: 70px;
       
    }
    #Newsletter{
-    height: 40vh;
     padding-top: 5px;
     padding-bottom: 10px;
     justify-items: center;
-    padding: 0px 5px;
+    padding: 40px 5px;
    }
 
    #Newsletter h3{
-    font-size: 20px;
+    font-size: 26px;
     text-align: center;
    }
    #Newsletter form {
@@ -431,7 +459,7 @@ margin-left: 70px;
  }
    #Newsletter form input{
     width: 90%;
-    padding: 5px 20px;
+    padding: 15px 20px;
     margin: auto;
    }
    #Newsletter form button{
@@ -534,7 +562,6 @@ margin-left: 70px;
 
   #blog .blog-heading h6{
     font-size: 16px;
-    text-align: left;
   }
   .faq-sec h3{
     font-size: 16px;

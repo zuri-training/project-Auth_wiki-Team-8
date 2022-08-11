@@ -145,7 +145,7 @@ a {
   background-position: center center;
   background-attachment: scroll;
   width: 100%;
-  height: 413px;
+  height: auto;
 }
 .hero-text {
   width: 100%;
@@ -283,6 +283,8 @@ input[type="submit"]:hover {
 
 form a {
   color: #000000;
+  font-family: Inter;
+  text-decoration: underline;
 }
 
 .line {
