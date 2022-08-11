@@ -700,14 +700,27 @@ border-radius: 8px;
     font-size: 20px;
    }
 
-   #Newsletter form input{
-    width: 50%;
-    padding: 5px 20px;
-   }
-   #Newsletter form button{
-    padding: 10px 20px;
-    border-radius: 6px;
-    }
+   #Newsletter form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+  #Newsletter form p{
+    display: none;
+  }
+
+  #Newsletter form input {
+    width: 80%;
+    padding: 15px 20px;
+    margin-bottom: 20px;}
+
+    #Newsletter form button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      width: 150px;
+      align-items: center;
+      margin-left: 50px;
+  }
 
     #container{
     width: 100%;
