@@ -18,36 +18,22 @@
       <li style="color: red">{{ msg }}</li>
       {% endfor %} {% endif %}
       <label for="id_username">Email</label>
-      <input
-        type="email"
-        name="username"
-        autofocus
-        autocapitalize="none"
-        autocomplete="username"
-        maxlength="100"
-        required
-        id="id_username"
-      />
+      <input type="email" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="100"
+        required id="id_username" />
 
       <label for="id_password">Password</label>
-      <input
-        type="password"
-        name="password"
-        autocomplete="current-password"
-        required
-        id="id_password"
-      />
+      <input type="password" name="password" autocomplete="current-password" required id="id_password" />
 
       <div class="flex-layout row1">
         <small>
           <a href="{% url 'accounts:password_reset' %}" target="_blank" class="hover">Forgot password? </a>
-        </small>
+        </p>
 
-        <small>
+        <p>
           Don't have an account?<span>
             <a href="{% url 'accounts:signup' %}"> Register</a>
           </span>
-        </small>
+        </p>
       </div>
 
       <input type="submit" value="Sign in" />
@@ -57,22 +43,9 @@
         <p>Or</p>
         <span class="line"></span>
       </div>
-      <div class="flex-layout row3">
-        <div class="google-box">
-          <img
-          src=https://th.bing.com/th/id/OIP.8s3LAW5gto4UdNXpmKEyQgHaGt?w=160&h=180&c=7&r=0&o=5&pid=1.7
-          alt="" class="logos" />
-          <label for="google">Google</label>
-        </div>
-
-        <div class="github-box">
-          <img
-            src="https://th.bing.com/th/id/OIP.ckeUFk-yid0vfWnd56w7wAHaHa?w=167&h=180&c=7&r=0&o=5&pid=1.7"
-            alt=""
-            class="logos"
-          />
-          <label for="github">Github</label>
-        </div>
+      <div class="register-now"
+        style="border: 1px solid #00205c; text-align:center; padding:20px; font-size:19px; font-weight:700; color:#00205c; letter-spacing: 0em; border-radius: 10px;">
+        <a href="{% url 'accounts:signup' %}">Register</a>
       </div>
       {% if request.GET.next %}
       <!-- if the user was redirected to the login page we want to get
