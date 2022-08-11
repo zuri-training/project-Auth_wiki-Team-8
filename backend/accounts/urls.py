@@ -18,9 +18,9 @@ urlpatterns = [
          name="password_change_done"),
     path('password_reset/', PasswordResetView.as_view(template_name='accounts/reset_pass_form.html', email_template_name='accounts/reset_pass_email.html'), name="password_reset"),
     path('password_reset/done/', PasswordResetDoneView.as_view(template_name='accounts/reset_pass_done.html'), name="password_reset/done"),
-    path('reset/<uidb64>/<token>/', PasswordResetConfirmView.as_view(),
+    path('reset/<uidb64>/<token>/', PasswordResetConfirmView.as_view(template_name='accounts/reset_pass_confirm.html'),
          name="password_reset_confirm"),
-    path('reset/done/', PasswordResetCompleteView.as_view(template_name='accounts/reset_pass_complete.html'),
+    path('reset/done/', PasswordResetCompleteView.as_view(template_name='accounts/change_pass_success.html'),
          name="password_reset_complete"),
 
 ]
