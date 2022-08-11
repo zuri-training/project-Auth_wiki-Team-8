@@ -1,7 +1,7 @@
 {% extends 'base_layout.html' %} 
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/password_changed.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pass_changed.css' %}">
 {% endblock styles %}
 {% block content %}
 <main>
@@ -12,11 +12,9 @@
       </div>
     </div>
     <div>
-      <img src="images/password_changed.jpg" alt="password_changed icon" width="500"/></div>
-    <section class="form-section">
-      <form action="./login.html">    
-        <input type="submit" value="Login now" />
-      </form>
-    </section>
+      <img src="{% static 'images/password_changed.jpg' %}" alt="password_changed icon" width="418" height="345"/></div>
+    <div class="login-button">
+        <a href="{% url 'accounts:login' %}"><button>Login now</button></a>
+    </div>
   </main>
   {% endblock %}

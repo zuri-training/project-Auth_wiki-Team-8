@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background: white;
+}
+
+.action{
+    position: fixed;
+    top: 20px;
+    right: 30px;
+}
+
+.action .profile{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.action .profile img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.action .menu{
+    position: absolute;
+    top: 80px;
+    right: -10px;
+    padding: 10px 20px;
+    background:rgba(0, 32, 92, 1);
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    height: 500%;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menu.active{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    height: 20px;
+    width: 20px;
+    background:rgba(0, 32, 92, 1);
+    transform: rotate(45deg);
+}
+
+.action .menu h3{
+    color: white;
+    font-size: 18px;
+    padding: 20px 0;
+    line-height: 1.2rem;
+}
+
+.action .menu h3 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.action .menu ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    direction: flex;
+    align-items: center;
+
+
+}
+
+.action .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+}

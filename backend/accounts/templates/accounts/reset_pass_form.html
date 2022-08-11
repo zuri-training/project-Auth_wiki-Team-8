@@ -1,7 +1,7 @@
 {% extends 'base_layout.html' %} {% block content %}
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/forgot_pass.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock styles %}
 <main>
     <div class="hero">
@@ -12,7 +12,8 @@
     </div>
 
     <section class="form-section">
-      <form action="#">
+      <form class="site-form" method="post">
+        {% csrf_token %}
         <label for="email">Email</label>
         <input
           type="email"
