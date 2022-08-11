@@ -11,7 +11,7 @@
   background-attachment: scroll;
   padding: 100px;
   width: 100%;
-  height: 413px;
+  height: auto;
 }
 .hero-text {
     margin-top: 15px;
@@ -130,6 +130,7 @@ input[type="submit"]:hover {
   padding: 0;
   justify-content: space-between;
   align-items: center;
+  font-family: Inter;
 }
 
 .row1 {
@@ -143,6 +144,10 @@ input[type="submit"]:hover {
 
 form a {
   color: #000000;
+}
+
+form a:hover {
+  color: red;
 }
 
 .line {
