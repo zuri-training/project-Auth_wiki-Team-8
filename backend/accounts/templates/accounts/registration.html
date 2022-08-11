@@ -18,76 +18,25 @@
       <li style="color: red">{{ err }}</li>
       {% endfor %} {% endif %}
       <label for="id_username">Username:</label>
-      <input
-        type="text"
-        name="username"
-        autofocus
-        maxlength="50"
-        required
-        placeholder="Enter your username"
-        id="id_username"
-      />
+      <input type="text" name="username" autofocus maxlength="50" required placeholder="Enter your username"
+        id="id_username" />
       <label for="id_email">Email:</label>
-      <input
-        type="email"
-        name="email"
-        maxlength="100"
-        required
-        id="id_email"
-        placeholder="Enter your Email"
-      />
+      <input type="email" name="email" maxlength="100" required id="id_email" placeholder="Enter your Email" />
       <label for="id_first_name">First name:</label>
-      <input
-        type="text"
-        name="first_name"
-        maxlength="50"
-        required
-        placeholder="Enter your first name"
-        id="id_first_name"
-      />
+      <input type="text" name="first_name" maxlength="50" required placeholder="Enter your first name"
+        id="id_first_name" />
       <label for="id_last_name">Last name:</label>
-      <input
-        type="text"
-        name="last_name"
-        maxlength="50"
-        required
-        placeholder="Enter your last name"
-        id="id_last_name"
-      />
+      <input type="text" name="last_name" maxlength="50" required placeholder="Enter your last name"
+        id="id_last_name" />
       <label for="id_phone_number">Phone number:</label>
-      <input
-        type="text"
-        name="phone_number"
-        maxlength="15"
-        required
-        placeholder="Enter your phone number"
-        id="id_phone_number"
-      />
+      <input type="text" name="phone_number" maxlength="15" required placeholder="Enter your phone number"
+        id="id_phone_number" />
       <label for="id_password1">Password:</label>
-      <input
-        type="password"
-        name="password1"
-        autocomplete="new-password"
-        required
-        placeholder="Enter your password"
-        id="id_password1"
-      />
+      <input type="password" name="password1" autocomplete="new-password" required placeholder="Enter your password"
+        id="id_password1" />
       <label for="id_password2">Password confirmation:</label>
-      <input
-        type="password"
-        name="password2"
-        autocomplete="new-password"
-        required
-        placeholder="Confirm your password"
-        id="id_password2"
-      />
-      <div class="flex-layout row1">
-        <p>
-          Already have an account?<span>
-            <a href="{% url 'accounts:login' %}"> Login</a>
-          </span>
-        </p>
-      </div>
+      <input type="password" name="password2" autocomplete="new-password" required placeholder="Confirm your password"
+        id="id_password2" />
 
       <input type="submit" value="Sign Up" />
 
@@ -96,22 +45,9 @@
         <p>Or</p>
         <span class="line"></span>
       </div>
-      <div class="flex-layout row3">
-        <div class="google-box">
-          <img
-          src=https://th.bing.com/th/id/OIP.8s3LAW5gto4UdNXpmKEyQgHaGt?w=160&h=180&c=7&r=0&o=5&pid=1.7
-          alt="" class="logos" />
-          <label for="google">Google</label>
-        </div>
-
-        <div class="github-box">
-          <img
-            src="https://th.bing.com/th/id/OIP.ckeUFk-yid0vfWnd56w7wAHaHa?w=167&h=180&c=7&r=0&o=5&pid=1.7"
-            alt=""
-            class="logos"
-          />
-          <label for="github">Github</label>
-        </div>
+      <div class="register-now"
+        style="border: 1px solid #00205c; text-align:center; padding:20px; font-size:19px; font-weight:700; color:#00205c; letter-spacing: 0em; border-radius: 10px;">
+        <a href="{% url 'accounts:login' %}">Login</a>
       </div>
     </form>
   </section>

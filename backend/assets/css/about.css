@@ -13,12 +13,11 @@ main{
     
 }
 
-
 #heading-ctn{
     color: hsla(0, 0%, 100%, 1);
     text-align: center;
     padding: 150px;
-    background-image: url(/frontend/images/hero\ pic.png);
+    background-image: url(../images/hero\ pic.png);
     background-position: center;
     background-repeat: none;
     background-size: cover;
@@ -42,6 +41,7 @@ main{
 }
 
 #headline-cont{
+    width: 100%;
     margin-right: 180px;
 }
 
@@ -66,7 +66,7 @@ main{
 }
 
 #form-ctn{
-    background-image: url(/frontend/images/Group\ 161.png);
+    background-image: url(../images/Group\ 161.png);
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
