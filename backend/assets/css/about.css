@@ -138,36 +138,9 @@ main{
     font-size: 23.33px;
 }
 
-@media (max-width: 1280px) and (min-width: 1024px){
-    #second-ctn{
-        margin-top: 20px;
-        margin-right: 0px;
-    }
-
-    #headline{
-        margin-right: 60px;
-    }
-
-    #form-ctn input{
-        padding-right: 150px;
-    }
-
-    #stats-ctn{
-        padding: 50px 20px;
-    }
-
-    .stats{
-        padding: 40px 70px;
-    }
-
-    #stats-ctn h5{
-        line-height: 50px;
-    }
-}
-
 @media (max-width: 1195px) and (min-width: 1064px) {
     #img-second-ctn img {
-        width: 90%;
+        width: 600px;
     }
 }
 
@@ -256,7 +229,7 @@ main{
 
     #headline{
         font-size: 24px;
-        margin: 20px 200px;
+        margin: 20px 30px;
         padding: auto 30px;
         text-align: center;
     }

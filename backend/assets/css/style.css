@@ -309,7 +309,7 @@
   }
   
   /*responsive*/
-  @media(max-width: 767px){
+  @media(max-width: 768px){
     .footer {
       padding: 70px 30px;
     }
