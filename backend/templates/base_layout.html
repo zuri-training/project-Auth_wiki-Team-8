@@ -51,32 +51,31 @@
                 can register to download ready made authentication code
               </p>
             </div>
-            <div class="footer-col">
-              <h4>company</h4>
-              <ul>
-                <li><a class="footer-links" href="#">Home</a></li>
-                <li><a class="footer-links" href="#">About</a></li>
-                <li><a class="footer-links" href="#">Login</a></li>
-                <li><a class="footer-links" href="#">Register</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Services</h4>
-              <ul>
-                <li><a class="footer-links" href="#">Auth Codes</a></li>
-                <li><a class="footer-links" href="#">Trending codes</a></li>
-                <li><a class="footer-links" href="#">Recent codes</a></li>
-                <li><a class="footer-links" href="#">Update codes</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Help</h4>
-              <ul>
-                <li><a class="footer-links" href="#">Contact us</a></li>
-                <li><a class="footer-links" href="#">FAQ</a></li>
-                <li><a class="footer-links" href="#">User guides</a></li>
-                <li><a class="footer-links" href="#">Documentation</a></li>
-              </ul>
+            <div class="footer-col-section2">
+              <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                  <li><a class="footer-links" href="/">Home</a></li>
+                  <li><a class="footer-links" href="/about/">About</a></li>
+                  <li><a class="footer-links" href="{% url 'accounts:login' %}">Login</a></li>
+                  <li><a class="footer-links" href="{% url 'accounts:signup' %}">Register</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                  <li><a class="footer-links" href="library/?q=a">Auth Codes</a></li>
+                  <li><a class="footer-links" href="library/?q=a">Trending codes</a></li>
+                  <li><a class="footer-links" href="library/?q=a">Recent codes</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                  <li><a class="footer-links" href="/contact-us/">Contact us</a></li>
+                  <li><a class="footer-links" href="/faq/">FAQ</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="row">
