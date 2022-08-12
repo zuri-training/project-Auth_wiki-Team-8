@@ -1,33 +1,33 @@
 {% extends 'base_layout.html' %} {% block content %}
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock styles %}
 
 <main>
-    <div class="hero">
-      <div class="hero-text">
-        <h3 id="contact-heading">Contact Us</h3>
-        <p>
-          Want to talk to us? Fill the form and our team will respond <br>
-          as soon as possible.
-        </p>
-      </div>
+  <div class="hero">
+    <div class="hero-text">
+      <h3 id="contact-heading">Contact Us</h3>
+      <p>
+        Want to talk to us? Fill the form and our team will respond <br>
+        as soon as possible.
+      </p>
     </div>
+  </div>
 
-    <section class="form-section"> 
-      <form action=$ method="post">
-        {% csrf_token %}
-        <label for="username">Your username</label>
-        <input name="name" type="text" class="feedback-input" placeholder="Username" required />
-        <label for="email">Email</label>
-        <input name="email" type="email" class="feedback-input" placeholder="Email address" required />
-        <label for="phone number">Phone number</label>
-        <input name="Phone number" type="tel" class="feedback-input" placeholder="Phone number" />
-        <label for="message">Message</label>
-        <textarea name="text" class="feedback-input" placeholder="How can we help you?"></textarea>
-        <input type="submit" value="Send message" />
-      </form>
-    </section>
-  </main>
+  <section class="form-section">
+    <form action="/contacts/send/" method="post">
+      {% csrf_token %}{% if msg %}
+      <h3 style="color: green">{{ msg }}</h3>
+      {% endif %}
+      <label for="id_email">Your Email</label>
+      <input name="email" id="id_email" type="email" class="feedback-input" placeholder="Email" required />
+      <label for="id_subject">Subject</label>
+      <input name="subject" id="id_subject" type="subject" class="feedback-input" placeholder="Subject" required />
+      <label for="id_message">Message</label>
+      <textarea name="message" id="id_message" class="feedback-input" placeholder="How can we help you?"></textarea>
+      <input type="submit" value="Send message" />
+    </form>
+  </section>
+</main>
 {% endblock %}
