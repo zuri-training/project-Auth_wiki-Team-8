@@ -198,6 +198,7 @@
   footer .container .row{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
   footer .container .row .footer-col{
     width: 100%;
