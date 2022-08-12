@@ -12,7 +12,8 @@
 {% block content %}
     <div id="sub-header">
         <h1 id="library-name">{{ library.name }}</h1>
-        <p id="library-version">{{ library.library_version }}</p>
+        <h3 id="library-lang">A {{ library.library_language }} Authentication Code</h3>
+        <p id="library-version">Version - {{ library.library_version }}</p>
         {% if not request.user.is_authenticated %}
             <h3 id="login"><a href="{% url 'accounts:login' %}" style="color: white; font-style: italic; text-decoration-line: underline;">Login</a> to have full access!..</h3>
         {% endif %}
@@ -20,7 +21,29 @@
     <div id="main">
         <div id="sub-main">
             <div id="description-div">
-                <h3 id="description">Description</h3>
+                <div>
+                    <h3 id="description">Description</h3>
+                    {% if request.user.is_authenticated %}
+                    <a download href="{{ library.library_file.url }}" id="file-download" target="_blank">
+                        <button id="download-btn">
+                            <div id="download-div">
+                                <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
+                                <p id="download">Download</p>
+                            </div>
+                        </button>
+                    </a>
+                
+                    {% else %}
+                    <a download href="{{ library.library_file.url }}" id="file-download" target="_blank" style="pointer-events: none; opacity: 0.4;">
+                        <button id="download-btn">
+                            <div id="download-div">
+                                <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
+                                <p id="download">Download</p>
+                            </div>
+                        </button>
+                    </a>
+                    {% endif %}
+                </div>
                 {% if request.user.is_authenticated %}
                     <p id="described">{{ library.description }}</p>
                 {% else %}
@@ -115,45 +138,37 @@
                             </button>
                         </form>
                     </div>
-                    <label for="write-comment">
-                        <button class="react-btn">
-                            <div id="comment-div" class="react-div">
-                                <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
-                                <p id="comment">Comment</p>
-                                <h3 class="like-dislike">{{ num }}</h3>
-                            </div>
-                        </button>
-                    </label>
                 </div>
             {% endif %}
         </div>
         <div id="download-comment">
             {% if request.user.is_authenticated %}
-                <a download href="{{ library.library_file.url }}" id="file-download" target="_blank">
-                    <button id="download-btn">
-                        <div id="download-div">
-                            <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
-                            <p id="download">Download</p>
+                <a download href="{{ library.library_file.url }}" id="file-download2" target="_blank">
+                    <button id="download-btn2">
+                        <div id="download-div2">
+                            <i class="fa fa-download" id="download-img2"></i>
+                            <p id="download2">Download</p>
                         </div>
                     </button>
                 </a>
             {% else %}
-                <a download href="{{ library.library_file.url }}" id="file-download" target="_blank" style="pointer-events: none; opacity: 0.4;">
-                    <button id="download-btn">
-                        <div id="download-div">
-                            <img id="download-img" src="{% static 'librarys/images/download.png' %}" alt="Download">
-                            <p id="download">Download</p>
+                <a download href="{{ library.library_file.url }}" id="file-download2" target="_blank" style="pointer-events: none; opacity: 0.4;">
+                    <button id="download-btn2">
+                        <div id="download-div2">
+                            <i class="fa fa-download" id="download-img2"></i>
+                            <p id="download2">Download</p>
                         </div>
                     </button>
                 </a>
             {% endif %}
             <div id="comments-reactions">
-                <p id="p-com">Comments:</p>
+                <p id="p-com">Comments({{ num}})</p>
+                <hr>
                 {% if request.user.is_authenticated %}
                     {% for comment in comments %}
                         <div class="comment-div">
                             <div class="info">
-                                <h3 class="author">{{ comment.author }}</h3>
+                                <h5 class="author">{{ comment.author }}</h5>
                                 <small class="date">{{ comment.date_posted }}</small>
                             </div>
                             <p class="comment">{{ comment.comment }}</p>
@@ -163,7 +178,7 @@
                     {% for comment in comments1 %}
                         <div class="comment-div">
                             <div class="info">
-                                <h3 class="author">{{ comment.author }}</h3>
+                                <h5 class="author">{{ comment.author }}</h5>
                                 <small class="date">{{ comment.date_posted }}</small>
                             </div>
                             <p class="comment">{{ comment.comment }}</p>

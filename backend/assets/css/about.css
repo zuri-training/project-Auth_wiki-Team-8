@@ -37,8 +37,12 @@ main{
 
 #second-ctn{
     display: flex;
-    margin-left: 50px;
+    margin: 20px 0px 20px 50px;
     align-items: center;
+}
+
+#img-second-ctn img {
+    width: 600px;
 }
 
 #headline{
@@ -140,7 +144,7 @@ main{
 
 @media (max-width: 1195px) and (min-width: 1064px) {
     #img-second-ctn img {
-        width: 600px;
+        width: 550px;
     }
 }
 

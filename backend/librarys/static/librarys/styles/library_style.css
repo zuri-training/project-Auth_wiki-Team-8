@@ -4,19 +4,33 @@
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    height: 200px;
+    height: 100%;
     color: #FFFFFF;
     text-align: center;
+    padding: 70px 0px;
+    font-family: Roboto;
+    font-size: 34px;
+}
+
+#library-lang {
+    margin-top: 20px;
 }
 
 #main {
     display: flex;
     margin: 80px;
     justify-content: space-between;
+    font-family: Roboto;
+    flex-direction: column;
+}
+
+#description-div div {
+    display: flex;
+    justify-content: space-between;
 }
 
 #sub-main {
-    width: 60%;
+    width: 80%;
 }
 
 #described {
@@ -84,24 +98,23 @@
 }
 
 .like-dislike {
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 #download-comment {
     display: flex;
     flex-flow: column;
     height: inherit;
-    width: 30%;
-    align-items: flex-end;
+    width: 60%;
+    align-items: center;
+    margin-top: 3%;
 }
 
 #comments-reactions {
     display: flex;
     flex-flow: column;
-    align-items: center;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
     margin-top: 5%;
     padding: 5%;
 }
@@ -114,12 +127,18 @@
     display: flex;
     flex-flow: column;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .info {
     display: flex;
     margin-bottom: 2%;
+    justify-content: space-between;
+}
+
+.comment-div .comment {
+    margin-left: 5%;
 }
 
 .author {
@@ -127,12 +146,12 @@
 }
 
 .date {
-    padding-top: 1.5%;
     font-style: italic;
 }
 
 #p-com {
-    margin-bottom: 5%;
+    font-size: 26px;
+    margin-bottom: 2%;
 }
 
 #comment-section, #comment-form, #write-comment {
@@ -145,12 +164,67 @@
     padding: 5%;
 }
 
-#comment-submit {
-    height: 30%;
-    width: 40%;
+#comment-submit, #file-download2 button {
+    padding: 20px 20px;
+    width: 180px;
     cursor: pointer;
+    background: #00205C;
+    color: #FFFFFF;
+    border-radius: 50px;
+    outline: 0;
+    border: 1px solid #00205C;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#file-download2 div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#file-download2 button {
+    width: 100%;
+}
+
+#file-download2 button i {
+    color: white;
+}
+
+#file-download2 button  {
+    margin-right: 15px;
+}
+
+#comment-submit:hover {
+    background-color: #FFFFFF;
+    color: #00205C;
 }
 
 #login {
     margin-top: 2%;
+}
+
+@media (max-width: 768px) {
+    #main {
+        margin: 50px
+    }
+
+    #sub-main {
+        width: 100%;
+    }
+    
+    #download-comment {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+        margin: 20px
+    }
+    #sub-main {
+        width: 100%;
+    }
+    #download-comment {
+        width: 100%;
+    }
 }
