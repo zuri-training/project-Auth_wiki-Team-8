@@ -6,22 +6,24 @@
 {% block content %}
         <div id="sub-header">
             <section id="home">
-                    <form method="get" action="/library" enctype="multipart/form-data" class="faq-form">
-                        <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
-                        <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
-                    </form>
+                <h2 class="faq-title">Search Here</h2>
+                <form method="get" action="/library" enctype="multipart/form-data" class="faq-form">
+                    <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
+                    <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
+                </form>
             </section>
         </div>
-        {% if found > 1 %}
-            <h3>Filter: Found {{ found }} search results</h3>
+        {% if found > 0 %}
+            <h3>Found {{ found }} search results</h3>
         {% else %}
-            <h3>Filter: No matches found</h3>
+            <h3>No matches found</h3>
             <h4>Try another keyword</h4>
         {% endif %}
         {% for library in libraries %}
             <a href="{% url 'librarys:search_result' library.id %}">
                 <div id="library-div">
                     <h2 id="library-name">{{ library.name }}</h2>
+                    <p id="version">{{ library.library_language}}</p>
                     <p id="version">{{ library.library_version }}</p>
                 </div>
             </a>
