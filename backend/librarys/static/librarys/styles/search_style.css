@@ -111,6 +111,10 @@
     margin: 10px 0px;
 }
 
+#version {
+    font-family: Roboto;
+}
+
 #pagination {
     display: flex;
     justify-content: space-between;
