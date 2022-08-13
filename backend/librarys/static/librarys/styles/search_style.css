@@ -146,6 +146,7 @@
     }
 
     #library-div {
-        width: 90%;
+        width: 85%;
+        padding: 10px 0px 10px 5%;
     }
 }
