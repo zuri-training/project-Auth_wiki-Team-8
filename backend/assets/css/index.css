@@ -238,17 +238,13 @@ margin-left: 70px;
     margin-bottom: 20px;
     margin-top: 3%;
     width: 78%;
+    max-width: 850px;
     height: auto;
     padding: 25px 0px 25px 5%;
-
-    /* material-theme/sys/light/on-error */
-
     background: #FFFFFF;
-    /* material-theme/sys/light/inverse-primary */
-
-    border: 1px solid #B3C5FF;
     border-radius: 16px;
-    box-shadow: 5px 5px 10px 5px #ecf0fd;
+    border-radius: 16px;
+    box-shadow: 8px 8px 12px 2px #ced8fa;
 }
 
 .card-01:hover {
@@ -264,6 +260,7 @@ margin-left: 70px;
 
 #library-name {
     font-family: Roboto;
+    font-size: 24px;
 }
 
 .card-02{
@@ -526,7 +523,7 @@ margin-left: 70px;
     border-radius: 10px;
     overflow: hidden;
     padding: 20px;
-    width: 90%;
+    width: 100%;
     }
 
     .card-02{
