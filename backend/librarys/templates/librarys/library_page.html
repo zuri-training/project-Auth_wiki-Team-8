@@ -91,7 +91,6 @@
                             <button class="react-btn" id="like">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
-                                    <p id="like-dislike">Like</p>
                                     <h3 class="like-dislike">{{ library.like }}</h3>
                                 </div>
                             </button>
@@ -100,21 +99,11 @@
                             <button class="react-btn" name="dislike">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
-                                    <p id="like-dislike">Dislike</p>
                                     <h3 class="like-dislike">{{ library.dislike }}</h3>
                                 </div>
                             </button>
                         </form>
                     </div>
-                    <a href="#comment-section">
-                        <button class="react-btn">
-                            <div id="comment-div" class="react-div">
-                                <img id="comment-img" class="react-img" src="{% static 'librarys/images/comment.png' %}" alt="React">
-                                <p id="comment">Comment</p>
-                                <h3 class="like-dislike">{{ num }}</h3>
-                            </div>
-                        </button>
-                    </a>
                 </div>
             {% else %}
                 <div id="reaction" style="pointer-events: none; opacity: 0.4;">
@@ -123,7 +112,6 @@
                             <button class="react-btn" id="like">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/like.png' %}" alt="React">
-                                    <p id="like-dislike">Like</p>
                                     <h3 class="like-dislike">{{ library.like }}</h3>
                                 </div>
                             </button>
@@ -132,7 +120,6 @@
                             <button class="react-btn" name="dislike">
                                 <div id="react-div" class="react-div">
                                     <img id="react-img" class="react-img" src="{% static 'librarys/images/dislike.png' %}" alt="React">
-                                    <p id="like-dislike">Dislike</p>
                                     <h3 class="like-dislike">{{ library.dislike }}</h3>
                                 </div>
                             </button>
@@ -168,7 +155,7 @@
                     {% for comment in comments %}
                         <div class="comment-div">
                             <div class="info">
-                                <h5 class="author">{{ comment.author }}</h5>
+                                <h5 class="author">{{ request.user }}</h5>
                                 <small class="date">{{ comment.date_posted }}</small>
                             </div>
                             <p class="comment">{{ comment.comment }}</p>
@@ -178,7 +165,7 @@
                     {% for comment in comments1 %}
                         <div class="comment-div">
                             <div class="info">
-                                <h5 class="author">{{ comment.author }}</h5>
+                                <h5 class="author">{{ request.user }}</h5>
                                 <small class="date">{{ comment.date_posted }}</small>
                             </div>
                             <p class="comment">{{ comment.comment }}</p>
@@ -188,7 +175,7 @@
                 {% if request.user.is_authenticated %}
                     <section name="comment-section" id="comment-section">
                         <form action="" method="post">{% csrf_token %}
-                            <textarea name="comment" id="write-comment" cols="30" rows="10" maxlength="150" placeholder="write your comment"></textarea>
+                            <textarea name="comment" id="write-comment" cols="30" rows="10" maxlength="150" placeholder="Write your comment..."></textarea>
                             <button id="comment-submit">Comment</button>
                         </form>
                     </section>
