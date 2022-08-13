@@ -1,6 +1,5 @@
 #sub-header {
     background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
-    height: 200px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -16,6 +15,19 @@
     text-align: center;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    padding: 50px 10px;
+}
+
+#home h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 #home .faq-form {
@@ -26,7 +38,7 @@
     padding: 5px;
     border-radius: 8px;
     display:flex;
-    margin-top: 40px;
+    margin: 40px 0px 30px 0;
 }
 
 #home .faq-form input {
@@ -66,11 +78,11 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin-left: 80px;
+    margin: auto;
     margin-bottom: 20px;
     width: 78%;
-    height: 100px;
-    padding-left: 5%;
+    height: auto;
+    padding: 20px 0px 20px 5%;
 
     /* material-theme/sys/light/on-error */
 
@@ -79,14 +91,32 @@
 
     border: 1px solid #B3C5FF;
     border-radius: 16px;
+    box-shadow: 5px 5px 10px 5px #ecf0fd;
+}
+
+#library-div:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    background-color: #B3C5FF;
+}
+
+#library-div:active {
+    background-color: #00205C;
+    color: white;
+}
+
+#library-name {
+    font-family: Roboto;
+    font-size: 28px;
+    margin: 10px 0px;
 }
 
 #pagination {
     display: flex;
     justify-content: space-between;
-    margin-left: 80px;
+    margin: auto;
     margin-bottom: 20px;
-    width: 77.6%;
+    width: 90%;
     color: black;
     font-family: Roboto;
 }
@@ -113,5 +143,10 @@
 
     .wrapper h3 {
         font-size: 26px;
+    }
+
+    #library-div {
+        width: 85%;
+        padding: 10px 0px 10px 5%;
     }
 }

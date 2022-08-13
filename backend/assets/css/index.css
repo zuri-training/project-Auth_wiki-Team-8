@@ -1,18 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
 /*home*/
 #home{
     background-image: linear-gradient(to top, rgba(0, 32, 92, 0.82)60%,rgba(0, 32, 92, 0.82)60%), url("../images/image\ 1.png");
     width: 100%;
-    height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding: 70px 20px;
 }
 #home h2{
     font-family: 'Poppins';
@@ -26,25 +24,30 @@
 }
 
 #home form {
+    width: 40%;
+    position: relative;
+    max-width: 400px;
     background: #fff;
     padding: 5px;
     border-radius: 8px;
     display:flex;
-    width: 40%;
     margin-top: 40px;
 }
 
 #home form input{
+    padding: 10px 20px;
     flex: 1;
     border: none;
     outline: none;
-    padding: 0 20px;
     font-size: 18px;
 }
 
   #home form button{
     color: black;
-    padding: 15px 40px;
+    padding: 15px 10px;
+    position: absolute;
+    right: 5%;
+    color: black;
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -135,18 +138,14 @@ margin-left: 70px;
 /*Newsletter*/
 
 #Newsletter{
-    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(/frontend/images/image\ 5.png);
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url("../images/image\ 5.png");
     width: 100%;
-    height: 50vh;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding: 60px 10px 40px 40px;
     justify-items: center;
-    padding-left: 40px;
-
 }
 #Newsletter h3{
     color: #fff;
@@ -160,10 +159,8 @@ margin-left: 70px;
 }
 
 #Newsletter form {
-border-radius: 8px;
-
+  border-radius: 8px;
 }
-
 
 #Newsletter form input{
     border: 1px solid #ececec;
@@ -176,8 +173,9 @@ border-radius: 8px;
     font-family: 'poppins';
     font-weight: 400;
     padding: 15px 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
-
 
 #Newsletter form button{
     color:rgba(51, 51, 51, 1);
@@ -191,22 +189,20 @@ border-radius: 8px;
     font-size: 19px;
     font-weight: 700;
     margin-left: 10px;
-   
-
   }
 
 #Newsletter form p{
     color: rgba(255, 255, 255, 1);
     font-family: 'poppins';
     font-weight: 400;
-    font-size: 19;
+    font-size: 16px;
     margin-top: 10px;
 }
 
 #container{
     background-color: #fff;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -232,16 +228,38 @@ border-radius: 8px;
     justify-content: center;
     flex-wrap: wrap;
 }
-.card-01{
-    background: white;
-    position: relative;
-    flex: 1;
-    max-width: 50%;
-    height: 70px;
-    border:2px solid #ececec;
-    margin:10px;
-    border-radius: 10px;
-    overflow: hidden;
+
+.card-01 {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 3%;
+    width: 78%;
+    height: auto;
+    padding: 25px 0px 25px 5%;
+
+    /* material-theme/sys/light/on-error */
+
+    background: #FFFFFF;
+    /* material-theme/sys/light/inverse-primary */
+
+    border: 1px solid #B3C5FF;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px 5px #ecf0fd;
+}
+
+.card-01:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    background-color: #B3C5FF;
+}
+
+.card-01:active {
+    background-color: #00205C;
+    color: white;
 }
 
 .card-02{
@@ -270,7 +288,8 @@ border-radius: 8px;
     background: #fff;
     width: 100%;
     margin-top: 10px;
-    height: 60vh;
+    height: 100%;
+    margin-bottom: 10%;
 }
 
 #faq .faq-sec{
@@ -294,18 +313,15 @@ border-radius: 8px;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    text-align: center;
-    margin-left: 50px;
-
 }
 .accordion span{
     background: none;
-
 }
 
 .accordion .accordion-content{
     overflow: hidden;
     z-index: 1;
+    margin-top: 15px;
 }
 
 .accordion-content.open{
@@ -330,149 +346,59 @@ border-radius: 8px;
 .accordion-content header i{
     font-size: 15px;
     color:#79B5B8;
+    margin-right: 15px;
 }
 .accordion-content .description{
     height: 0;
     font-size: 15px;
     color: #333;
     font-weight: 400;
-    padding: 0 15px;
+    padding: 0 15px 0 47px;
     transition: all 0.2s linear;
 }
 
-/* footer styles */
-.footer{
-    background-color: #00205C;
-      padding: 70px 0;
-  }
-  footer .container{
-    max-width: 1170px;
-    margin:auto;
-  }
-  footer .container .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  footer .container .row .footer-col{
-    width: 20%;
-    padding: 0 15px;
- }
- footer .container .row .last{
-  width: 100%;
-  margin-top: 70px;
-  border-top: 1px solid #ffffff;
-  text-align: center;
- }
- footer .container .row .social{
-  position: absolute;
-  margin-top: 45px;
-  margin-left: 10px;
- }
- footer .container .row .social a i{
-  color:#fff;
-  margin-right: 5px;
- }
- footer .container .row .copyright{
-  margin-top: 10px;
-  width: 100%;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #FFFFFF;
- }
-  footer .container .row .colmain{
-    width: 40%;
-    padding: 0 15px;
- }
-  footer .container .row .footer-col h4.head{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    color: #ffffff;
-    margin-top: -10px;
-  }
-  footer .container .row .footer-col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    /* position: relative; */
-  }
-  .footer-col h4::before{
-    content: '';
-    /* position: absolute; */
-    left:0;
-    bottom: -10px;
-    background-color: #ffffff;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-  }
-  footer .container .row .footer-col p{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 200;
-    font-size: 20px;
-    line-height: 24px;
-    color:#ffffff;
-  }
-  footer .container .row ul{
-    list-style: none;
-  }
-  footer .container .row .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-  }
-  footer .container .row .footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  footer .container .row .footer-col ul li a.footer-links:hover{
-    color: #ffffff;
-    padding-left: 8px;
-  }
-  footer .container .row .footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255,255,255,0.2);
-    margin:0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-  }
-  footer .container .row .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffffff;
-  }
-  
-  /*responsive*/
-  @media(max-width: 767px){
-    footer .container .row .footer-col{
-      width: 50%;
-      margin-bottom: 30px;
-  }
-  }
-  @media(max-width: 574px){
-    footer .container .row .footer-col{
-      width: 100%;
-  }
+@media (max-width: 800px) {
+  #home form {
+    width: 60%;
   }
 
+  #Newsletter{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    justify-items: center;
+    padding: 40px 5px;
+   }
+
+   #Newsletter h3{
+    font-size: 26px;
+    text-align: center;
+   }
+   #Newsletter form {
+    border-radius: 8px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+ }
+   #Newsletter form input{
+    width: 70%;
+    padding: 15px 20px;
+    margin: auto;
+   }
+   #Newsletter form button{
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 150px;
+    margin: auto;
+    }
+
+    #Newsletter form p {
+        text-align: center;
+    }
+}
   @media(max-width: 574px){
     #home{
         width: 100%;
-        height: 60vh;
+        height: auto;
         background-size: cover;
         background-position: center;
         display: flex;
@@ -492,34 +418,21 @@ border-radius: 8px;
     }
 
     #home form {
-        background: #fff;
-        padding: 5px;
-        border-radius: 8px;
-        display:flex;
-        width: 70%;
-        margin-top: 40px;
-    }
-    /*home*/
+      width: 80%;
+  }
 
-    #home form input{
-        flex: 1;
-        border: none;
-        outline: none;
-        padding: 0 25px;
-        font-size: 15px;
-    }
+  #home form input {
+      padding: 10px 0px;
+  }
 
-    #home form button{
-      padding: 10px 10px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      background: transparent;
-    }
-
+  #home form button {
+      padding: 12px 10px;
+      right: 0%;
+  }
     #blog .blog-heading h6{
         text-align: center;
         font-size: 20px;
+        margin: 0;
     }
 
     .blog-container{
@@ -551,33 +464,43 @@ border-radius: 8px;
       
    }
    #Newsletter{
-    height: 40vh;
     padding-top: 5px;
     padding-bottom: 10px;
     justify-items: center;
-    padding-left: 40px;
+    padding: 40px 5px;
    }
 
    #Newsletter h3{
-    font-size: 20px;
+    font-size: 26px;
+    text-align: center;
    }
-
+   #Newsletter form {
+    border-radius: 8px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+ }
    #Newsletter form input{
-    width: 50%;
-    padding: 5px 20px;
+    width: 90%;
+    padding: 15px 20px;
+    margin: auto;
    }
    #Newsletter form button{
     padding: 10px 20px;
     border-radius: 6px;
+    width: 150px;
+    margin: auto;
+    }
+
+    #Newsletter form p {
+        text-align: center;
     }
 
     #container{
     width: 100%;
-    height: 40vh;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 100%;
+    padding: 50px 20px;
     justify-items: center;
-    padding-left: 40px;
     flex-wrap: wrap;
 
     }
@@ -588,12 +511,13 @@ border-radius: 8px;
 
     .card-01{
     max-width: 100%;
-    height: 40px;
+    height: 100%;
     border:2px solid #ececec;
-    margin:10px;
+    margin:10px auto;
     border-radius: 10px;
     overflow: hidden;
-
+    padding: 20px;
+    width: 90%;
     }
     .card-02{
     max-width: 100%;
@@ -633,54 +557,37 @@ border-radius: 8px;
     background-color: #ececec;
     width: 100%;
     background-size: cover;
-    padding: 5px 5px;
+    padding: 20px 5px;
   }
   
   #faq{
     background: #fff;
     width: 100%;
     margin-top: 10px;
-    height: 50vh;
+    height: auto;
   }
-
-    
-
-    
-
-
-
   }
 
   @media(max-width: 375px){
-
-    body{
-      width: 100%;
-    }
     #home h2{
-
       font-size: 24px;
       text-align: center;
     }
     #home form {
       background: #fff;
-      padding: 10px;
+      padding: 8px;
       border-radius: 8px;
       display:flex;
-      width: 80%;
+      width: 100%;
       margin-top: 40px;
   }
 
   #blog .blog-heading h6{
     font-size: 16px;
-    text-align: left;
   }
-
   .faq-sec h3{
     font-size: 16px;
   }
-
-
-
   .accordion-content header .title{
     font-size: 15px;
     font-weight: 500;
@@ -702,14 +609,14 @@ border-radius: 8px;
   background-color: #ececec;
   width: 100%;
   background-size: cover;
-  padding: 5px 5px;
+  padding: 25px 5px;
 }
 
 #faq{
   background: #fff;
   width: 100%;
   margin-top: 10px;
-  height: 54vh;
+  margin-bottom: 50px;
 }
 
   }

@@ -2,182 +2,179 @@
 {% load static %}
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 {% endblock styles %}
 {% block content %}
 <!----Home---->
 <section id="home">
     <h2>We have the best Authentication <br>codes that are ready to be used</h2>
-        <form method="get" action="/library" enctype="multipart/form-data" class="form">
-            <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
-            <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
-        </form>
+    <form method="get" action="/library" enctype="multipart/form-data" class="form">
+        <input type="text" placeholder=" e.g python authentication" name="q" value="{{request.GET.q}}">
+        <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
+    </form>
 </section>
-    <!--section-->
-    <section id="blog">
-        <div class="blog-heading">
-            <h6>Recently added Authentication Codes</h6>
-        </div>
+<!--section-->
+<section id="blog">
+    <div class="blog-heading">
+        <h6>Recently added Authentication Codes</h6>
+    </div>
 
-        <div class="blog-container">
-            {% for library in libraries1 %}
-                <a href="{% url 'librarys:search_result' library.id %}">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="{% static 'images/image 3.png' %}" alt="">
-                        </div>
-                        
-                        <div class="blog-text">
-                            <p>{{ library.name }}</p>
-                            <p>{{ library.description }}</p>
-                        </div>
-                    </div>
-                </a>
-            {% endfor %}
-        </div>
-    </section>
-
-    <!--Newsletter-->
-
-    <section id="Newsletter">
-        <h3>Get Authwiki updates</h3>
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <button type="submit">Subscribe</button>
-            <p>No spam, we will only send you mails related to update</p>
-        </form>
-
-    </section>
-
-
-    <section id="container">
-        <h6>Trending libraries</h6>
-        {% for library in libraries %}
-            <a href="{% url 'librarys:search_result' library.id %}">
-                <div class="row">
-                    <div class="card-01">
-                        <h3 id="library-name">{{ library.name }}</h3>
-                        <p id="version">{{ library.library_version }}</p>
-                    </div>
+    <div class="blog-container">
+        {% for library in libraries1 %}
+        <a href="{% url 'librarys:search_result' library.id %}">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="{% static 'images/image 3.png' %}" alt="">
                 </div>
-            </a>
+
+                <div class="blog-text">
+                    <p>{{ library.name }}</p>
+                    <p>{{ library.description }}</p>
+                </div>
+            </div>
+        </a>
         {% endfor %}
-        <a href="library/?q=a" id="see-more">See More..</a>
-    </section>
-    
+    </div>
+</section>
 
-    <section id="faq">
-        <div class="faq-sec">
-            <h3>Frequently asked questions</h3>
-            <div class="accordion">
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">Do I need to sign up?</span>
-                    </header>
+<!--Newsletter-->
 
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
+<section id="Newsletter">
+    <h3>Get Authwiki updates</h3>
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <button type="submit">Subscribe</button>
+        <p>No spam, we will only send you mails related to update</p>
+    </form>
+
+</section>
 
 
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">How do I change my password?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
+<section id="container">
+    <h6>Trending libraries</h6>
+    {% for library in libraries %}
+    <a href="{% url 'librarys:search_result' library.id %}">
+        <div class="row">
+            <div class="card-01">
+                <h3 id="library-name">{{ library.name }}</h3>
+                <p id="version">{{ library.library_version }}</p>
             </div>
-
-            <div class="accordion">
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">How can i download authentication code?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
-
-
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">Can i drop my code here?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">Can i connect with my github account?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
-
-
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">Is there a team i can work with?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="accordion">
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">Is the code free to download?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
-
-
-                <div class="accordion-content">
-                    <header>
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        <span class="title">How can i reset my password?</span>
-                    </header>
-
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
-                    </p>
-                </div>
-            </div>
-
         </div>
-        
+    </a>
+    {% endfor %}
+    <a href="library/?q=a" id="see-more">See All Auth Codes..</a>
+</section>
 
-    </section>
+
+<section id="faq">
+    <div class="faq-sec">
+        <h3>Frequently asked questions</h3>
+        <div class="accordion">
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">Do I need to sign up?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+
+
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">How do I change my password?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">How can i download authentication code?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+
+
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">Can i drop my code here?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">Can i connect with my github account?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+
+
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">Is there a team i can work with?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+        </div>
+
+
+        <div class="accordion">
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">Is the code free to download?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+
+
+            <div class="accordion-content">
+                <header>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span class="title">How can i reset my password?</span>
+                </header>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorum?
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
 {% endblock content %}
 {% block scripts %}
 <script src="{% static 'js/script1.js' %}"></script>

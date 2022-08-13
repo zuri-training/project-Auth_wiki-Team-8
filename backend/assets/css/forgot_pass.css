@@ -1,7 +1,7 @@
 
 .hero {
-  position: relative;
-  top: 115px;
+  /* position: relative;
+  top: 115px; */
   background-image: url(../images/headerimage.jpg);
   background-color: #00205c;
   background-repeat: no-repeat;
@@ -14,9 +14,9 @@
 .hero-text {
   width: 100%;
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
   transform: translate(-50%, -50%);
   color: #ffffff;
 }
@@ -49,8 +49,8 @@
 }
 /* input fields */
 .form-section {
-  position: absolute;
-  top: 528px;
+  /* position: absolute;
+  top: 528px; */
   width: 100%;
   height: auto;
 }
@@ -188,12 +188,5 @@ form a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-
-  .google-box,
-  .github-box {
-    width: 70%;
-    padding-block: 24px;
-    padding-inline: 60px;
   }
 }

@@ -1,9 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet");
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: #fff;
+    width: 100%;
+    
+}
+
 
 #heading-ctn{
     color: hsla(0, 0%, 100%, 1);
     text-align: center;
     padding: 150px;
-    background-image: url(../images/hero\ pic.png);
+    background-image: url("../images/hero\ pic.png");
     background-position: center;
     background-repeat: none;
     background-size: cover;
@@ -22,18 +37,18 @@
 
 #second-ctn{
     display: flex;
-    margin-left: 80px;
+    margin: 20px 0px 20px 50px;
     align-items: center;
 }
 
-#headline-cont{
-    margin-right: 250px;
+#img-second-ctn img {
+    width: 600px;
 }
 
 #headline{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 57.33px;
+    font-size: 7vmin;
     color: #333;
     margin-bottom: 15px;
     margin-right: 20px;
@@ -46,12 +61,8 @@
     line-height: 28.8px;
 }
 
-#img-second-ctn{
-    margin: 50px 100px 50px 170px;
-}
-
 #form-ctn{
-    background-image: url(../images/Group\ 161.png);
+    background-image: url("../images/Group\ 161.png");
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +126,8 @@
 .stats{
     border-radius: 16px;
     background-color: #DAE1FF;
-    padding: 40px 60px;
+    padding: 40px 5px;
+    width: 350px;
 }
 
 #stats-ctn h5{
@@ -130,11 +142,267 @@
     font-size: 23.33px;
 }
 
+@media (max-width: 1195px) and (min-width: 1064px) {
+    #img-second-ctn img {
+        width: 550px;
+    }
+}
+
+@media (max-width: 1064px) and (min-width: 769px) {
+    #second-ctn{
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    #headline-cont{
+        margin: auto 100px;
+    }
+
+    #headline{
+        margin: auto;
+        text-align: center;
+        line-height: 70px;
+    }
+
+    #subheadline{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: auto 80px;
+    }
+    #img-second-ctn{
+        margin: 20px auto;
+    }
+
+    #img-second-ctn img{
+        width: 350px;
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 70px 30px;
+    }
+
+    #form-ctn h3{
+        text-align: center;
+    }
+
+    #form-ctn input{
+        margin: auto 150px;
+    }
+
+    #form-ctn button{
+        margin: auto;
+        padding: 24px 100px;
+        margin-top: 10px;
+    }
+
+    #form-ctn p{
+        text-align: center;
+    }
+
+    #stats-ctn{
+        flex-direction: column;
+        margin: 40px auto;
+        padding: 50px 30px;
+    }
+
+    .stats{
+        padding: auto 40px;
+        width: 26rem;
+    }
+
+    #stats-ctn h5{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 769px) {
+    #second-ctn{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #headline-cont{
+        margin: 30px auto;
+    }
+
+    #headline{
+        font-size: 24px;
+        margin: 20px 30px;
+        padding: auto 30px;
+        text-align: center;
+    }
+    
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px;
+    }
+
+    #stats-ctn{
+        flex-direction: column;
+    }
+
+    #subheadline{
+        font-size: 16px;
+        text-align: center;
+        margin: 10px 70px;
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #form-ctn h3{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #form-ctn input{
+        margin-bottom: 10px;
+        padding: auto;
+    }
+
+    #form-ctn button{
+        margin: auto 150px;
+        text-align: center;
+        padding: 24px auto;
+    }
+
+    #form-ctn p{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #stats-ctn{
+        flex-direction: column;
+        margin: 40px auto;
+    }
+
+    .stats{
+        width: 25rem;
+        padding: 40px 40px;
+    }
+}
+
+
+@media (max-width: 480px) and (min-width: 320px) {
+    #heading-ctn{
+        padding: 40px 20px;
+    }
+
+    #heading-elem{
+        font-size: 32px;
+    }
+
+    #second-ctn{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px auto;
+    }
+
+    #headline-cont{
+        margin: auto;
+    }
+
+    #headline{
+        margin: auto 50px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+
+    #subheadline{
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+        margin: auto 25px;
+    }
+
+    #img-second-ctn{
+        margin: 10px auto;
+    }
+
+    #img-second-ctn img{
+        width: 300px
+    }
+
+    #form-ctn{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 60px 30px 20px 30px;
+    }
+
+    #form-ctn h3{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #form-ctn input{
+        padding: 24px 60px 24px 25px;
+    }
+
+    #form-ctn button{
+        padding: auto;
+        margin: auto;
+    }
+
+    #form-ctn p{
+        visibility: hidden;
+    }
+    
+    #stats-ctn{
+        margin: 40px 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stats{
+        padding: 40px 60px;
+        width: 300px;
+    }
+
+    #stats-ctn h5{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .small{
+        font-size: 28px;
+    }
+}
+
+
+
+
+
+
+
+
 /* Responsiveness for main */
 
-@media (max-width: 1280px){
+/* @media (max-width: 1280px){
+    #second-ctn{
+        
+    }
+
     #headline-cont{
-        margin-right: 20px;
+        margin:auto;
     }
 
     #form-ctn input{
@@ -146,7 +414,7 @@
     }
 
     #img-second-ctn{
-        margin: 50px 50px 50px 80px;
+        margin: 10px;
     }
 }
 
@@ -264,7 +532,7 @@
 
 @media (max-width: 480px){
     #heading-ctn{
-        padding: 40px 20px;
+        padding: 100px;
 
     }
 
@@ -280,7 +548,7 @@
     }
 
     #headline-cont{
-        margin: auto 20px;
+        margin: auto 80px;
     }
 
     #headline{
@@ -349,4 +617,6 @@
     .small{
         font-size: 23.33px;
     }
-}
+} */
+
+

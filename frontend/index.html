@@ -17,16 +17,16 @@
     <nav>
       <input type="checkbox" id="check" />
       <label for="check" class="checkbtn">
-        <i class="fas fa-bars navi"></i>
+        <i class="fas fa-bars navi" id="burger-icon"></i>
       </label>
       <label class="logo">Auth_Wiki</label>
       <ul>
-        <li><a class="nav-links" href="#">Home</a></li>
-        <li><a class="nav-links" href="#">About</a></li>
-        <li><a class="nav-links" href="#">Contact us</a></li>
-        <li><a class="nav-links" href="#">FAQ</a></li>
-        <li><a class="nav-links" href="#">Login</a></li>
-        <li><a class="nav-links active" href="#">Register</a></li>
+        <li><a class="nav-links" href="/">Home</a></li>
+        <li><a class="nav-links" href="/about/">About</a></li>
+        <li><a class="nav-links" href="/contact-us/">Contact us</a></li>
+        <li><a class="nav-links" href="/faq/">FAQ</a></li>
+        <li><a class="nav-links" href="{% url 'accounts:login' %}">Login</a></li>
+        <li><a class="active" href="{% url 'accounts:signup' %}">Register</a></li>
       </ul>
     </nav>
   </header>
@@ -222,6 +222,7 @@
 
     </section>
 
+    <!------------------------------ FOOTER ----------------------->
     <footer class="footer">
         <div class="container">
           <div class="row">
