@@ -32,18 +32,18 @@
         <div id="pagination" style="display: none;"></div>
         {% else %}
         <div id="pagination">
-            {% if page.has_previous and page.has_next %}
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous">Previous</a>
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next">Next</a>
-            {% elif  page.has_previous %}
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous">Previous</a>
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
-            {% elif  page.has_next %}
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next">Next</a>
+            {% if libraries.has_previous and libraries.has_next %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.previous_page_number }}" id="previous">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.next_page_number }}" id="next">Next</a>
+            {% elif  libraries.has_previous %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.previous_page_number }}" id="previous">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
+            {% elif  libraries.has_next %}
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.next_page_number }}" id="next">Next</a>
             {% else %}
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.previous_page_number }}" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
-                <a href="/library/?q={{ request.GET.get }}&page={{ page.next_page_number }}" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
             {% endif %}
         </div>
         {% endif %}
