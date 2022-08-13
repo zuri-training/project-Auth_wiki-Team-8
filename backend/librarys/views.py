@@ -55,7 +55,6 @@ class LibrarySearchPage(View):
                     'libraries': libraries,
                     'found': found,
                     'title': 'Search results',
-                    'page': libraries_per_page
                 }
             )
         else:
