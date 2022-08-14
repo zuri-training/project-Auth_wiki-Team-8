@@ -14,7 +14,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('accounts:profile')
+            return redirect('/')
         else:
             err = form.errors.as_data()
             print(err)
@@ -37,7 +37,7 @@ def signin_view(request):
             login(request, user)
             if'next' in request.POST:
                 return redirect(request.POST.get('next'))
-            return redirect('accounts:profile')
+            return redirect('/')
         else:
             message = form.errors.as_data().get('__all__')[0]
             return render(request, 'accounts/login.html', {'message': message})
