@@ -109,6 +109,7 @@
 
   #see-more {
     margin-top: 5%;
+    font-family: Roboto;
   }
 
   @media (max-width: 1100px){

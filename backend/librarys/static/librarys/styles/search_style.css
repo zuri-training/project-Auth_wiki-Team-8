@@ -81,17 +81,12 @@
     margin: auto;
     margin-bottom: 20px;
     width: 78%;
+    max-width: 850px;
     height: auto;
     padding: 20px 0px 20px 5%;
-
-    /* material-theme/sys/light/on-error */
-
     background: #FFFFFF;
-    /* material-theme/sys/light/inverse-primary */
-
-    border: 1px solid #B3C5FF;
     border-radius: 16px;
-    box-shadow: 5px 5px 10px 5px #ecf0fd;
+    box-shadow: 8px 8px 12px 4px #ced8fa;
 }
 
 #library-div:hover {
@@ -109,6 +104,10 @@
     font-family: Roboto;
     font-size: 28px;
     margin: 10px 0px;
+}
+
+#version {
+    font-family: Roboto;
 }
 
 #pagination {
@@ -147,5 +146,10 @@
 
     #library-div {
         width: 90%;
+        padding: 10px 5%;
+    }
+
+    #library-name {
+        font-size: 21px;
     }
 }
