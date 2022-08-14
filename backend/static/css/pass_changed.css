@@ -1,0 +1,79 @@
+.password {
+    background-image: url('../images/header_bg.svg');
+    height: 413px;
+    width: 100%;
+    color: #d9d9d9;
+    box-shadow: inset 2000px 0 0 0 rgba(0, 32, 92, 0.5);
+  }
+  
+.password-text {
+     width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+  }
+  
+.password-text h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 57.33px;
+    line-height: 69px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+.password-text p {
+    font-family: Poppins;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  
+@media screen and (max-width: 500px) {
+    .password-text h3 {
+      font-size: 40px;
+      line-height: 45px;
+      margin-bottom: 15px;
+    }
+}
+  
+img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+  /************************ FORM *************************/
+
+.login-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border: 0;
+  background: none;
+  margin-bottom: 50px;
+}
+.login-button a{
+  border: 0;
+}
+button{
+  cursor: pointer;
+  color: #00205C;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  border: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  background-color: #ffffff;
+}
+button:hover {
+    background: #d9d9d9
+  }

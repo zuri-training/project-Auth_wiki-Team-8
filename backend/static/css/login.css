@@ -1,0 +1,192 @@
+/* title */
+
+.hero {
+  /* position: relative;
+  top: 115px; */
+  background-image: url(../images/headerimage.jpg);
+  background-color: #00205c;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  padding: 100px;
+  width: 100%;
+  height: auto;
+}
+.hero-text {
+    margin-top: 15px;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.hero-text h3 {
+  font-family: Inter;
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 69px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+.hero-text p {
+  font-family: Poppins;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .hero-text h3 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+}
+/* input fields */
+.form-section {
+  height: auto;
+}
+.form-section form {
+  margin: auto;
+  width: min(638px, 90%);
+  padding-bottom: 103px;
+  margin-top: 100px;
+}
+
+.form-section label,
+span {
+  font-family: Inter;
+  font-size: 19.2px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: left;
+  color: #303034;
+}
+
+.form-section span:hover,
+.hover:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  height: 71px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #00205c;
+  display: block;
+  margin-top: 6px;
+  transition: 0.3s;
+}
+input[type="email"]:focus-within,
+input[type="text"]:focus-within,
+input[type="password"]:focus-within {
+  border: 3px solid #00205c;
+  background-color: rgba(128, 128, 128, 0.21);
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  margin-bottom: 33px;
+}
+
+input::placeholder {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+input[type="submit"] {
+  color: #ffffff;
+  margin-block: 20px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  background: #00205c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.flex-layout {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Inter;
+}
+
+.row1 {
+  margin: 10px 0;
+}
+
+.row2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+form a {
+  color: #000000;
+}
+
+form a:hover {
+  color: red;
+}
+
+.line {
+  border: 1px solid #000000;
+  width: 280px;
+}
+.logos {
+  width: 28px;
+  height: 28px;
+}
+
+@media screen and (max-width: 600px) {
+  /* .hero {
+    background-image: url(/project-Auth_wiki-Team-8/frontend/images/heroimage.jpg);
+    background-clip: border-box;
+    background-attachment: fixed;
+  } */
+  .row1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .row1 p {
+    text-align: left;
+  }
+  .row3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .google-box,
+  .github-box {
+    width: 70%;
+    padding-block: 24px;
+    padding-inline: 60px;
+  }
+}
+form.profile span.helptext, form.profile div#id_password, form.profile label:last-of-type {
+  display: none !important;
+}
