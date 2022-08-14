@@ -33,8 +33,25 @@
         <li><a class="nav-links" href="{% url 'accounts:login' %}">Login</a></li>
         <li><a class="active" href="{% url 'accounts:signup' %}">Register</a></li>
         {% else %}
-        <li><a class="nav-links" href="{% url 'accounts:profile' %}">Profile</a></li>
-        <li><a class="active" href="{% url 'accounts:logout' %}">Logout</a></li>
+        <div class="action">
+          <div class="profile" onclick="menuToggle();">
+            <img src="{% static 'images/img_avatar.png' %}">
+
+          </div>
+
+          <div class="menu">
+            <h3>{{ request.user.username }}
+              <hr>
+            </h3>
+            <ul>
+              <li><a href="{% url 'accounts:profile' %}">Edit profile</a></li>
+              <li><a href="{% url 'accounts:password_change' %}">Change password</a>
+              </li>
+            </ul>
+            <hr>
+            <h3><a href="{% url 'accounts:logout' %}">Log out</a></h3>
+          </div>
+        </div>
         {% endif %}
       </ul>
     </nav>
@@ -93,6 +110,12 @@
       </div>
   </footer>
   <script src="{% static 'js/script.js' %}"></script>
+  <script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector('.menu');
+      toggleMenu.classList.toggle('active')
+    }
+  </script>
   {% block scripts %}{% endblock %}
 </body>
 
