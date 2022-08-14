@@ -1,0 +1,155 @@
+#sub-header {
+    background-image: linear-gradient(to top, rgba(0, 32, 92, 0.75)60%,rgba(0, 32, 92, 0.75)60%), url(../images/image.png);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#home {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10px;
+}
+
+#home h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#home .faq-form {
+    width: 40%;
+    position: relative;
+    max-width: 400px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    display:flex;
+    margin: 40px 0px 30px 0;
+}
+
+#home .faq-form input {
+    padding: 10px 20px;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+#home .faq-form button {
+    padding: 15px 10px;
+    position: absolute;
+    right: 5%;
+    color: black;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.wrapper h3 {
+    margin: 40px auto 50px auto;
+    text-align: center;
+    font-size: 32px;
+    font-family: Roboto;
+}
+
+.wrapper h4 {
+    font-family: Roboto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#library-div {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 78%;
+    max-width: 850px;
+    height: auto;
+    padding: 20px 0px 20px 5%;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 8px 8px 12px 4px #ced8fa;
+}
+
+#library-div:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    background-color: #B3C5FF;
+}
+
+#library-div:active {
+    background-color: #00205C;
+    color: white;
+}
+
+#library-name {
+    font-family: Roboto;
+    font-size: 28px;
+    margin: 10px 0px;
+}
+
+#version {
+    font-family: Roboto;
+}
+
+#pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90%;
+    color: black;
+    font-family: Roboto;
+}
+
+@media (max-width: 800px) {
+    #home .faq-form {
+        width: 60%;
+    }
+}
+
+@media (max-width: 460px) {
+    #home .faq-form {
+        width: 80%;
+    }
+
+    #home .faq-form input {
+        padding: 10px 5px;
+    }
+
+    #home .faq-form button {
+        padding: 12px 10px;
+        right: 0%;
+    }
+
+    .wrapper h3 {
+        font-size: 26px;
+    }
+
+    #library-div {
+        width: 90%;
+        padding: 10px 5%;
+    }
+
+    #library-name {
+        font-size: 21px;
+    }
+}
