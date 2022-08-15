@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.db.models import Q
 from django.views import View
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from .models import LibraryPage, CommentReaction
+from .models import LibraryPage, CommentReaction, Reactions
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
@@ -98,14 +98,36 @@ class LibraryInfo(View):
 def dislikes(request, pk):
     if request.method == 'POST':
         library = LibraryPage.objects.get(id=pk)
-        library.dislike += 1
-        library.save()
+        liked_already = Reactions.objects.filter(
+            author=request.user, library=library, reaction='like')
+        disliked_already = Reactions.objects.filter(
+            author=request.user, library=library, reaction='dislike')
+        if liked_already:
+            liked_already.delete()
+            library.like -= 1
+            library.save()
+        if not disliked_already:
+            Reactions.objects.create(
+                author=request.user, library=library, reaction='dislike')
+            library.dislike += 1
+            library.save()
     return HttpResponseRedirect(reverse('librarys:search_result', args=[str(pk)]))
 
 
 def likes(request, pk):
     if request.method == 'POST':
         library = LibraryPage.objects.get(id=pk)
-        library.like += 1
-        library.save()
+        liked_already = Reactions.objects.filter(
+            author=request.user, library=library, reaction='like')
+        disliked_already = Reactions.objects.filter(
+            author=request.user, library=library, reaction='dislike')
+        if disliked_already:
+            disliked_already.delete()
+            library.dislike -= 1
+            library.save()
+        if not liked_already:
+            Reactions.objects.create(
+                author=request.user, library=library, reaction='like')
+            library.like += 1
+            library.save()
     return HttpResponseRedirect(reverse('librarys:search_result', args=[str(pk)]))
