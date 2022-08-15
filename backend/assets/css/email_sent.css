@@ -2,7 +2,7 @@
 #heading-ctn{
     color: hsla(0, 0%, 100%, 1);
     text-align: center;
-    padding: 150px;
+    padding: 70px  20px;
     background-image: url(../images/hero\ pic.png);
     background-position: center;
     background-repeat: none;
@@ -25,5 +25,28 @@ main p{
     font-size: 3.5rem;
     text-align: center;
     font-family: Roboto;
-    margin: 150px 300px;
+    margin: 150px 80px;
+}
+
+@media (max-width: 768px) {
+    #heading-ctn h1 {   
+        padding: 70px 20px;
+        font-size: 40px;
+     }
+
+    main p {
+        margin: 50px 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    #heading-ctn h1 {   
+       padding: 70px 10px;
+       font-size: 37px;
+    } 
+
+    main p {
+        margin: 50px 10px;
+        font-size: 30px;
+    }
 }
