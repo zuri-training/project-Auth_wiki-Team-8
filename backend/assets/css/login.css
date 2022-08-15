@@ -39,6 +39,10 @@
   text-align: center;
 }
 
+.form-section h3 {
+  font-family: Roboto;
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 500px) {
   .hero-text h3 {
     font-size: 40px;
@@ -144,6 +148,7 @@ input[type="submit"]:hover {
 
 form a {
   color: #000000;
+  font-family: Roboto;
 }
 
 form a:hover {
