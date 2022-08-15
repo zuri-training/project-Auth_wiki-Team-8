@@ -1,105 +1,122 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    {% block styles %}{% endblock %}
-    {% if title %}
-      <title>Auth_Wiki - {{ title }}</title>
-    {% else %}
-      <title>Auth_Wiki</title>
-    {% endif %}
-  </head>
-  <body>
-    <header>
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars navi" id="burger-icon"></i>
-        </label>
-        <label class="logo">Auth_Wiki</label>
-        <ul>
-          <li><a class="nav-links" href="/">Home</a></li>
-          <li><a class="nav-links" href="/about/">About</a></li>
-          <li><a class="nav-links" href="/contact-us/">Contact us</a></li>
-          <li><a class="nav-links" href="/faq/">FAQ</a></li>
-          {% if not request.user.is_authenticated %}
-          <li><a class="nav-links" href="{% url 'accounts:login' %}">Login</a></li>
-          <li><a class="active" href="{% url 'accounts:signup' %}">Register</a></li>
-          {% else %}
-          <li><a class="nav-links" href="{% url 'accounts:profile' %}">Profile</a></li>
-          <li><a class="active" href="{% url 'accounts:logout' %}">Logout</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
-    <div class="wrapper">{% block content %}{% endblock %}</div>
-    <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col colmain">
-              <h4 class="head">AuthWiki</h4>
-              <p>
-                Authwiki is a website for authentication codes where developers
-                can register to download ready made authentication code
-              </p>
-            </div>
-            <div class="footer-col-section2">
-              <div class="footer-col">
-                <h4>company</h4>
-                <ul>
-                  <li><a class="footer-links" href="/">Home</a></li>
-                  <li><a class="footer-links" href="/about/">About</a></li>
-                  <li><a class="footer-links" href="{% url 'accounts:login' %}">Login</a></li>
-                  <li><a class="footer-links" href="{% url 'accounts:signup' %}">Register</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                  <li><a class="footer-links" href="library/?q=a">Auth Codes</a></li>
-                  <li><a class="footer-links" href="library/?q=a">Trending codes</a></li>
-                  <li><a class="footer-links" href="library/?q=a">Recent codes</a></li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <h4>Help</h4>
-                <ul>
-                  <li><a class="footer-links" href="/contact-us/">Contact us</a></li>
-                  <li><a class="footer-links" href="/faq/">FAQ</a></li>
-                </ul>
-              </div>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  {% block styles %}{% endblock %}
+  {% if title %}
+  <title>Auth_Wiki - {{ title }}</title>
+  {% else %}
+  <title>Auth_Wiki</title>
+  {% endif %}
+</head>
+
+<body>
+  <header>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars navi" id="burger-icon"></i>
+      </label>
+      <label class="logo">Auth_Wiki</label>
+      <ul>
+        <li><a class="nav-links" href="/">Home</a></li>
+        <li><a class="nav-links" href="/about/">About</a></li>
+        <li><a class="nav-links" href="/contact-us/">Contact us</a></li>
+        <li><a class="nav-links" href="/faq/">FAQ</a></li>
+        {% if not request.user.is_authenticated %}
+        <li><a class="nav-links" href="{% url 'accounts:login' %}">Login</a></li>
+        <li><a class="active" href="{% url 'accounts:signup' %}">Register</a></li>
+        {% else %}
+        <div class="action">
+          <div class="profile" onclick="menuToggle();">
+            <img src="{% static 'images/img_avatar.png' %}">
+
           </div>
-          <div class="row">
-            <div class="social">
-              <a class="footer-socials" href="#"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="footer-socials" href="#"
-                ><i class="fab fa-google"></i
-              ></a>
-              <a class="footer-socials" href="#"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            </div>
-            <div class="last">
-              <div class="col-md-12">
-                <p class="copyright">
-                  Authwiki Platform 2022. All right reserved
-                </p>
-            </div>
+
+          <div class="menu">
+            <h3>{{ request.user.username }}
+              <hr>
+            </h3>
+            <ul>
+              <li><a href="{% url 'accounts:profile' %}">Edit profile</a></li>
+              <li><a href="{% url 'accounts:password_change' %}">Change password</a>
+              </li>
+            </ul>
+            <hr>
+            <h3><a href="{% url 'accounts:logout' %}">Log out</a></h3>
           </div>
         </div>
-      </footer>
-    <script src="{% static 'js/script.js' %}"></script>
-    {% block scripts %}{% endblock %}
-  </body>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  <div class="wrapper">{% block content %}{% endblock %}</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col colmain">
+          <h4 class="head">AuthWiki</h4>
+          <p>
+            Authwiki is a website for authentication codes where developers
+            can register to download ready made authentication code
+          </p>
+        </div>
+        <div class="footer-col-section2">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a class="footer-links" href="/">Home</a></li>
+              <li><a class="footer-links" href="/about/">About</a></li>
+              <li><a class="footer-links" href="{% url 'accounts:login' %}">Login</a></li>
+              <li><a class="footer-links" href="{% url 'accounts:signup' %}">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a class="footer-links" href="/library/">Auth Codes</a></li>
+              <li><a class="footer-links" href="/library/?q=a">Trending codes</a></li>
+              <li><a class="footer-links" href="/library/?q=a">Recent codes</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+              <li><a class="footer-links" href="/contact-us/">Contact us</a></li>
+              <li><a class="footer-links" href="/faq/">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="social">
+          <a class="footer-socials" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="footer-socials" href="#"><i class="fab fa-google"></i></a>
+          <a class="footer-socials" href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="last">
+          <div class="col-md-12">
+            <p class="copyright">
+              Authwiki Platform 2022. All right reserved
+            </p>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <script src="{% static 'js/script.js' %}"></script>
+  <script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector('.menu');
+      toggleMenu.classList.toggle('active')
+    }
+  </script>
+  {% block scripts %}{% endblock %}
+</body>
+
 </html>
