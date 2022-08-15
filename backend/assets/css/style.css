@@ -314,6 +314,12 @@
   }
 
   @media (max-width: 460px) {
+    header nav label.logo{
+      font-size: 24px;
+      padding-left: 10px;
+      margin-left: 20px;
+    }
+
     header nav .checkbtn {
       margin-right: 4%;
     }
