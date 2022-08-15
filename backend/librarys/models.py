@@ -31,3 +31,14 @@ class CommentReaction(models.Model):
 
     def __str__(self):
         return str(self.author)
+
+
+class Reactions(models.Model):
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    library = models.ForeignKey(
+        LibraryPage, on_delete=models.CASCADE
+    )
+    reaction = models.CharField(max_length=10)
+
+    def __str__(self) -> str:
+        return str(self.author)

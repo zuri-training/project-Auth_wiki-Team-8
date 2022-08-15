@@ -26,7 +26,7 @@ def about(request):
 
 
 def home(request):
-    library = LibraryPage.objects.all()
+    library = LibraryPage.objects.all()[::-1]
     libraries = []
     if len(library) > 6:
         for i in range(6):
