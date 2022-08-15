@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@300;400&display=swap');
 
-
 *{
     padding: 0;
     margin: 0;
@@ -310,7 +309,6 @@
       padding: 5px 5px 5px 0px;
       color: white;
     }
-
   }
 
   @media (max-width: 460px) {
