@@ -1,0 +1,51 @@
+{% extends 'base_layout.html' %} {% block content %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock styles %}
+
+<main>
+    <div id="heading-ctn">
+        <h1 id="heading-elem">About Us</h1>
+        <p id="sub-head-elem">We are a team that help developers <br> with authentication codes</p>
+    </div>
+
+    <div id="second-ctn">
+        <div id="headline-cont">
+            <h2 id="headline">Auth code
+                made
+                easy by
+                Auth_wiki</h2>
+            <p id="subheadline">The Get-AuthenticodeSignaturecmdlet gets information about the
+                Authenticode signature for a file or file content as a byte array.
+                If the file is both embedded signed and Windows catalog signed,
+                the Windows catalog signature is used.If the file is not signed,
+                the information is retrieved, but the fields are blank. See more</p>
+        </div>
+
+        <div id="img-second-ctn">
+            <img src="{% static 'images/image 13.png' %}" alt="a developer on a laptop">
+        </div>
+    </div>
+
+    <div id="form-ctn">
+        <h3>Get Auth_wiki updates</h3>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <button>Subscribe</button>
+        <p>No spam, we will only send you mails related to update</p>
+    </div>
+
+    <div id="stats-ctn">
+        <span class="stats">
+            <h5>+200 <span class="small">auth codes</span></h5>
+        </span>
+        <span class="stats">
+            <h5>+3500 <span class="small">users</span></h5>
+        </span>
+        <span class="stats">
+            <h5>100k+ <span class="small">downloads</span></h5>
+        </span>
+    </div>
+</main>
+{% endblock %}

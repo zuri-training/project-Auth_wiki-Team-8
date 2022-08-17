@@ -1,0 +1,50 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'librarys/styles/search_style.css' %}">
+{% endblock styles %}
+{% block content %}
+        <div id="sub-header">
+            <section id="home">
+                <h2 class="faq-title">Search Here</h2>
+                <form method="get" action="/library" enctype="multipart/form-data" class="faq-form">
+                    <input type="text" placeholder=" e.g facebook authentication" name="q" value="{{request.GET.q}}">
+                    <button type="submit" value="{{request.GET.q}}"><i class="fa fa-search"></i></button>
+                </form>
+            </section>
+        </div>
+        {% if found > 0 %}
+            <h3>Found {{ found }} search results</h3>
+        {% else %}
+            <h3>No matches found</h3>
+            <h4>Try another keyword</h4>
+        {% endif %}
+        {% for library in libraries %}
+            <a href="{% url 'librarys:search_result' library.id %}">
+                <div id="library-div">
+                    <h2 id="library-name">{{ library.name }}</h2>
+                    <p id="version">{{ library.library_language}}</p>
+                    <p id="version">Version {{ library.library_version }}</p>
+                </div>
+            </a>
+        {% endfor %}
+        {% if found == 0 %}
+        <div id="pagination" style="display: none;"></div>
+        {% else %}
+        <div id="pagination">
+            {% if libraries.has_previous and libraries.has_next %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.previous_page_number }}" id="previous">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.next_page_number }}" id="next">Next</a>
+            {% elif  libraries.has_previous %}
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.previous_page_number }}" id="previous">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
+            {% elif  libraries.has_next %}
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page={{ libraries.next_page_number }}" id="next">Next</a>
+            {% else %}
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="previous" style="pointer-events: none; opacity: 0.4;">Previous</a>
+                <a href="/library/?q={{ request.GET.get }}&page=1" id="next" style="pointer-events: none; opacity: 0.4;">Next</a>
+            {% endif %}
+        </div>
+        {% endif %}
+{% endblock content %}
